@@ -1,0 +1,49 @@
+C:\Users\Hassan\source\repos\clsBussinessLayer\bin\Debug\clsBussinessLayer.dll
+C:\Users\Hassan\source\repos\clsBussinessLayer\bin\Debug\clsBussinessLayer.pdb
+C:\Users\Hassan\source\repos\clsBussinessLayer\bin\Debug\HospitalDataLayer.dll
+C:\Users\Hassan\source\repos\clsBussinessLayer\bin\Debug\HospitalDataLayer.pdb
+C:\Users\Hassan\source\repos\clsBussinessLayer\obj\Debug\clsBussinessLayer.csproj.AssemblyReference.cache
+C:\Users\Hassan\source\repos\clsBussinessLayer\obj\Debug\clsBussinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Hassan\source\repos\clsBussinessLayer\obj\Debug\clsBussi.91231794.Up2Date
+C:\Users\Hassan\source\repos\clsBussinessLayer\obj\Debug\clsBussinessLayer.dll
+C:\Users\Hassan\source\repos\clsBussinessLayer\obj\Debug\clsBussinessLayer.pdb
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\clsBussinessLayer.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\clsBussinessLayer.pdb
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\GumroadLicensing.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\HospitalDataLayer.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\Newtonsoft.Json.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\RestSharp.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\SendGrid.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\StarkbankEcdsa.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Buffers.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.CodeDom.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.IO.Pipelines.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Memory.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Numerics.Vectors.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Text.Encodings.Web.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Text.Json.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.ValueTuple.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\HospitalDataLayer.pdb
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\Newtonsoft.Json.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\RestSharp.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\SendGrid.pdb
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\SendGrid.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Buffers.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.CodeDom.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.IO.Pipelines.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Memory.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Numerics.Vectors.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Text.Encodings.Web.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Text.Json.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\bin\Debug\System.ValueTuple.xml
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\obj\Debug\clsBussinessLayer.csproj.AssemblyReference.cache
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\obj\Debug\clsBussinessLayer.csproj.CoreCompileInputs.cache
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\obj\Debug\clsBussi.91231794.Up2Date
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\obj\Debug\clsBussinessLayer.dll
+D:\My Projects\C#\HospitalProject\Code\clsBussinessLayer\obj\Debug\clsBussinessLayer.pdb
