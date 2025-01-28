@@ -1,0 +1,67 @@
+C:\Users\Hassan\source\repos\Hospital Management System\bin\Debug\Hospital Management System.exe.config
+C:\Users\Hassan\source\repos\Hospital Management System\bin\Debug\Hospital Management System.exe
+C:\Users\Hassan\source\repos\Hospital Management System\bin\Debug\Hospital Management System.pdb
+C:\Users\Hassan\source\repos\Hospital Management System\obj\Debug\Hospital Management System.csproj.AssemblyReference.cache
+C:\Users\Hassan\source\repos\Hospital Management System\obj\Debug\Hospital_Management_System.Properties.Resources.resources
+C:\Users\Hassan\source\repos\Hospital Management System\obj\Debug\Hospital Management System.csproj.GenerateResource.cache
+C:\Users\Hassan\source\repos\Hospital Management System\obj\Debug\Hospital Management System.csproj.CoreCompileInputs.cache
+C:\Users\Hassan\source\repos\Hospital Management System\obj\Debug\Hospital Management System.exe
+C:\Users\Hassan\source\repos\Hospital Management System\obj\Debug\Hospital Management System.pdb
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\Hospital Management System.exe.config
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\Hospital Management System.exe
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\Hospital Management System.pdb
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\aa-DJ\Hospital Management System.resources.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\clsBussinessLayer.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\GumroadLicensing.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\Guna.UI2.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\Newtonsoft.Json.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\RestSharp.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\SendGrid.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\StarkbankEcdsa.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Buffers.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.CodeDom.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.IO.Pipelines.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Memory.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Numerics.Vectors.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Text.Encodings.Web.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Text.Json.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.ValueTuple.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\HospitalDataLayer.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\clsBussinessLayer.pdb
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\Newtonsoft.Json.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\RestSharp.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\SendGrid.pdb
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\SendGrid.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Buffers.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.CodeDom.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.IO.Pipelines.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Memory.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Numerics.Vectors.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Text.Encodings.Web.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Text.Json.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\System.ValueTuple.xml
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\bin\Debug\HospitalDataLayer.pdb
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital Management System.csproj.AssemblyReference.cache
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital Management System.csproj.SuggestedBindingRedirects.cache
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital Management System.exe.config
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital_Management_System.Login.frmForgetPassword.resources
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital_Management_System.Login.frmLoginScreen.resources
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital_Management_System.People.Controls.ctrlAddNewPerson.resources
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital_Management_System.People.Controls.ctrlPersonInfo.resources
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital_Management_System.People.Controls.ctrlSearchAndListOfPeople.resources
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital_Management_System.Properties.Resources.resources
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital_Management_System.Login.frmLoginScreen.aa-DJ.resources
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital Management System.csproj.GenerateResource.cache
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital Management System.csproj.CoreCompileInputs.cache
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\aa-DJ\Hospital Management System.resources.dll
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital.78AF1D08.Up2Date
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital Management System.exe
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital Management System.pdb
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital_Management_System.frmMainForSecretary.resources
+D:\My Projects\C#\HospitalProject\Code\Hospital Management System\obj\Debug\Hospital_Management_System.Appointments.frmAppointments.resources
