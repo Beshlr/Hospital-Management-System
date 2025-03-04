@@ -20,6 +20,13 @@ namespace Hospital_Management_System.Global.Controls
         {
             InitializeComponent();
         }
+        public ctrlAddNewPicture(Image img)
+        {
+            InitializeComponent();
+            llblRemoveImage.Visible = img !=null;
+            _img = img;
+            pbxImage.Image = img;
+        }
 
         public delegate bool CheckImageChange(object sender, Image img);
 
@@ -44,7 +51,7 @@ namespace Hospital_Management_System.Global.Controls
 
         }
 
-        private bool CtrlAddNewPicture_OnImageChanged(object sender, Image img)
+        public bool CtrlAddNewPicture_OnImageChanged(object sender, Image img)
         {
             if (img != _img && img != Resources.Male_512)
             {
