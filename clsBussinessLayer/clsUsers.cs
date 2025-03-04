@@ -81,7 +81,7 @@ namespace clsBussinessLayer
 
         public static clsUsers Find(string Username)
         {
-            string Password = "",UserEmail = "",ImagePath = "";
+            string Password = null,UserEmail = null,ImagePath = null;
             int RoleID = -1,UserID = -1;
             bool isActive = false;
 
@@ -97,7 +97,7 @@ namespace clsBussinessLayer
 
         public static clsUsers Find(int UserID)
         {
-            string Username = "", Password = "", UserEmail = "", ImagePath = "";
+            string Username = null, Password = null, UserEmail = null, ImagePath = null;
             int RoleID = -1;
             bool isActive = false;
 

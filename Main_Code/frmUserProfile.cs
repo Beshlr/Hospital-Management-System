@@ -29,6 +29,15 @@ namespace Hospital_Management_System
 
         private clsUsers _User = null;
 
-       
+        private void frmUserProfile_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ctrlAddNewPicture1_Load(object sender, EventArgs e)
+        {
+            Image img = _User.ImagePath != null ? Image.FromFile(_User.ImagePath) : null ;
+            ctrlAddNewPicture1 = new Global.Controls.ctrlAddNewPicture(img);
+        }
     }
 }
