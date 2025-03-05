@@ -37,10 +37,10 @@ namespace Hospital_Management_System.Doctors
         private clsEmergencyContact _EmergencyContact = new clsEmergencyContact();
         private enum _Mode { enAdd = 1, enUpdate = 2 }
         private _Mode enMode = _Mode.enAdd;
-
+        private string _ImagePath = "";
         private void pbxEditImage_Click(object sender, EventArgs e)
         {
-            clsGlobal.HandelChooseImageFromFileExplorer(ref openFileDialog1, ref pbxDoctorImage);
+            clsGlobal.HandelChooseImageFromFileExplorer(ref openFileDialog1, ref pbxDoctorImage,ref _ImagePath);
         }
 
         private void llblRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

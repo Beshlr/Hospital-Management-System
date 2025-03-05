@@ -102,7 +102,7 @@ namespace Hospital_Management_System.Classes
     
         public static bool ShowPasswordAndChangeIcon(ref Guna.UI2.WinForms.Guna2TextBox textBox,ref PictureBox pictureBox)
         {
-            if (textBox.PasswordChar == '*')
+            if (textBox.PasswordChar == '•')
             {
                 textBox.PasswordChar = '\0';
                 if (pictureBox.ImageLocation == "C:\\Users\\Hassan\\Pictures\\Icnos\\OpenEye_Password.png")
@@ -119,7 +119,7 @@ namespace Hospital_Management_System.Classes
         {
             if (textBox.PasswordChar == '\0' && textBox.Text != "Enter your password")
             {
-                textBox.PasswordChar = '*';
+                textBox.PasswordChar = '•';
                 if(pictureBox.ImageLocation == "C:\\Users\\Hassan\\Pictures\\Icnos\\HideEye_Password.png")
                 {
                     pictureBox.ImageLocation = "C:\\Users\\Hassan\\Pictures\\Icnos\\OpenEye_Password.png";
@@ -164,7 +164,7 @@ namespace Hospital_Management_System.Classes
                     break;
                 }
                 else
-                    NewEmail += '*';
+                    NewEmail += '•';
             }
 
             return NewEmail;
@@ -176,7 +176,7 @@ namespace Hospital_Management_System.Classes
         }
 
         public static bool HandelChooseImageFromFileExplorer(ref OpenFileDialog openFileDialog,
-                                                             ref Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox)
+                                                             ref Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox, ref string ImagePath)
         {
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
             openFileDialog.FilterIndex = 1;
@@ -186,6 +186,7 @@ namespace Hospital_Management_System.Classes
             {
                 // Process the selected file
                 string selectedFilePath = openFileDialog.FileName;
+                ImagePath = selectedFilePath;
                 pictureBox.Image = FromFile(selectedFilePath); 
                 // ...
 

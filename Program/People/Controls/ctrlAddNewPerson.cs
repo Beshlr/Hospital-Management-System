@@ -24,6 +24,7 @@ namespace Hospital_Management_System.People.Controls
 
         public delegate void BackAddedPersonID(int PersonID);
         public BackAddedPersonID addedPersonID;
+        private string _ImagePath = "";
 
         private clsPeople _Person = null;
         private enum _enMode { enAddNewPerson = 1, enUpdatePerson = 2};
@@ -61,7 +62,7 @@ namespace Hospital_Management_System.People.Controls
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
-            if (clsGlobal.HandelChooseImageFromFileExplorer(ref openFileDialog1, ref pbxPersonImage))
+            if (clsGlobal.HandelChooseImageFromFileExplorer(ref openFileDialog1, ref pbxPersonImage, ref _ImagePath))
                 return;
             else
             {

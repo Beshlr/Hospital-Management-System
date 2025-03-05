@@ -24,6 +24,7 @@ namespace Hospital_Management_System.People.Controls
         }
 
         public static DataTable dataSource {  get; set; }
+        private string _ImagePath = "";
 
         private void pbxSearchFilter_Click(object sender, EventArgs e)
         {
@@ -85,7 +86,7 @@ namespace Hospital_Management_System.People.Controls
 
         private void guna2CirclePictureBox2_Click(object sender, EventArgs e)
         {
-            clsGlobal.HandelChooseImageFromFileExplorer(ref openFileDialog1,ref pbxImage);
+            clsGlobal.HandelChooseImageFromFileExplorer(ref openFileDialog1,ref pbxImage, ref _ImagePath);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

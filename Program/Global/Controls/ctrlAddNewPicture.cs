@@ -34,11 +34,12 @@ namespace Hospital_Management_System.Global.Controls
 
 
         private Image _img { get; set; }
+        private string _ImagePath = "";
 
         private void guna2CirclePictureBox2_Click(object sender, EventArgs e)
         {
             
-            if (!clsGlobal.HandelChooseImageFromFileExplorer(ref openFileDialog1, ref pbxImage))
+            if (!clsGlobal.HandelChooseImageFromFileExplorer(ref openFileDialog1, ref pbxImage, ref _ImagePath))
             {
                 MessageBox.Show("There is an error, Please try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 pbxImage.Image = Resources.Male_512;
@@ -66,10 +67,21 @@ namespace Hospital_Management_System.Global.Controls
         {
             return _img;
         }
-        public void SetImage(Image Img)
+        public void SetImage(string ImgPath)
         {
-            _img = Img;
-            pbxImage.Image = Img;
+            _img = Image.FromFile(ImgPath);
+            pbxImage.ImageLocation = ImgPath;
+            
+        }
+
+        public string GetImagePath()
+        {
+            return _ImagePath;
+        }
+
+        public void ChangeEditImageStatus(bool Edit)
+        {
+            btnChangeImage.Enabled = Edit;
         }
 
         private void llblRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -81,6 +93,10 @@ namespace Hospital_Management_System.Global.Controls
         {
             btnChangeImage.Enabled = llblRemoveImage.Enabled = EnableEdit;
         }
-            
+
+        private void ctrlAddNewPicture_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

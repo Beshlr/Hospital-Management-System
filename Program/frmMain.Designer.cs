@@ -56,11 +56,11 @@
             this.pbxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlTopPanel = new System.Windows.Forms.Panel();
             this.pnlNotificationIcon = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pnlNotificationList = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblNoNotification = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlControl.SuspendLayout();
             this.pnlPuttons.SuspendLayout();
             this.pnlLoginUserDetails.SuspendLayout();
@@ -74,9 +74,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.pnlTopPanel.SuspendLayout();
             this.pnlNotificationIcon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelChildForm.SuspendLayout();
             this.pnlNotificationList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlControl
@@ -162,6 +162,7 @@
             this.pbxUserImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxUserImage.TabIndex = 0;
             this.pbxUserImage.TabStop = false;
+            this.pbxUserImage.Click += new System.EventHandler(this.pbxUserImage_Click);
             // 
             // btnLogOut
             // 
@@ -573,6 +574,14 @@
             this.pnlNotificationIcon.Size = new System.Drawing.Size(61, 52);
             this.pnlNotificationIcon.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(41, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 18);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // guna2ImageButton1
             // 
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -625,14 +634,6 @@
             this.lblNoNotification.TabIndex = 0;
             this.lblNoNotification.Text = "You don\'t have any notifications";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(41, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 18);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmMainForSecretary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -662,11 +663,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.pnlTopPanel.ResumeLayout(false);
             this.pnlNotificationIcon.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
             this.pnlNotificationList.ResumeLayout(false);
             this.pnlNotificationList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

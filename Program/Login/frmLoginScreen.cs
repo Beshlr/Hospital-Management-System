@@ -146,7 +146,7 @@ namespace Hospital_Management_System.Login
 
         private void pxbHideShowPass_Click(object sender, EventArgs e)
         {
-            if(txtPassword.PasswordChar == '*')
+            if(txtPassword.PasswordChar == '•')
             {
                 clsGlobal.ShowPasswordAndChangeIcon(ref txtPassword, ref pxbHideShowPass);
                     

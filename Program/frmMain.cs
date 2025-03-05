@@ -245,5 +245,12 @@ namespace Hospital_Management_System
                 _ResetSizeOfNotificationPanel();
             }
         }
+
+        private void pbxUserImage_Click(object sender, EventArgs e)
+        {
+            frmUserProfile frm = new frmUserProfile(clsGlobal.CurrentUser);
+            frm.ShowDialog();
+            clsGlobal.CurrentUser = clsUsers.Find(clsGlobal.CurrentUser.UserID);
+        }
     }
 }

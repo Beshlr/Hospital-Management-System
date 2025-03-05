@@ -179,7 +179,7 @@
     <value>pbxLoginLogo</value>
   </data>
   <data name="&gt;&gt;pbxLoginLogo.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;pbxLoginLogo.Parent" xml:space="preserve">
     <value>splitContainer1.Panel1</value>
@@ -254,7 +254,7 @@
     <value>cbxRemeberMe</value>
   </data>
   <data name="&gt;&gt;cbxRemeberMe.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2CheckBox, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;cbxRemeberMe.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -338,7 +338,7 @@
     <value>btnSignIn</value>
   </data>
   <data name="&gt;&gt;btnSignIn.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;btnSignIn.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -398,7 +398,7 @@
     <value>txtPassword</value>
   </data>
   <data name="&gt;&gt;txtPassword.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtPassword.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -458,7 +458,7 @@
     <value>txtUsername</value>
   </data>
   <data name="&gt;&gt;txtUsername.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtUsername.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -512,7 +512,7 @@
     <value>guna2Panel1</value>
   </data>
   <data name="&gt;&gt;guna2Panel1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Panel1.Parent" xml:space="preserve">
     <value>splitContainer1.Panel2</value>
@@ -668,7 +668,7 @@
     <value>guna2BorderlessForm1</value>
   </data>
   <data name="&gt;&gt;guna2BorderlessForm1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2BorderlessForm, Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2BorderlessForm, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmLoginScreen</value>
