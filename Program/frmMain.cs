@@ -239,7 +239,6 @@ namespace Hospital_Management_System
                 if(activeForm != null)
                 {
                     pnlNotificationList.Visible = true;
-                    Parent = pnlNotificationList;
                 }
                 else
                     pnlNotificationList.Visible = true;
