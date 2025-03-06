@@ -17,7 +17,7 @@ namespace Hospital_Management_System.Global
                 string code = random.Next(100000, 999999).ToString();
 
                 // إعدادات SendGrid
-                var apiKey = "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"; // استخدام البيئة لحماية الـ API Key
+                var apiKey = "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";
                 var client = new SendGridClient(apiKey);
 
                 var from = new EmailAddress("hassanbeshir09@gmail.com", "Hassan Beshir");

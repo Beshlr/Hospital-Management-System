@@ -18,7 +18,7 @@ namespace clsBussinessLayer
         public int RoleID { get; set; }
         public bool IsActive {  get; set; }
         public string ImagePath;
-        public enum enRole { Admin = 1,Doctor = 2, Receptionist = 3, Patient = 4}
+        public enum enRole { Admin = 1, Secretary = 2, Doctor = 3, Patient = 4}
         private enRole Role { get { return (enRole)RoleID; } }
         public string RoleName { 
             get
@@ -29,8 +29,8 @@ namespace clsBussinessLayer
                         return "Admin";
                     case enRole.Doctor:
                         return "Doctor";
-                    case enRole.Receptionist:
-                        return "Receptionist";
+                    case enRole.Secretary:
+                        return "Secretary";
                     case enRole.Patient:
                         return "Patient";
                 }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Hospital_Management_System.Global;
 using Hospital_Management_System.Properties;
 using Hospital_Management_System.Classes;
+using System.IO;
 
 namespace Hospital_Management_System.Global.Controls
 {
@@ -69,10 +70,27 @@ namespace Hospital_Management_System.Global.Controls
         }
         public void SetImage(string ImgPath)
         {
-            _img = Image.FromFile(ImgPath);
-            pbxImage.ImageLocation = ImgPath;
-            
+            _ImagePath = ImgPath;
+            Console.WriteLine($"Trying to set image: {ImgPath}");
+
+            if (File.Exists(ImgPath))
+            {
+                using (var stream = new FileStream(ImgPath, FileMode.Open, FileAccess.Read))
+                {
+                    _img = Image.FromStream(stream);
+                }
+                pbxImage.Image = _img;
+                pbxImage.Refresh();
+
+                Console.WriteLine("Image set successfully.");
+            }
+            else
+            {
+                MessageBox.Show("The image does not exist in the specified path!");
+            }
         }
+
+
 
         public string GetImagePath()
         {
@@ -81,12 +99,14 @@ namespace Hospital_Management_System.Global.Controls
 
         public void ChangeEditImageStatus(bool Edit)
         {
-            btnChangeImage.Enabled = Edit;
+            btnChangeImage.Enabled = llblRemoveImage.Enabled = Edit;
         }
 
         private void llblRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             pbxImage.Image = Resources.Male_512;
+            _ImagePath = null;
+            _img = null;
         }
 
         public void ChangeEditingStatus(bool EnableEdit)

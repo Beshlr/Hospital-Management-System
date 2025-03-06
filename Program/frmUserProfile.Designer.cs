@@ -39,20 +39,22 @@
             this.lblRoleName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnSaveEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.pbxHideShowPass = new System.Windows.Forms.PictureBox();
             this.rbtnActiveYES = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnActiveNO = new Guna.UI2.WinForms.Guna2RadioButton();
             this.gbxRoles = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.rbtnAdmin = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbtnSecretary = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnPatient = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnDoctor = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.rbtnAdmin = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rbtnSecretary = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.gbxActiveStatus = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnSaveEdit = new Guna.UI2.WinForms.Guna2Button();
             this.ctrlAddNewPicture1 = new Hospital_Management_System.Global.Controls.ctrlAddNewPicture();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHideShowPass)).BeginInit();
             this.gbxRoles.SuspendLayout();
+            this.gbxActiveStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -135,7 +137,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(118, 388);
+            this.txtEmail.Location = new System.Drawing.Point(118, 380);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "Enter your email";
             this.txtEmail.SelectedText = "";
@@ -146,7 +148,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 396);
+            this.label2.Location = new System.Drawing.Point(60, 388);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 18);
             this.label2.TabIndex = 9;
@@ -198,32 +200,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(39, 455);
+            this.label5.Location = new System.Drawing.Point(9, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 18);
             this.label5.TabIndex = 15;
             this.label5.Text = "Is Active:";
-            // 
-            // btnSaveEdit
-            // 
-            this.btnSaveEdit.Animated = true;
-            this.btnSaveEdit.AutoRoundedCorners = true;
-            this.btnSaveEdit.BorderRadius = 15;
-            this.btnSaveEdit.BorderThickness = 1;
-            this.btnSaveEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSaveEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSaveEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSaveEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSaveEdit.FillColor = System.Drawing.Color.Green;
-            this.btnSaveEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSaveEdit.ForeColor = System.Drawing.Color.White;
-            this.btnSaveEdit.IndicateFocus = true;
-            this.btnSaveEdit.Location = new System.Drawing.Point(176, 574);
-            this.btnSaveEdit.Name = "btnSaveEdit";
-            this.btnSaveEdit.Size = new System.Drawing.Size(108, 33);
-            this.btnSaveEdit.TabIndex = 17;
-            this.btnSaveEdit.Text = "Save";
-            this.btnSaveEdit.Click += new System.EventHandler(this.btnSaveEdit_Click);
             // 
             // btnClose
             // 
@@ -270,10 +251,11 @@
             this.rbtnActiveYES.CheckedState.InnerOffset = -4;
             this.rbtnActiveYES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnActiveYES.ForeColor = System.Drawing.Color.Green;
-            this.rbtnActiveYES.Location = new System.Drawing.Point(121, 452);
+            this.rbtnActiveYES.Location = new System.Drawing.Point(109, 13);
             this.rbtnActiveYES.Name = "rbtnActiveYES";
             this.rbtnActiveYES.Size = new System.Drawing.Size(63, 24);
             this.rbtnActiveYES.TabIndex = 20;
+            this.rbtnActiveYES.TabStop = true;
             this.rbtnActiveYES.Text = "YES";
             this.rbtnActiveYES.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rbtnActiveYES.UncheckedState.BorderThickness = 2;
@@ -290,7 +272,7 @@
             this.rbtnActiveNO.CheckedState.InnerOffset = -4;
             this.rbtnActiveNO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnActiveNO.ForeColor = System.Drawing.Color.Red;
-            this.rbtnActiveNO.Location = new System.Drawing.Point(209, 452);
+            this.rbtnActiveNO.Location = new System.Drawing.Point(210, 13);
             this.rbtnActiveNO.Name = "rbtnActiveNO";
             this.rbtnActiveNO.Size = new System.Drawing.Size(52, 24);
             this.rbtnActiveNO.TabIndex = 21;
@@ -310,11 +292,51 @@
             this.gbxRoles.CustomBorderThickness = new System.Windows.Forms.Padding(0);
             this.gbxRoles.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gbxRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.gbxRoles.Location = new System.Drawing.Point(41, 487);
+            this.gbxRoles.Location = new System.Drawing.Point(30, 487);
             this.gbxRoles.Name = "gbxRoles";
-            this.gbxRoles.Size = new System.Drawing.Size(342, 76);
+            this.gbxRoles.Size = new System.Drawing.Size(353, 76);
             this.gbxRoles.TabIndex = 22;
             this.gbxRoles.Visible = false;
+            // 
+            // rbtnAdmin
+            // 
+            this.rbtnAdmin.AutoSize = true;
+            this.rbtnAdmin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnAdmin.CheckedState.BorderThickness = 0;
+            this.rbtnAdmin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnAdmin.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbtnAdmin.CheckedState.InnerOffset = -4;
+            this.rbtnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAdmin.ForeColor = System.Drawing.Color.Black;
+            this.rbtnAdmin.Location = new System.Drawing.Point(234, 38);
+            this.rbtnAdmin.Name = "rbtnAdmin";
+            this.rbtnAdmin.Size = new System.Drawing.Size(77, 24);
+            this.rbtnAdmin.TabIndex = 26;
+            this.rbtnAdmin.Text = "Admin";
+            this.rbtnAdmin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbtnAdmin.UncheckedState.BorderThickness = 2;
+            this.rbtnAdmin.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbtnAdmin.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // rbtnSecretary
+            // 
+            this.rbtnSecretary.AutoSize = true;
+            this.rbtnSecretary.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnSecretary.CheckedState.BorderThickness = 0;
+            this.rbtnSecretary.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnSecretary.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbtnSecretary.CheckedState.InnerOffset = -4;
+            this.rbtnSecretary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnSecretary.ForeColor = System.Drawing.Color.Black;
+            this.rbtnSecretary.Location = new System.Drawing.Point(234, 8);
+            this.rbtnSecretary.Name = "rbtnSecretary";
+            this.rbtnSecretary.Size = new System.Drawing.Size(104, 24);
+            this.rbtnSecretary.TabIndex = 25;
+            this.rbtnSecretary.Text = "Secretary";
+            this.rbtnSecretary.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbtnSecretary.UncheckedState.BorderThickness = 2;
+            this.rbtnSecretary.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbtnSecretary.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // rbtnPatient
             // 
@@ -368,45 +390,39 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Role :";
             // 
-            // rbtnAdmin
+            // gbxActiveStatus
             // 
-            this.rbtnAdmin.AutoSize = true;
-            this.rbtnAdmin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnAdmin.CheckedState.BorderThickness = 0;
-            this.rbtnAdmin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnAdmin.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbtnAdmin.CheckedState.InnerOffset = -4;
-            this.rbtnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAdmin.ForeColor = System.Drawing.Color.Black;
-            this.rbtnAdmin.Location = new System.Drawing.Point(234, 38);
-            this.rbtnAdmin.Name = "rbtnAdmin";
-            this.rbtnAdmin.Size = new System.Drawing.Size(77, 24);
-            this.rbtnAdmin.TabIndex = 26;
-            this.rbtnAdmin.Text = "Admin";
-            this.rbtnAdmin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbtnAdmin.UncheckedState.BorderThickness = 2;
-            this.rbtnAdmin.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbtnAdmin.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.gbxActiveStatus.Controls.Add(this.rbtnActiveNO);
+            this.gbxActiveStatus.Controls.Add(this.rbtnActiveYES);
+            this.gbxActiveStatus.Controls.Add(this.label5);
+            this.gbxActiveStatus.CustomBorderThickness = new System.Windows.Forms.Padding(0);
+            this.gbxActiveStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gbxActiveStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.gbxActiveStatus.Location = new System.Drawing.Point(30, 430);
+            this.gbxActiveStatus.Name = "gbxActiveStatus";
+            this.gbxActiveStatus.Size = new System.Drawing.Size(353, 51);
+            this.gbxActiveStatus.TabIndex = 23;
             // 
-            // rbtnSecretary
+            // btnSaveEdit
             // 
-            this.rbtnSecretary.AutoSize = true;
-            this.rbtnSecretary.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnSecretary.CheckedState.BorderThickness = 0;
-            this.rbtnSecretary.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnSecretary.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbtnSecretary.CheckedState.InnerOffset = -4;
-            this.rbtnSecretary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnSecretary.ForeColor = System.Drawing.Color.Black;
-            this.rbtnSecretary.Location = new System.Drawing.Point(234, 8);
-            this.rbtnSecretary.Name = "rbtnSecretary";
-            this.rbtnSecretary.Size = new System.Drawing.Size(104, 24);
-            this.rbtnSecretary.TabIndex = 25;
-            this.rbtnSecretary.Text = "Secretary";
-            this.rbtnSecretary.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbtnSecretary.UncheckedState.BorderThickness = 2;
-            this.rbtnSecretary.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbtnSecretary.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.btnSaveEdit.Animated = true;
+            this.btnSaveEdit.AutoRoundedCorners = true;
+            this.btnSaveEdit.BorderRadius = 15;
+            this.btnSaveEdit.BorderThickness = 1;
+            this.btnSaveEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSaveEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaveEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSaveEdit.FillColor = System.Drawing.Color.Green;
+            this.btnSaveEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveEdit.ForeColor = System.Drawing.Color.White;
+            this.btnSaveEdit.Location = new System.Drawing.Point(175, 574);
+            this.btnSaveEdit.Name = "btnSaveEdit";
+            this.btnSaveEdit.Size = new System.Drawing.Size(108, 33);
+            this.btnSaveEdit.TabIndex = 24;
+            this.btnSaveEdit.Text = "Save";
+            this.btnSaveEdit.Click += new System.EventHandler(this.btnSaveEdit_Click);
             // 
             // ctrlAddNewPicture1
             // 
@@ -418,19 +434,16 @@
             // 
             // frmUserProfile
             // 
-            this.AcceptButton = this.btnSaveEdit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(421, 619);
+            this.Controls.Add(this.btnSaveEdit);
+            this.Controls.Add(this.gbxActiveStatus);
             this.Controls.Add(this.gbxRoles);
-            this.Controls.Add(this.rbtnActiveNO);
-            this.Controls.Add(this.rbtnActiveYES);
             this.Controls.Add(this.pbxHideShowPass);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnSaveEdit);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblRoleName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblUserID);
@@ -450,6 +463,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxHideShowPass)).EndInit();
             this.gbxRoles.ResumeLayout(false);
             this.gbxRoles.PerformLayout();
+            this.gbxActiveStatus.ResumeLayout(false);
+            this.gbxActiveStatus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,7 +484,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblRoleName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Button btnSaveEdit;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private System.Windows.Forms.PictureBox pbxHideShowPass;
         private Guna.UI2.WinForms.Guna2RadioButton rbtnActiveYES;
@@ -480,5 +494,7 @@
         private Guna.UI2.WinForms.Guna2RadioButton rbtnPatient;
         private Guna.UI2.WinForms.Guna2RadioButton rbtnDoctor;
         private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2GroupBox gbxActiveStatus;
+        private Guna.UI2.WinForms.Guna2Button btnSaveEdit;
     }
 }

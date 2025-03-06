@@ -246,11 +246,18 @@ namespace Hospital_Management_System
             }
         }
 
+        private void _ReloadUserInfo()
+        {
+            clsGlobal.CurrentUser = clsUsers.Find(clsGlobal.CurrentUser.UserID);
+            lblUsername.Text = clsGlobal.CurrentUser.UserName;
+            pbxUserImage.ImageLocation = clsGlobal.CurrentUser.ImagePath;
+        }
+
         private void pbxUserImage_Click(object sender, EventArgs e)
         {
             frmUserProfile frm = new frmUserProfile(clsGlobal.CurrentUser);
             frm.ShowDialog();
-            clsGlobal.CurrentUser = clsUsers.Find(clsGlobal.CurrentUser.UserID);
+            _ReloadUserInfo();
         }
     }
 }

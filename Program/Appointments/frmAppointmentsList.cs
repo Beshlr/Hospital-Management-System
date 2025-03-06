@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using clsBussinessLayer;
 using System.Drawing.Drawing2D;
 using System.Security.Cryptography;
+using Guna.UI2.WinForms;
 
 namespace Hospital_Management_System.Appointments
 {
@@ -35,6 +36,10 @@ namespace Hospital_Management_System.Appointments
             _LoadDataToList();
             gbxFilterBy.Visible = false;
             LoadAppointmentImages();
+
+            dgvAppointments.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(255, 255, 255);
+            dgvAppointments.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(70, 50, 180);
+
         }
 
         private void _LoadDataToList()
@@ -362,6 +367,22 @@ namespace Hospital_Management_System.Appointments
             frm.ShowDialog();
             _LoadDataToList();
         }
-       
+
+        private void guna2DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex % 2 == 0)
+            {
+                dgvAppointments.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(240, 240, 255);
+            }
+            else
+            {
+                dgvAppointments.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(220, 220, 245);
+            }
+        }
+
+        private void dgvAppointments_SelectionChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

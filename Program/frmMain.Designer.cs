@@ -175,7 +175,7 @@
             this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.Red;
+            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btnLogOut.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(250)))));
             this.btnLogOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
             this.btnLogOut.Image = global::Hospital_Management_System.Properties.Resources.Logout_64;
@@ -244,7 +244,7 @@
             // 
             // pnlSubMenuPharmacy
             // 
-            this.pnlSubMenuPharmacy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.pnlSubMenuPharmacy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.pnlSubMenuPharmacy.Controls.Add(this.btnRequests);
             this.pnlSubMenuPharmacy.Controls.Add(this.btnInventory);
             this.pnlSubMenuPharmacy.Dock = System.Windows.Forms.DockStyle.Top;
@@ -255,7 +255,7 @@
             // 
             // btnRequests
             // 
-            this.btnRequests.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnRequests.BackColor = System.Drawing.Color.Transparent;
             this.btnRequests.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRequests.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRequests.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -280,7 +280,7 @@
             // 
             // btnInventory
             // 
-            this.btnInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnInventory.BackColor = System.Drawing.Color.Transparent;
             this.btnInventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInventory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnInventory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -332,7 +332,7 @@
             // 
             // pnlSubMenuStaf
             // 
-            this.pnlSubMenuStaf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.pnlSubMenuStaf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.pnlSubMenuStaf.Controls.Add(this.btnStaffScheduling);
             this.pnlSubMenuStaf.Controls.Add(this.btnNurses);
             this.pnlSubMenuStaf.Dock = System.Windows.Forms.DockStyle.Top;
@@ -343,7 +343,7 @@
             // 
             // btnStaffScheduling
             // 
-            this.btnStaffScheduling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnStaffScheduling.BackColor = System.Drawing.Color.Transparent;
             this.btnStaffScheduling.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStaffScheduling.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnStaffScheduling.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -368,7 +368,7 @@
             // 
             // btnNurses
             // 
-            this.btnNurses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnNurses.BackColor = System.Drawing.Color.Transparent;
             this.btnNurses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNurses.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNurses.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -420,7 +420,7 @@
             // 
             // pnlSubMenuGeneral
             // 
-            this.pnlSubMenuGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.pnlSubMenuGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.pnlSubMenuGeneral.Controls.Add(this.btnPayments);
             this.pnlSubMenuGeneral.Controls.Add(this.btnAdmissions);
             this.pnlSubMenuGeneral.Controls.Add(this.btnAppointments);
@@ -432,7 +432,7 @@
             // 
             // btnPayments
             // 
-            this.btnPayments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnPayments.BackColor = System.Drawing.Color.Transparent;
             this.btnPayments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPayments.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPayments.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -457,7 +457,7 @@
             // 
             // btnAdmissions
             // 
-            this.btnAdmissions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnAdmissions.BackColor = System.Drawing.Color.Transparent;
             this.btnAdmissions.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdmissions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAdmissions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -482,7 +482,7 @@
             // 
             // btnAppointments
             // 
-            this.btnAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnAppointments.BackColor = System.Drawing.Color.Transparent;
             this.btnAppointments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAppointments.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAppointments.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

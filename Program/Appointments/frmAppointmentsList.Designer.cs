@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxFilterBy = new Guna.UI2.WinForms.Guna2GroupBox();
             this.rbtnPhoneNo = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnStatus = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -40,38 +40,38 @@
             this.rbtnName = new Guna.UI2.WinForms.Guna2RadioButton();
             this.dgvAppointments = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cmsMenuList = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.cmsAdd = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmsCancel = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsConfirm = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmsInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlSearchBar = new System.Windows.Forms.Panel();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.txtSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbxSearchFilter = new System.Windows.Forms.PictureBox();
             this.pnlFilterBy = new System.Windows.Forms.Panel();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.pnlAdd = new System.Windows.Forms.Panel();
             this.pnlControls = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.cmsAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsCancel = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsConfirm = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pbxSearchFilter = new System.Windows.Forms.PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pnlLogo = new System.Windows.Forms.Panel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.gbxFilterBy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.cmsMenuList.SuspendLayout();
             this.pnlSearchBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearchFilter)).BeginInit();
             this.pnlFilterBy.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.pnlControls.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSearchFilter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxFilterBy
@@ -179,44 +179,44 @@
             // 
             this.dgvAppointments.AllowUserToAddRows = false;
             this.dgvAppointments.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            this.dgvAppointments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.dgvAppointments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAppointments.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAppointments.ColumnHeadersHeight = 25;
             this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvAppointments.ContextMenuStrip = this.cmsMenuList;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAppointments.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAppointments.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAppointments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAppointments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAppointments.Location = new System.Drawing.Point(0, 316);
             this.dgvAppointments.Name = "dgvAppointments";
             this.dgvAppointments.ReadOnly = true;
             this.dgvAppointments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAppointments.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAppointments.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAppointments.RowHeadersVisible = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvAppointments.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvAppointments.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAppointments.RowTemplate.Height = 40;
             this.dgvAppointments.Size = new System.Drawing.Size(1181, 480);
             this.dgvAppointments.TabIndex = 7;
@@ -239,10 +239,12 @@
             this.dgvAppointments.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvAppointments.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvAppointments.ThemeStyle.RowsStyle.Height = 40;
-            this.dgvAppointments.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAppointments.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvAppointments.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(180)))));
+            this.dgvAppointments.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvAppointments.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointments_CellDoubleClick);
+            this.dgvAppointments.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.guna2DataGridView1_CellFormatting);
             this.dgvAppointments.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvAppointments_CellPainting);
+            this.dgvAppointments.SelectionChanged += new System.EventHandler(this.dgvAppointments_SelectionChanged);
             this.dgvAppointments.Click += new System.EventHandler(this.dgvAppointments_Click);
             // 
             // cmsMenuList
@@ -271,15 +273,70 @@
             this.cmsMenuList.Text = "Delete";
             this.cmsMenuList.Opening += new System.ComponentModel.CancelEventHandler(this.cmsMenuList_Opening);
             // 
+            // cmsAdd
+            // 
+            this.cmsAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsAdd.Image = global::Hospital_Management_System.Properties.Resources.Add_64;
+            this.cmsAdd.Name = "cmsAdd";
+            this.cmsAdd.Size = new System.Drawing.Size(165, 26);
+            this.cmsAdd.Text = "Add";
+            this.cmsAdd.Click += new System.EventHandler(this.cmsAdd_Click);
+            // 
+            // cmsEdit
+            // 
+            this.cmsEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsEdit.Image = global::Hospital_Management_System.Properties.Resources.Edit_64;
+            this.cmsEdit.Name = "cmsEdit";
+            this.cmsEdit.Size = new System.Drawing.Size(165, 26);
+            this.cmsEdit.Text = "Edit";
+            this.cmsEdit.Click += new System.EventHandler(this.cmsUpdate_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
             // 
+            // cmsCancel
+            // 
+            this.cmsCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsCancel.ForeColor = System.Drawing.Color.Red;
+            this.cmsCancel.Image = global::Hospital_Management_System.Properties.Resources._9004715_cross_delete_remove_cancel_icon;
+            this.cmsCancel.Name = "cmsCancel";
+            this.cmsCancel.Size = new System.Drawing.Size(165, 26);
+            this.cmsCancel.Text = "Cancel";
+            this.cmsCancel.Click += new System.EventHandler(this.cmsDelete_Click);
+            // 
+            // cmsConfirm
+            // 
+            this.cmsConfirm.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmsConfirm.Image = global::Hospital_Management_System.Properties.Resources.Confirm_icon;
+            this.cmsConfirm.Name = "cmsConfirm";
+            this.cmsConfirm.Size = new System.Drawing.Size(165, 26);
+            this.cmsConfirm.Text = "Confirm";
+            this.cmsConfirm.Click += new System.EventHandler(this.cmsConfirm_Click);
+            // 
+            // cmsDelete
+            // 
+            this.cmsDelete.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmsDelete.Image = global::Hospital_Management_System.Properties.Resources.Deleteicon;
+            this.cmsDelete.Name = "cmsDelete";
+            this.cmsDelete.Size = new System.Drawing.Size(165, 26);
+            this.cmsDelete.Text = "Delete";
+            this.cmsDelete.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(162, 6);
+            // 
+            // cmsInfo
+            // 
+            this.cmsInfo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cmsInfo.Image = global::Hospital_Management_System.Properties.Resources._352432_info_icon;
+            this.cmsInfo.Name = "cmsInfo";
+            this.cmsInfo.Size = new System.Drawing.Size(165, 26);
+            this.cmsInfo.Text = "View Details";
+            this.cmsInfo.Click += new System.EventHandler(this.cmsInfo_Click);
             // 
             // pnlSearchBar
             // 
@@ -312,6 +369,49 @@
             this.cbxStatus.TabIndex = 9;
             this.cbxStatus.SelectedIndexChanged += new System.EventHandler(this.txtSearchBar_TextChanged);
             this.cbxStatus.Click += new System.EventHandler(this.txtSearchBar_Click);
+            // 
+            // txtSearchBar
+            // 
+            this.txtSearchBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtSearchBar.Animated = true;
+            this.txtSearchBar.AutoRoundedCorners = true;
+            this.txtSearchBar.BorderRadius = 15;
+            this.txtSearchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchBar.DefaultText = "";
+            this.txtSearchBar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchBar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchBar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchBar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchBar.FillColor = System.Drawing.Color.DarkGray;
+            this.txtSearchBar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchBar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtSearchBar.ForeColor = System.Drawing.Color.Black;
+            this.txtSearchBar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchBar.IconRight = global::Hospital_Management_System.Properties.Resources._211817_search_strong_icon;
+            this.txtSearchBar.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtSearchBar.IconRightOffset = new System.Drawing.Point(5, 0);
+            this.txtSearchBar.Location = new System.Drawing.Point(12, 120);
+            this.txtSearchBar.Name = "txtSearchBar";
+            this.txtSearchBar.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtSearchBar.PlaceholderText = "Enter Patient\'s Text";
+            this.txtSearchBar.SelectedText = "";
+            this.txtSearchBar.Size = new System.Drawing.Size(263, 32);
+            this.txtSearchBar.TabIndex = 6;
+            this.txtSearchBar.TextChanged += new System.EventHandler(this.txtSearchBar_TextChanged);
+            this.txtSearchBar.Click += new System.EventHandler(this.txtSearchBar_Click);
+            // 
+            // pbxSearchFilter
+            // 
+            this.pbxSearchFilter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pbxSearchFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxSearchFilter.Image = global::Hospital_Management_System.Properties.Resources._4781833_filter_filters_funnel_list_navigation_icon;
+            this.pbxSearchFilter.Location = new System.Drawing.Point(289, 122);
+            this.pbxSearchFilter.Name = "pbxSearchFilter";
+            this.pbxSearchFilter.Size = new System.Drawing.Size(29, 30);
+            this.pbxSearchFilter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxSearchFilter.TabIndex = 8;
+            this.pbxSearchFilter.TabStop = false;
+            this.pbxSearchFilter.Click += new System.EventHandler(this.pbxSearchFilter_Click);
             // 
             // pnlFilterBy
             // 
@@ -391,114 +491,6 @@
             this.label1.Text = "Appointments";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pnlLogo
-            // 
-            this.pnlLogo.Controls.Add(this.tableLayoutPanel1);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(1181, 158);
-            this.pnlLogo.TabIndex = 18;
-            // 
-            // cmsAdd
-            // 
-            this.cmsAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmsAdd.Image = global::Hospital_Management_System.Properties.Resources.Add_64;
-            this.cmsAdd.Name = "cmsAdd";
-            this.cmsAdd.Size = new System.Drawing.Size(165, 26);
-            this.cmsAdd.Text = "Add";
-            this.cmsAdd.Click += new System.EventHandler(this.cmsAdd_Click);
-            // 
-            // cmsEdit
-            // 
-            this.cmsEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmsEdit.Image = global::Hospital_Management_System.Properties.Resources.Edit_64;
-            this.cmsEdit.Name = "cmsEdit";
-            this.cmsEdit.Size = new System.Drawing.Size(165, 26);
-            this.cmsEdit.Text = "Edit";
-            this.cmsEdit.Click += new System.EventHandler(this.cmsUpdate_Click);
-            // 
-            // cmsCancel
-            // 
-            this.cmsCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmsCancel.ForeColor = System.Drawing.Color.Red;
-            this.cmsCancel.Image = global::Hospital_Management_System.Properties.Resources._9004715_cross_delete_remove_cancel_icon;
-            this.cmsCancel.Name = "cmsCancel";
-            this.cmsCancel.Size = new System.Drawing.Size(165, 26);
-            this.cmsCancel.Text = "Cancel";
-            this.cmsCancel.Click += new System.EventHandler(this.cmsDelete_Click);
-            // 
-            // cmsConfirm
-            // 
-            this.cmsConfirm.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmsConfirm.Image = global::Hospital_Management_System.Properties.Resources.Confirm_icon;
-            this.cmsConfirm.Name = "cmsConfirm";
-            this.cmsConfirm.Size = new System.Drawing.Size(165, 26);
-            this.cmsConfirm.Text = "Confirm";
-            this.cmsConfirm.Click += new System.EventHandler(this.cmsConfirm_Click);
-            // 
-            // cmsDelete
-            // 
-            this.cmsDelete.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmsDelete.Image = global::Hospital_Management_System.Properties.Resources.Deleteicon;
-            this.cmsDelete.Name = "cmsDelete";
-            this.cmsDelete.Size = new System.Drawing.Size(165, 26);
-            this.cmsDelete.Text = "Delete";
-            this.cmsDelete.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // cmsInfo
-            // 
-            this.cmsInfo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cmsInfo.Image = global::Hospital_Management_System.Properties.Resources._352432_info_icon;
-            this.cmsInfo.Name = "cmsInfo";
-            this.cmsInfo.Size = new System.Drawing.Size(165, 26);
-            this.cmsInfo.Text = "View Details";
-            this.cmsInfo.Click += new System.EventHandler(this.cmsInfo_Click);
-            // 
-            // txtSearchBar
-            // 
-            this.txtSearchBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtSearchBar.Animated = true;
-            this.txtSearchBar.AutoRoundedCorners = true;
-            this.txtSearchBar.BorderRadius = 15;
-            this.txtSearchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchBar.DefaultText = "";
-            this.txtSearchBar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchBar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchBar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchBar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchBar.FillColor = System.Drawing.Color.DarkGray;
-            this.txtSearchBar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchBar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtSearchBar.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchBar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchBar.IconRight = global::Hospital_Management_System.Properties.Resources._211817_search_strong_icon;
-            this.txtSearchBar.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.txtSearchBar.IconRightOffset = new System.Drawing.Point(5, 0);
-            this.txtSearchBar.Location = new System.Drawing.Point(12, 120);
-            this.txtSearchBar.Name = "txtSearchBar";
-            this.txtSearchBar.PasswordChar = '\0';
-            this.txtSearchBar.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtSearchBar.PlaceholderText = "Enter Patient\'s Text";
-            this.txtSearchBar.SelectedText = "";
-            this.txtSearchBar.Size = new System.Drawing.Size(263, 32);
-            this.txtSearchBar.TabIndex = 6;
-            this.txtSearchBar.TextChanged += new System.EventHandler(this.txtSearchBar_TextChanged);
-            this.txtSearchBar.Click += new System.EventHandler(this.txtSearchBar_Click);
-            // 
-            // pbxSearchFilter
-            // 
-            this.pbxSearchFilter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pbxSearchFilter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxSearchFilter.Image = global::Hospital_Management_System.Properties.Resources._4781833_filter_filters_funnel_list_navigation_icon;
-            this.pbxSearchFilter.Location = new System.Drawing.Point(289, 122);
-            this.pbxSearchFilter.Name = "pbxSearchFilter";
-            this.pbxSearchFilter.Size = new System.Drawing.Size(29, 30);
-            this.pbxSearchFilter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxSearchFilter.TabIndex = 8;
-            this.pbxSearchFilter.TabStop = false;
-            this.pbxSearchFilter.Click += new System.EventHandler(this.pbxSearchFilter_Click);
-            // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -511,6 +503,15 @@
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 14;
             this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.tableLayoutPanel1);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(1181, 158);
+            this.pnlLogo.TabIndex = 18;
             // 
             // dataGridViewImageColumn1
             // 
@@ -538,14 +539,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.cmsMenuList.ResumeLayout(false);
             this.pnlSearchBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearchFilter)).EndInit();
             this.pnlFilterBy.ResumeLayout(false);
             this.pnlAdd.ResumeLayout(false);
             this.pnlControls.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.pnlLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSearchFilter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.pnlLogo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
