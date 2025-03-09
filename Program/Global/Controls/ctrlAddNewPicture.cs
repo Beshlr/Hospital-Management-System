@@ -97,6 +97,7 @@ namespace Hospital_Management_System.Global.Controls
             return _ImagePath;
         }
 
+
         public void ChangeEditImageStatus(bool Edit)
         {
             btnChangeImage.Enabled = llblRemoveImage.Enabled = Edit;

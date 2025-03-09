@@ -12,13 +12,13 @@ using Hospital_Management_System.Classes;
 using clsBussinessLayer;
 using Hospital_Management_System.Properties;
 using Hospital_Management_System.Appointments;
+using static Hospital_Management_System.frmUserProfile;
 
 namespace Hospital_Management_System
 {
     public partial class frmMainForSecretary : Form
     {
-        frmLoginScreen _frmLogin;
-
+        private frmLoginScreen _frmLogin;
         public frmMainForSecretary(frmLoginScreen LoginFrm)
         {
             InitializeComponent();
@@ -209,6 +209,11 @@ namespace Hospital_Management_System
 
         private void frmMainForSecretary_Load(object sender, EventArgs e)
         {
+           
+            this.Controls.Add(pnlNotificationList);
+            pnlNotificationList.BringToFront(); 
+        
+
             if (clsGlobal.CurrentUser.ImagePath != null && clsGlobal.CurrentUser.ImagePath.Length > 0)
                 pbxUserImage.ImageLocation = clsGlobal.CurrentUser.ImagePath;
             lblUsername.Text = clsGlobal.CurrentUser.UserName;
@@ -230,34 +235,43 @@ namespace Hospital_Management_System
             pnlNotificationList.MaximumSize = new Size(width,height);
         }
 
+        private void _RefreashNotificationsListLocation()
+        {
+            pnlNotificationList.Location = new Point(
+                panelChildForm.Width + 20,
+                guna2ImageButton1.Location.Y + guna2ImageButton1.Height + 5);
+        }
+
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
             if (pnlNotificationList.Visible)
                 pnlNotificationList.Visible = false;
             else
             {
-                if(activeForm != null)
-                {
-                    pnlNotificationList.Visible = true;
-                }
-                else
-                    pnlNotificationList.Visible = true;
+                _RefreashNotificationsListLocation();
                 _ResetSizeOfNotificationPanel();
+                pnlNotificationList.Visible = true;
+                pnlNotificationList.BringToFront();
             }
         }
 
-        private void _ReloadUserInfo()
+        private void _ReloadUserInfo(object sender, FormCloseEventArgs e)
         {
             clsGlobal.CurrentUser = clsUsers.Find(clsGlobal.CurrentUser.UserID);
             lblUsername.Text = clsGlobal.CurrentUser.UserName;
-            pbxUserImage.ImageLocation = clsGlobal.CurrentUser.ImagePath;
+            pbxUserImage.Image = e.UserImage;
         }
 
         private void pbxUserImage_Click(object sender, EventArgs e)
         {
             frmUserProfile frm = new frmUserProfile(clsGlobal.CurrentUser);
+            frm.ImageChanged += _ReloadUserInfo;
             frm.ShowDialog();
-            _ReloadUserInfo();
+        }
+
+        private void frmMainForSecretary_Resize(object sender, EventArgs e)
+        {
+            _RefreashNotificationsListLocation();
         }
     }
 }

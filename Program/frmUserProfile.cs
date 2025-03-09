@@ -13,8 +13,22 @@ using Hospital_Management_System.Classes;
 
 namespace Hospital_Management_System
 {
+
+    
+
+
     public partial class frmUserProfile : Form
     {
+        public class FormCloseEventArgs : EventArgs
+        {
+            public Image UserImage { get; }
+
+            public FormCloseEventArgs(Image userImage)
+            { this.UserImage = userImage; }
+        }
+
+        public EventHandler<FormCloseEventArgs> ImageChanged;
+
         public frmUserProfile(int UserID)
         {
             InitializeComponent();
@@ -43,7 +57,7 @@ namespace Hospital_Management_System
         private enUserMode _UserMode = enUserMode.enAddNew;
         private enum enScreenMode { enShow, enEdit};
         private enScreenMode _ScreenMode = enScreenMode.enShow;
-
+        private Image _Img = null;
         private clsUsers _User = null;
 
         private void _ChangeAllTheControlsStatus(bool enable) => gbxActiveStatus.Enabled = gbxRoles.Enabled = txtUsername.Enabled = txtPassword.Enabled = txtEmail.Enabled = enable;
@@ -59,7 +73,8 @@ namespace Hospital_Management_System
                 if (clsGlobal.CurrentUser.RoleName == "Secretary")
                 {
                     rbtnAdmin.Visible = false;
-                    rbtnSecretary.Visible = false;
+                    if (_UserMode != enUserMode.enUpdate)
+                        rbtnSecretary.Visible = false;
                 }
             }
         }
@@ -230,10 +245,20 @@ namespace Hospital_Management_System
 
         }
 
+        protected virtual void OnFormClosed(Image userImage)
+        {
+            ImageChanged?.Invoke(this, new FormCloseEventArgs(userImage));
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             if (_ScreenMode == enScreenMode.enShow)
+            {
+                _Img = ctrlAddNewPicture1.GetImage();
+                if (_Img != null)
+                    OnFormClosed(_Img);
                 this.DialogResult = DialogResult.Cancel;
+            }
             else
             {
                 _ScreenMode = enScreenMode.enShow;
