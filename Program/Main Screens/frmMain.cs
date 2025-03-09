@@ -24,6 +24,7 @@ namespace Hospital_Management_System
             InitializeComponent();
             _frmLogin = LoginFrm;
             hideSubMenu();
+            _LoginUser = clsGlobal.CurrentUser;
         }
         private void hideSubMenu()
         {
@@ -33,6 +34,8 @@ namespace Hospital_Management_System
         }
 
         private clsNotifications[] _notificationsList = null;
+        private clsUsers _LoginUser = null;
+        
         private void showSubMenu(Guna.UI2.WinForms.Guna2Panel subMenu)
         {
             if (subMenu.Visible == false)
@@ -42,6 +45,30 @@ namespace Hospital_Management_System
             }
             else
                 subMenu.Visible = false;
+        }
+
+        private void _SetScreenControls()
+        {
+            switch(_LoginUser.RoleName)
+            {
+                case "Secretary":
+                    _SetScreenControlsForSecretary();
+                    break;
+                case "Patient":
+                    _SetScreenControlsForPatient();
+                    break;
+                case "Doctor":
+                    _SetScreenControlsForDoctor();
+                    break;
+                default:
+                    _SetScreenControlsForAdmin();
+                    break;
+            }
+        }
+
+        private void _SetScreenControlsForSecretary()
+        {
+
         }
 
         private void btnGeneral_Click(object sender, EventArgs e)

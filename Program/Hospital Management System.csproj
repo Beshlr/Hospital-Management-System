@@ -103,12 +103,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Appointments\ctrlAppointmentList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Appointments\ctrlAppointmentList.Designer.cs">
-      <DependentUpon>ctrlAppointmentList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Appointments\frmAddAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,16 +127,10 @@
     <Compile Include="Doctors\frmAddNewDoctor.Designer.cs">
       <DependentUpon>frmAddNewDoctor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMainForDoctors.cs">
+    <Compile Include="Users\frmUserProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMainForDoctors.Designer.cs">
-      <DependentUpon>frmMainForDoctors.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmUserProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUserProfile.Designer.cs">
+    <Compile Include="Users\frmUserProfile.Designer.cs">
       <DependentUpon>frmUserProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Global\clsGlobal.cs" />
@@ -172,10 +160,10 @@
     <Compile Include="Login\frmLoginScreen.Designer.cs">
       <DependentUpon>frmLoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Main Screens\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Main Screens\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Patients\frmAddNewPatient.cs">
@@ -204,9 +192,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Appointments\ctrlAppointmentList.resx">
-      <DependentUpon>ctrlAppointmentList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Appointments\frmAddAppointment.resx">
       <DependentUpon>frmAddAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,13 +204,10 @@
     <EmbeddedResource Include="Doctors\frmAddNewDoctor.resx">
       <DependentUpon>frmAddNewDoctor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Main Screens\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMainForDoctors.resx">
-      <DependentUpon>frmMainForDoctors.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUserProfile.resx">
+    <EmbeddedResource Include="Users\frmUserProfile.resx">
       <DependentUpon>frmUserProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Global\Controls\ctrlAddNewPicture.resx">
@@ -287,7 +269,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pharmacy\" />
-    <Folder Include="Users\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Download premium png of PNG Cartoon doctor green transparent background_  by Adjima about doctor stethoscope child, doctor, doctor clipboard, doctor 3d, and child doctor 12119201.jpg" />
@@ -531,6 +512,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4781824_alarm_alert_attention_bell_clock_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_512dp_000000_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

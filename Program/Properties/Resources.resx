@@ -124,8 +124,8 @@
   <data name="accountProfileIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accountProfileIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="patient_info_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\patient_info_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="status" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\status.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +147,9 @@
   </data>
   <data name="blood_bag (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blood_bag (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="accountProfileIcon11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accountProfileIcon11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Doctors_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Doctors_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,14 +184,14 @@
   <data name="6491376_door_key_lock_room_security_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6491376_door_key_lock_room_security_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="4781824_alarm_alert_attention_bell_clock_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4781824_alarm_alert_attention_bell_clock_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="4781840_+_add_circle_create_expand_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4781840_+_add_circle_create_expand_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pharmacy_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pharmacy_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logout_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logout_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="9055423_bxs_edit_icon (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9055423_bxs_edit_icon (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,14 +220,11 @@
   <data name="Help_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Help_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calendar_icon_641" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendar_icon_641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Add_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Patient_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Patient_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blood_bag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blood_bag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="History_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\History_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,6 +247,9 @@
   <data name="Patient_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Patient_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Doctor_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doctor_512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Lab_Result_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lab_Result_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -259,9 +262,6 @@
   <data name="9004715_cross_delete_remove_cancel_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9004715_cross_delete_remove_cancel_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blood_bag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blood_bag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="6843080_appointment_calendar_deadline_planing_reminder_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6843080_appointment_calendar_deadline_planing_reminder_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -271,11 +271,14 @@
   <data name="352432_info_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\352432_info_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="9004772_cross_delete_cancel_remove_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9004772_cross_delete_cancel_remove_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="calendar_icon_641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar_icon_641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="patient_boy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\patient_boy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Male 512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Male 512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,8 +310,8 @@
   <data name="Address" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Address.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="patient_info_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\patient_info_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="9004772_cross_delete_cancel_remove_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9004772_cross_delete_cancel_remove_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gender" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,11 +331,11 @@
   <data name="Patient_5121" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Patient_5121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="accountProfileIcon11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\accountProfileIcon11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logout_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logout_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Doctor_512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Doctor_512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Patient_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Patient_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="12607_close_delete_error_exit_false_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\12607_close_delete_error_exit_false_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,7 +361,7 @@
   <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4781824_alarm_alert_attention_bell_clock_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4781824_alarm_alert_attention_bell_clock_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="person_512dp_000000_FILL0_wght400_GRAD0_opsz48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\person_512dp_000000_FILL0_wght400_GRAD0_opsz48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

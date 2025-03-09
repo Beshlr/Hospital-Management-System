@@ -131,6 +131,6 @@ namespace Hospital_Management_System.Global.Controls
             cbxStatus.Items.AddRange(new string[] { "Active", "Inactive" });
         }
 
-        
+        //private void _
     }
 }

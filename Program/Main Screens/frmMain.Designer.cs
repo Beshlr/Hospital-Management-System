@@ -45,6 +45,7 @@
             this.pnlNotificationList = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblNoNotification = new System.Windows.Forms.Label();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.pbxUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
@@ -85,11 +86,12 @@
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlControl.Location = new System.Drawing.Point(0, 0);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(238, 813);
+            this.pnlControl.Size = new System.Drawing.Size(238, 928);
             this.pnlControl.TabIndex = 0;
             // 
             // pnlPuttons
             // 
+            this.pnlPuttons.Controls.Add(this.btnUsers);
             this.pnlPuttons.Controls.Add(this.pnlLoginUserDetails);
             this.pnlPuttons.Controls.Add(this.btnLogOut);
             this.pnlPuttons.Controls.Add(this.btnSettings);
@@ -103,7 +105,7 @@
             this.pnlPuttons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPuttons.Location = new System.Drawing.Point(0, 103);
             this.pnlPuttons.Name = "pnlPuttons";
-            this.pnlPuttons.Size = new System.Drawing.Size(238, 710);
+            this.pnlPuttons.Size = new System.Drawing.Size(238, 825);
             this.pnlPuttons.TabIndex = 1;
             // 
             // pnlLoginUserDetails
@@ -111,7 +113,7 @@
             this.pnlLoginUserDetails.Controls.Add(this.pnlUsername);
             this.pnlLoginUserDetails.Controls.Add(this.pnlUserImage);
             this.pnlLoginUserDetails.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlLoginUserDetails.Location = new System.Drawing.Point(0, 658);
+            this.pnlLoginUserDetails.Location = new System.Drawing.Point(0, 773);
             this.pnlLoginUserDetails.Name = "pnlLoginUserDetails";
             this.pnlLoginUserDetails.Size = new System.Drawing.Size(238, 52);
             this.pnlLoginUserDetails.TabIndex = 3;
@@ -259,6 +261,32 @@
             this.guna2ImageButton1.TabIndex = 0;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
+            // btnUsers
+            // 
+            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.Black;
+            this.btnUsers.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(250)))));
+            this.btnUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+            this.btnUsers.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = global::Hospital_Management_System.Properties.Resources.person_512dp_000000_FILL0_wght400_GRAD0_opsz48;
+            this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsers.ImageOffset = new System.Drawing.Point(2, 0);
+            this.btnUsers.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnUsers.Location = new System.Drawing.Point(0, 784);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnUsers.Size = new System.Drawing.Size(238, 60);
+            this.btnUsers.TabIndex = 22;
+            this.btnUsers.Text = "Users";
+            // 
             // pbxUserImage
             // 
             this.pbxUserImage.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -296,7 +324,7 @@
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
             this.btnLogOut.Size = new System.Drawing.Size(238, 60);
-            this.btnLogOut.TabIndex = 22;
+            this.btnLogOut.TabIndex = 23;
             this.btnLogOut.Text = "Logout";
             this.btnLogOut.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -626,7 +654,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1092, 813);
+            this.ClientSize = new System.Drawing.Size(1092, 928);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.pnlTopPanel);
             this.Controls.Add(this.pnlControl);
@@ -691,6 +719,7 @@
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Label lblNoNotification;
         private Guna.UI2.WinForms.Guna2GradientPanel pnlNotificationList;
+        private Guna.UI2.WinForms.Guna2Button btnUsers;
     }
 }
 
