@@ -28,75 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pnlControls = new System.Windows.Forms.Panel();
             this.pnlSearchBar = new System.Windows.Forms.Panel();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.txtSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pbxSearchFilter = new System.Windows.Forms.PictureBox();
             this.pnlAdd = new System.Windows.Forms.Panel();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.pnlFilterBy = new System.Windows.Forms.Panel();
             this.gbxFilterBy = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.rbtnPhoneNo = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbtnDepartment = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnStatus = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rbtnNationalNo = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rbtnName = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.txtSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pbxSearchFilter = new System.Windows.Forms.PictureBox();
+            this.rbtnDoctorName = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbtnPatientName = new Guna.UI2.WinForms.Guna2RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.pnlControls.SuspendLayout();
             this.pnlSearchBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearchFilter)).BeginInit();
             this.pnlAdd.SuspendLayout();
             this.pnlFilterBy.SuspendLayout();
             this.gbxFilterBy.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSearchFilter)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvList
             // 
             this.dgvList.AllowUserToAddRows = false;
             this.dgvList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
-            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lavender;
+            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvList.ColumnHeadersHeight = 25;
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvList.Location = new System.Drawing.Point(0, 158);
             this.dgvList.Name = "dgvList";
             this.dgvList.ReadOnly = true;
             this.dgvList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvList.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvList.RowTemplate.Height = 40;
             this.dgvList.Size = new System.Drawing.Size(1102, 368);
             this.dgvList.TabIndex = 18;
@@ -164,137 +164,6 @@
             this.cbxStatus.Size = new System.Drawing.Size(205, 28);
             this.cbxStatus.TabIndex = 9;
             // 
-            // pnlAdd
-            // 
-            this.pnlAdd.Controls.Add(this.btnAdd);
-            this.pnlAdd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlAdd.Location = new System.Drawing.Point(948, 0);
-            this.pnlAdd.Name = "pnlAdd";
-            this.pnlAdd.Size = new System.Drawing.Size(154, 158);
-            this.pnlAdd.TabIndex = 16;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAdd.AutoRoundedCorners = true;
-            this.btnAdd.BorderRadius = 15;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd.Font = new System.Drawing.Font("Cairo Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(10, 120);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(135, 32);
-            this.btnAdd.TabIndex = 13;
-            this.btnAdd.Text = "Add";
-            // 
-            // pnlFilterBy
-            // 
-            this.pnlFilterBy.Controls.Add(this.gbxFilterBy);
-            this.pnlFilterBy.Location = new System.Drawing.Point(327, 38);
-            this.pnlFilterBy.Name = "pnlFilterBy";
-            this.pnlFilterBy.Size = new System.Drawing.Size(265, 115);
-            this.pnlFilterBy.TabIndex = 12;
-            // 
-            // gbxFilterBy
-            // 
-            this.gbxFilterBy.Controls.Add(this.rbtnPhoneNo);
-            this.gbxFilterBy.Controls.Add(this.rbtnStatus);
-            this.gbxFilterBy.Controls.Add(this.rbtnNationalNo);
-            this.gbxFilterBy.Controls.Add(this.rbtnName);
-            this.gbxFilterBy.CustomBorderThickness = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.gbxFilterBy.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gbxFilterBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.gbxFilterBy.Location = new System.Drawing.Point(4, 14);
-            this.gbxFilterBy.Name = "gbxFilterBy";
-            this.gbxFilterBy.Size = new System.Drawing.Size(259, 97);
-            this.gbxFilterBy.TabIndex = 9;
-            this.gbxFilterBy.Tag = "Department";
-            this.gbxFilterBy.Text = "Filter By";
-            // 
-            // rbtnPhoneNo
-            // 
-            this.rbtnPhoneNo.AutoSize = true;
-            this.rbtnPhoneNo.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnPhoneNo.CheckedState.BorderThickness = 0;
-            this.rbtnPhoneNo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnPhoneNo.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbtnPhoneNo.CheckedState.InnerOffset = -4;
-            this.rbtnPhoneNo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.rbtnPhoneNo.Location = new System.Drawing.Point(156, 67);
-            this.rbtnPhoneNo.Name = "rbtnPhoneNo";
-            this.rbtnPhoneNo.Size = new System.Drawing.Size(88, 19);
-            this.rbtnPhoneNo.TabIndex = 3;
-            this.rbtnPhoneNo.Tag = "Department";
-            this.rbtnPhoneNo.Text = "Department";
-            this.rbtnPhoneNo.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbtnPhoneNo.UncheckedState.BorderThickness = 2;
-            this.rbtnPhoneNo.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbtnPhoneNo.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // rbtnStatus
-            // 
-            this.rbtnStatus.AutoSize = true;
-            this.rbtnStatus.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnStatus.CheckedState.BorderThickness = 0;
-            this.rbtnStatus.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnStatus.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbtnStatus.CheckedState.InnerOffset = -4;
-            this.rbtnStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.rbtnStatus.Location = new System.Drawing.Point(10, 67);
-            this.rbtnStatus.Name = "rbtnStatus";
-            this.rbtnStatus.Size = new System.Drawing.Size(57, 19);
-            this.rbtnStatus.TabIndex = 2;
-            this.rbtnStatus.Tag = "Status";
-            this.rbtnStatus.Text = "Status";
-            this.rbtnStatus.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbtnStatus.UncheckedState.BorderThickness = 2;
-            this.rbtnStatus.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbtnStatus.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // rbtnNationalNo
-            // 
-            this.rbtnNationalNo.AutoSize = true;
-            this.rbtnNationalNo.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnNationalNo.CheckedState.BorderThickness = 0;
-            this.rbtnNationalNo.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnNationalNo.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbtnNationalNo.CheckedState.InnerOffset = -4;
-            this.rbtnNationalNo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.rbtnNationalNo.Location = new System.Drawing.Point(156, 33);
-            this.rbtnNationalNo.Name = "rbtnNationalNo";
-            this.rbtnNationalNo.Size = new System.Drawing.Size(96, 19);
-            this.rbtnNationalNo.TabIndex = 1;
-            this.rbtnNationalNo.Text = "Doctor Name";
-            this.rbtnNationalNo.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbtnNationalNo.UncheckedState.BorderThickness = 2;
-            this.rbtnNationalNo.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbtnNationalNo.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // rbtnName
-            // 
-            this.rbtnName.AutoSize = true;
-            this.rbtnName.Checked = true;
-            this.rbtnName.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnName.CheckedState.BorderThickness = 0;
-            this.rbtnName.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rbtnName.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rbtnName.CheckedState.InnerOffset = -4;
-            this.rbtnName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.rbtnName.Location = new System.Drawing.Point(10, 33);
-            this.rbtnName.Name = "rbtnName";
-            this.rbtnName.Size = new System.Drawing.Size(97, 19);
-            this.rbtnName.TabIndex = 0;
-            this.rbtnName.TabStop = true;
-            this.rbtnName.Text = "Patient Name";
-            this.rbtnName.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rbtnName.UncheckedState.BorderThickness = 2;
-            this.rbtnName.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rbtnName.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
             // txtSearchBar
             // 
             this.txtSearchBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -335,6 +204,137 @@
             this.pbxSearchFilter.TabIndex = 8;
             this.pbxSearchFilter.TabStop = false;
             // 
+            // pnlAdd
+            // 
+            this.pnlAdd.Controls.Add(this.btnAdd);
+            this.pnlAdd.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlAdd.Location = new System.Drawing.Point(948, 0);
+            this.pnlAdd.Name = "pnlAdd";
+            this.pnlAdd.Size = new System.Drawing.Size(154, 158);
+            this.pnlAdd.TabIndex = 16;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAdd.AutoRoundedCorners = true;
+            this.btnAdd.BorderRadius = 15;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.Font = new System.Drawing.Font("Cairo Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(10, 120);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(135, 32);
+            this.btnAdd.TabIndex = 13;
+            this.btnAdd.Text = "Add";
+            // 
+            // pnlFilterBy
+            // 
+            this.pnlFilterBy.Controls.Add(this.gbxFilterBy);
+            this.pnlFilterBy.Location = new System.Drawing.Point(327, 38);
+            this.pnlFilterBy.Name = "pnlFilterBy";
+            this.pnlFilterBy.Size = new System.Drawing.Size(265, 115);
+            this.pnlFilterBy.TabIndex = 12;
+            // 
+            // gbxFilterBy
+            // 
+            this.gbxFilterBy.Controls.Add(this.rbtnDepartment);
+            this.gbxFilterBy.Controls.Add(this.rbtnStatus);
+            this.gbxFilterBy.Controls.Add(this.rbtnDoctorName);
+            this.gbxFilterBy.Controls.Add(this.rbtnPatientName);
+            this.gbxFilterBy.CustomBorderThickness = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.gbxFilterBy.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.gbxFilterBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.gbxFilterBy.Location = new System.Drawing.Point(4, 14);
+            this.gbxFilterBy.Name = "gbxFilterBy";
+            this.gbxFilterBy.Size = new System.Drawing.Size(259, 97);
+            this.gbxFilterBy.TabIndex = 9;
+            this.gbxFilterBy.Tag = "Department";
+            this.gbxFilterBy.Text = "Filter By";
+            // 
+            // rbtnDepartment
+            // 
+            this.rbtnDepartment.AutoSize = true;
+            this.rbtnDepartment.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnDepartment.CheckedState.BorderThickness = 0;
+            this.rbtnDepartment.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnDepartment.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbtnDepartment.CheckedState.InnerOffset = -4;
+            this.rbtnDepartment.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.rbtnDepartment.Location = new System.Drawing.Point(156, 67);
+            this.rbtnDepartment.Name = "rbtnDepartment";
+            this.rbtnDepartment.Size = new System.Drawing.Size(88, 19);
+            this.rbtnDepartment.TabIndex = 3;
+            this.rbtnDepartment.Tag = "Department";
+            this.rbtnDepartment.Text = "Department";
+            this.rbtnDepartment.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbtnDepartment.UncheckedState.BorderThickness = 2;
+            this.rbtnDepartment.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbtnDepartment.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // rbtnStatus
+            // 
+            this.rbtnStatus.AutoSize = true;
+            this.rbtnStatus.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnStatus.CheckedState.BorderThickness = 0;
+            this.rbtnStatus.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnStatus.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbtnStatus.CheckedState.InnerOffset = -4;
+            this.rbtnStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.rbtnStatus.Location = new System.Drawing.Point(10, 67);
+            this.rbtnStatus.Name = "rbtnStatus";
+            this.rbtnStatus.Size = new System.Drawing.Size(57, 19);
+            this.rbtnStatus.TabIndex = 2;
+            this.rbtnStatus.Tag = "Status";
+            this.rbtnStatus.Text = "Status";
+            this.rbtnStatus.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbtnStatus.UncheckedState.BorderThickness = 2;
+            this.rbtnStatus.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbtnStatus.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // rbtnDoctorName
+            // 
+            this.rbtnDoctorName.AutoSize = true;
+            this.rbtnDoctorName.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnDoctorName.CheckedState.BorderThickness = 0;
+            this.rbtnDoctorName.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnDoctorName.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbtnDoctorName.CheckedState.InnerOffset = -4;
+            this.rbtnDoctorName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.rbtnDoctorName.Location = new System.Drawing.Point(156, 33);
+            this.rbtnDoctorName.Name = "rbtnDoctorName";
+            this.rbtnDoctorName.Size = new System.Drawing.Size(96, 19);
+            this.rbtnDoctorName.TabIndex = 1;
+            this.rbtnDoctorName.Text = "Doctor Name";
+            this.rbtnDoctorName.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbtnDoctorName.UncheckedState.BorderThickness = 2;
+            this.rbtnDoctorName.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbtnDoctorName.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // rbtnPatientName
+            // 
+            this.rbtnPatientName.AutoSize = true;
+            this.rbtnPatientName.Checked = true;
+            this.rbtnPatientName.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnPatientName.CheckedState.BorderThickness = 0;
+            this.rbtnPatientName.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbtnPatientName.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbtnPatientName.CheckedState.InnerOffset = -4;
+            this.rbtnPatientName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.rbtnPatientName.Location = new System.Drawing.Point(10, 33);
+            this.rbtnPatientName.Name = "rbtnPatientName";
+            this.rbtnPatientName.Size = new System.Drawing.Size(97, 19);
+            this.rbtnPatientName.TabIndex = 0;
+            this.rbtnPatientName.TabStop = true;
+            this.rbtnPatientName.Text = "Patient Name";
+            this.rbtnPatientName.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbtnPatientName.UncheckedState.BorderThickness = 2;
+            this.rbtnPatientName.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbtnPatientName.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
             // ctrlListWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,11 +346,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.pnlControls.ResumeLayout(false);
             this.pnlSearchBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearchFilter)).EndInit();
             this.pnlAdd.ResumeLayout(false);
             this.pnlFilterBy.ResumeLayout(false);
             this.gbxFilterBy.ResumeLayout(false);
             this.gbxFilterBy.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSearchFilter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -367,9 +367,9 @@
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private System.Windows.Forms.Panel pnlFilterBy;
         private Guna.UI2.WinForms.Guna2GroupBox gbxFilterBy;
-        private Guna.UI2.WinForms.Guna2RadioButton rbtnPhoneNo;
+        private Guna.UI2.WinForms.Guna2RadioButton rbtnDepartment;
         private Guna.UI2.WinForms.Guna2RadioButton rbtnStatus;
-        private Guna.UI2.WinForms.Guna2RadioButton rbtnNationalNo;
-        private Guna.UI2.WinForms.Guna2RadioButton rbtnName;
+        private Guna.UI2.WinForms.Guna2RadioButton rbtnDoctorName;
+        private Guna.UI2.WinForms.Guna2RadioButton rbtnPatientName;
     }
 }

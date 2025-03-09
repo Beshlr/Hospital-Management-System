@@ -153,6 +153,12 @@
     <Compile Include="Global\Controls\ctrlAddNewPicture.Designer.cs">
       <DependentUpon>ctrlAddNewPicture.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global\Controls\ctrlListWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Global\Controls\ctrlListWithFilter.Designer.cs">
+      <DependentUpon>ctrlListWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global\UIHalper.cs" />
     <Compile Include="Login\frmForgetPassword.cs">
       <SubType>Form</SubType>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Global\Controls\ctrlAddNewPicture.resx">
       <DependentUpon>ctrlAddNewPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\Controls\ctrlListWithFilter.resx">
+      <DependentUpon>ctrlListWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmForgetPassword.resx">
       <DependentUpon>frmForgetPassword.cs</DependentUpon>
