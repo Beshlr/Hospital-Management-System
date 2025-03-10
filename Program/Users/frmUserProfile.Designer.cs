@@ -229,7 +229,7 @@
             // 
             // pbxHideShowPass
             // 
-            this.pbxHideShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.pbxHideShowPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.pbxHideShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxHideShowPass.Image = global::Hospital_Management_System.Properties.Resources.OpenEye_Password;
             this.pbxHideShowPass.ImeMode = System.Windows.Forms.ImeMode.NoControl;

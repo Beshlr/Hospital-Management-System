@@ -31,50 +31,50 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainForSecretary));
             this.pnlControl = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlPuttons = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.pnlLoginUserDetails = new System.Windows.Forms.Panel();
             this.pnlUsername = new System.Windows.Forms.Panel();
             this.lblUsername = new System.Windows.Forms.Label();
             this.pnlUserImage = new System.Windows.Forms.Panel();
-            this.pnlSubMenuPharmacy = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlSubMenuStaf = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlSubMenuGeneral = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlAppLogo = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlTopPanel = new System.Windows.Forms.Panel();
-            this.pnlNotificationIcon = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.pnlNotificationList = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lblNoNotification = new System.Windows.Forms.Label();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.pbxUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnRooms = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlSubMenuPharmacy = new Guna.UI2.WinForms.Guna2Panel();
             this.btnRequests = new Guna.UI2.WinForms.Guna2Button();
             this.btnInventory = new Guna.UI2.WinForms.Guna2Button();
             this.btnPharmacy = new Guna.UI2.WinForms.Guna2Button();
-            this.btnStaffScheduling = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlSubMenuStaf = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnDoctors = new Guna.UI2.WinForms.Guna2Button();
             this.btnNurses = new Guna.UI2.WinForms.Guna2Button();
             this.btnStaff = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlSubMenuGeneral = new Guna.UI2.WinForms.Guna2Panel();
             this.btnPayments = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAdmissions = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPatients = new Guna.UI2.WinForms.Guna2Button();
             this.btnAppointments = new Guna.UI2.WinForms.Guna2Button();
             this.btnGeneral = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlAppLogo = new Guna.UI2.WinForms.Guna2Panel();
             this.pbxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnlTopPanel = new System.Windows.Forms.Panel();
+            this.pnlNotificationIcon = new System.Windows.Forms.Panel();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pnlNotificationList = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblNoNotification = new System.Windows.Forms.Label();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.pnlControl.SuspendLayout();
             this.pnlPuttons.SuspendLayout();
             this.pnlLoginUserDetails.SuspendLayout();
             this.pnlUsername.SuspendLayout();
             this.pnlUserImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).BeginInit();
             this.pnlSubMenuPharmacy.SuspendLayout();
             this.pnlSubMenuStaf.SuspendLayout();
             this.pnlSubMenuGeneral.SuspendLayout();
             this.pnlAppLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.pnlTopPanel.SuspendLayout();
             this.pnlNotificationIcon.SuspendLayout();
             this.pnlNotificationList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlControl
@@ -91,9 +91,9 @@
             // 
             // pnlPuttons
             // 
+            this.pnlPuttons.Controls.Add(this.btnLogOut);
             this.pnlPuttons.Controls.Add(this.btnUsers);
             this.pnlPuttons.Controls.Add(this.pnlLoginUserDetails);
-            this.pnlPuttons.Controls.Add(this.btnLogOut);
             this.pnlPuttons.Controls.Add(this.btnSettings);
             this.pnlPuttons.Controls.Add(this.btnRooms);
             this.pnlPuttons.Controls.Add(this.pnlSubMenuPharmacy);
@@ -107,6 +107,32 @@
             this.pnlPuttons.Name = "pnlPuttons";
             this.pnlPuttons.Size = new System.Drawing.Size(238, 825);
             this.pnlPuttons.TabIndex = 1;
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.Black;
+            this.btnUsers.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(250)))));
+            this.btnUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+            this.btnUsers.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = global::Hospital_Management_System.Properties.Resources.person_512dp_000000_FILL0_wght400_GRAD0_opsz48;
+            this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsers.ImageOffset = new System.Drawing.Point(2, 0);
+            this.btnUsers.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnUsers.Location = new System.Drawing.Point(0, 724);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnUsers.Size = new System.Drawing.Size(238, 60);
+            this.btnUsers.TabIndex = 22;
+            this.btnUsers.Text = "Users";
             // 
             // pnlLoginUserDetails
             // 
@@ -148,145 +174,6 @@
             this.pnlUserImage.Size = new System.Drawing.Size(50, 52);
             this.pnlUserImage.TabIndex = 2;
             // 
-            // pnlSubMenuPharmacy
-            // 
-            this.pnlSubMenuPharmacy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.pnlSubMenuPharmacy.Controls.Add(this.btnRequests);
-            this.pnlSubMenuPharmacy.Controls.Add(this.btnInventory);
-            this.pnlSubMenuPharmacy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuPharmacy.Location = new System.Drawing.Point(0, 482);
-            this.pnlSubMenuPharmacy.Name = "pnlSubMenuPharmacy";
-            this.pnlSubMenuPharmacy.Size = new System.Drawing.Size(238, 122);
-            this.pnlSubMenuPharmacy.TabIndex = 14;
-            // 
-            // pnlSubMenuStaf
-            // 
-            this.pnlSubMenuStaf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.pnlSubMenuStaf.Controls.Add(this.btnStaffScheduling);
-            this.pnlSubMenuStaf.Controls.Add(this.btnNurses);
-            this.pnlSubMenuStaf.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuStaf.Location = new System.Drawing.Point(0, 298);
-            this.pnlSubMenuStaf.Name = "pnlSubMenuStaf";
-            this.pnlSubMenuStaf.Size = new System.Drawing.Size(238, 124);
-            this.pnlSubMenuStaf.TabIndex = 12;
-            // 
-            // pnlSubMenuGeneral
-            // 
-            this.pnlSubMenuGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.pnlSubMenuGeneral.Controls.Add(this.btnPayments);
-            this.pnlSubMenuGeneral.Controls.Add(this.btnAdmissions);
-            this.pnlSubMenuGeneral.Controls.Add(this.btnAppointments);
-            this.pnlSubMenuGeneral.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuGeneral.Location = new System.Drawing.Point(0, 60);
-            this.pnlSubMenuGeneral.Name = "pnlSubMenuGeneral";
-            this.pnlSubMenuGeneral.Size = new System.Drawing.Size(238, 178);
-            this.pnlSubMenuGeneral.TabIndex = 8;
-            // 
-            // pnlAppLogo
-            // 
-            this.pnlAppLogo.Controls.Add(this.pbxLogo);
-            this.pnlAppLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAppLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlAppLogo.Name = "pnlAppLogo";
-            this.pnlAppLogo.Size = new System.Drawing.Size(238, 103);
-            this.pnlAppLogo.TabIndex = 0;
-            // 
-            // pnlTopPanel
-            // 
-            this.pnlTopPanel.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.pnlTopPanel.Controls.Add(this.pnlNotificationIcon);
-            this.pnlTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTopPanel.Location = new System.Drawing.Point(238, 0);
-            this.pnlTopPanel.Name = "pnlTopPanel";
-            this.pnlTopPanel.Size = new System.Drawing.Size(854, 52);
-            this.pnlTopPanel.TabIndex = 0;
-            // 
-            // pnlNotificationIcon
-            // 
-            this.pnlNotificationIcon.Controls.Add(this.guna2ImageButton1);
-            this.pnlNotificationIcon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlNotificationIcon.Location = new System.Drawing.Point(793, 0);
-            this.pnlNotificationIcon.Name = "pnlNotificationIcon";
-            this.pnlNotificationIcon.Size = new System.Drawing.Size(61, 52);
-            this.pnlNotificationIcon.TabIndex = 1;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelChildForm.Location = new System.Drawing.Point(238, 52);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(854, 824);
-            this.panelChildForm.TabIndex = 2;
-            // 
-            // pnlNotificationList
-            // 
-            this.pnlNotificationList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlNotificationList.AutoScroll = true;
-            this.pnlNotificationList.AutoSize = true;
-            this.pnlNotificationList.BorderColor = System.Drawing.Color.DimGray;
-            this.pnlNotificationList.BorderRadius = 5;
-            this.pnlNotificationList.BorderThickness = 1;
-            this.pnlNotificationList.Controls.Add(this.lblNoNotification);
-            this.pnlNotificationList.Location = new System.Drawing.Point(640, 6);
-            this.pnlNotificationList.Name = "pnlNotificationList";
-            this.pnlNotificationList.Size = new System.Drawing.Size(211, 174);
-            this.pnlNotificationList.TabIndex = 0;
-            this.pnlNotificationList.Visible = false;
-            // 
-            // lblNoNotification
-            // 
-            this.lblNoNotification.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblNoNotification.AutoSize = true;
-            this.lblNoNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoNotification.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblNoNotification.Location = new System.Drawing.Point(793, 0);
-            this.lblNoNotification.Name = "lblNoNotification";
-            this.lblNoNotification.Size = new System.Drawing.Size(190, 13);
-            this.lblNoNotification.TabIndex = 0;
-            this.lblNoNotification.Text = "You don\'t have any notifications";
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton1.Image = global::Hospital_Management_System.Properties.Resources._4781824_alarm_alert_attention_bell_clock_icon;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(3, 3);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(55, 42);
-            this.guna2ImageButton1.TabIndex = 0;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
-            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.Black;
-            this.btnUsers.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(250)))));
-            this.btnUsers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-            this.btnUsers.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Image = global::Hospital_Management_System.Properties.Resources.person_512dp_000000_FILL0_wght400_GRAD0_opsz48;
-            this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUsers.ImageOffset = new System.Drawing.Point(2, 0);
-            this.btnUsers.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUsers.Location = new System.Drawing.Point(0, 784);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnUsers.Size = new System.Drawing.Size(238, 60);
-            this.btnUsers.TabIndex = 22;
-            this.btnUsers.Text = "Users";
-            // 
             // pbxUserImage
             // 
             this.pbxUserImage.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -301,32 +188,6 @@
             this.pbxUserImage.TabIndex = 0;
             this.pbxUserImage.TabStop = false;
             this.pbxUserImage.Click += new System.EventHandler(this.pbxUserImage_Click);
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
-            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnLogOut.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(250)))));
-            this.btnLogOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-            this.btnLogOut.Image = global::Hospital_Management_System.Properties.Resources.Logout_64;
-            this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogOut.ImageOffset = new System.Drawing.Point(2, 0);
-            this.btnLogOut.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLogOut.Location = new System.Drawing.Point(0, 724);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnLogOut.Size = new System.Drawing.Size(238, 60);
-            this.btnLogOut.TabIndex = 23;
-            this.btnLogOut.Text = "Logout";
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnSettings
             // 
@@ -379,6 +240,17 @@
             this.btnRooms.Size = new System.Drawing.Size(238, 60);
             this.btnRooms.TabIndex = 17;
             this.btnRooms.Text = "Rooms";
+            // 
+            // pnlSubMenuPharmacy
+            // 
+            this.pnlSubMenuPharmacy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.pnlSubMenuPharmacy.Controls.Add(this.btnRequests);
+            this.pnlSubMenuPharmacy.Controls.Add(this.btnInventory);
+            this.pnlSubMenuPharmacy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuPharmacy.Location = new System.Drawing.Point(0, 482);
+            this.pnlSubMenuPharmacy.Name = "pnlSubMenuPharmacy";
+            this.pnlSubMenuPharmacy.Size = new System.Drawing.Size(238, 122);
+            this.pnlSubMenuPharmacy.TabIndex = 14;
             // 
             // btnRequests
             // 
@@ -457,30 +329,41 @@
             this.btnPharmacy.Text = "Pharmacy";
             this.btnPharmacy.Click += new System.EventHandler(this.btnPharmacy_Click);
             // 
-            // btnStaffScheduling
+            // pnlSubMenuStaf
             // 
-            this.btnStaffScheduling.BackColor = System.Drawing.Color.Transparent;
-            this.btnStaffScheduling.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStaffScheduling.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnStaffScheduling.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnStaffScheduling.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnStaffScheduling.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnStaffScheduling.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnStaffScheduling.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnStaffScheduling.ForeColor = System.Drawing.Color.Black;
-            this.btnStaffScheduling.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(134)))), ((int)(((byte)(205)))));
-            this.btnStaffScheduling.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(144)))), ((int)(((byte)(225)))));
-            this.btnStaffScheduling.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnStaffScheduling.Image = global::Hospital_Management_System.Properties.Resources.Doctor_512;
-            this.btnStaffScheduling.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnStaffScheduling.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnStaffScheduling.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnStaffScheduling.Location = new System.Drawing.Point(0, 65);
-            this.btnStaffScheduling.Name = "btnStaffScheduling";
-            this.btnStaffScheduling.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnStaffScheduling.Size = new System.Drawing.Size(235, 49);
-            this.btnStaffScheduling.TabIndex = 10;
-            this.btnStaffScheduling.Text = "Doctors";
+            this.pnlSubMenuStaf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.pnlSubMenuStaf.Controls.Add(this.btnDoctors);
+            this.pnlSubMenuStaf.Controls.Add(this.btnNurses);
+            this.pnlSubMenuStaf.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuStaf.Location = new System.Drawing.Point(0, 298);
+            this.pnlSubMenuStaf.Name = "pnlSubMenuStaf";
+            this.pnlSubMenuStaf.Size = new System.Drawing.Size(238, 124);
+            this.pnlSubMenuStaf.TabIndex = 12;
+            // 
+            // btnDoctors
+            // 
+            this.btnDoctors.BackColor = System.Drawing.Color.Transparent;
+            this.btnDoctors.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDoctors.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDoctors.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDoctors.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDoctors.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDoctors.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnDoctors.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnDoctors.ForeColor = System.Drawing.Color.Black;
+            this.btnDoctors.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(134)))), ((int)(((byte)(205)))));
+            this.btnDoctors.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(144)))), ((int)(((byte)(225)))));
+            this.btnDoctors.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDoctors.Image = global::Hospital_Management_System.Properties.Resources.Doctor_512;
+            this.btnDoctors.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDoctors.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnDoctors.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnDoctors.Location = new System.Drawing.Point(0, 65);
+            this.btnDoctors.Name = "btnDoctors";
+            this.btnDoctors.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnDoctors.Size = new System.Drawing.Size(235, 49);
+            this.btnDoctors.TabIndex = 10;
+            this.btnDoctors.Text = "Doctors";
             // 
             // btnNurses
             // 
@@ -534,6 +417,18 @@
             this.btnStaff.Text = "Staff";
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
+            // pnlSubMenuGeneral
+            // 
+            this.pnlSubMenuGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.pnlSubMenuGeneral.Controls.Add(this.btnPayments);
+            this.pnlSubMenuGeneral.Controls.Add(this.btnPatients);
+            this.pnlSubMenuGeneral.Controls.Add(this.btnAppointments);
+            this.pnlSubMenuGeneral.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuGeneral.Location = new System.Drawing.Point(0, 60);
+            this.pnlSubMenuGeneral.Name = "pnlSubMenuGeneral";
+            this.pnlSubMenuGeneral.Size = new System.Drawing.Size(238, 178);
+            this.pnlSubMenuGeneral.TabIndex = 8;
+            // 
             // btnPayments
             // 
             this.btnPayments.BackColor = System.Drawing.Color.Transparent;
@@ -559,30 +454,30 @@
             this.btnPayments.TabIndex = 11;
             this.btnPayments.Text = "Payments";
             // 
-            // btnAdmissions
+            // btnPatients
             // 
-            this.btnAdmissions.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdmissions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdmissions.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdmissions.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdmissions.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdmissions.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdmissions.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnAdmissions.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnAdmissions.ForeColor = System.Drawing.Color.Black;
-            this.btnAdmissions.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(134)))), ((int)(((byte)(205)))));
-            this.btnAdmissions.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(144)))), ((int)(((byte)(225)))));
-            this.btnAdmissions.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAdmissions.Image = global::Hospital_Management_System.Properties.Resources.Patient_128;
-            this.btnAdmissions.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAdmissions.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnAdmissions.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAdmissions.Location = new System.Drawing.Point(0, 65);
-            this.btnAdmissions.Name = "btnAdmissions";
-            this.btnAdmissions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnAdmissions.Size = new System.Drawing.Size(238, 49);
-            this.btnAdmissions.TabIndex = 10;
-            this.btnAdmissions.Text = "Patients";
+            this.btnPatients.BackColor = System.Drawing.Color.Transparent;
+            this.btnPatients.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPatients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPatients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPatients.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPatients.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPatients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnPatients.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnPatients.ForeColor = System.Drawing.Color.Black;
+            this.btnPatients.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(134)))), ((int)(((byte)(205)))));
+            this.btnPatients.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(144)))), ((int)(((byte)(225)))));
+            this.btnPatients.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnPatients.Image = global::Hospital_Management_System.Properties.Resources.Patient_128;
+            this.btnPatients.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPatients.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnPatients.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnPatients.Location = new System.Drawing.Point(0, 65);
+            this.btnPatients.Name = "btnPatients";
+            this.btnPatients.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnPatients.Size = new System.Drawing.Size(238, 49);
+            this.btnPatients.TabIndex = 10;
+            this.btnPatients.Text = "Patients";
             // 
             // btnAppointments
             // 
@@ -637,6 +532,15 @@
             this.btnGeneral.Text = "General";
             this.btnGeneral.Click += new System.EventHandler(this.btnGeneral_Click);
             // 
+            // pnlAppLogo
+            // 
+            this.pnlAppLogo.Controls.Add(this.pbxLogo);
+            this.pnlAppLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAppLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlAppLogo.Name = "pnlAppLogo";
+            this.pnlAppLogo.Size = new System.Drawing.Size(238, 103);
+            this.pnlAppLogo.TabIndex = 0;
+            // 
             // pbxLogo
             // 
             this.pbxLogo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -648,6 +552,101 @@
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 0;
             this.pbxLogo.TabStop = false;
+            // 
+            // pnlTopPanel
+            // 
+            this.pnlTopPanel.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.pnlTopPanel.Controls.Add(this.pnlNotificationIcon);
+            this.pnlTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopPanel.Location = new System.Drawing.Point(238, 0);
+            this.pnlTopPanel.Name = "pnlTopPanel";
+            this.pnlTopPanel.Size = new System.Drawing.Size(854, 52);
+            this.pnlTopPanel.TabIndex = 0;
+            // 
+            // pnlNotificationIcon
+            // 
+            this.pnlNotificationIcon.Controls.Add(this.guna2ImageButton1);
+            this.pnlNotificationIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlNotificationIcon.Location = new System.Drawing.Point(793, 0);
+            this.pnlNotificationIcon.Name = "pnlNotificationIcon";
+            this.pnlNotificationIcon.Size = new System.Drawing.Size(61, 52);
+            this.pnlNotificationIcon.TabIndex = 1;
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton1.Image = global::Hospital_Management_System.Properties.Resources._4781824_alarm_alert_attention_bell_clock_icon;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(3, 3);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(55, 42);
+            this.guna2ImageButton1.TabIndex = 0;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelChildForm.Location = new System.Drawing.Point(238, 52);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(854, 824);
+            this.panelChildForm.TabIndex = 2;
+            // 
+            // pnlNotificationList
+            // 
+            this.pnlNotificationList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlNotificationList.AutoScroll = true;
+            this.pnlNotificationList.AutoSize = true;
+            this.pnlNotificationList.BorderColor = System.Drawing.Color.DimGray;
+            this.pnlNotificationList.BorderRadius = 5;
+            this.pnlNotificationList.BorderThickness = 1;
+            this.pnlNotificationList.Controls.Add(this.lblNoNotification);
+            this.pnlNotificationList.Location = new System.Drawing.Point(640, 6);
+            this.pnlNotificationList.Name = "pnlNotificationList";
+            this.pnlNotificationList.Size = new System.Drawing.Size(211, 174);
+            this.pnlNotificationList.TabIndex = 0;
+            this.pnlNotificationList.Visible = false;
+            // 
+            // lblNoNotification
+            // 
+            this.lblNoNotification.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblNoNotification.AutoSize = true;
+            this.lblNoNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoNotification.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblNoNotification.Location = new System.Drawing.Point(793, 0);
+            this.lblNoNotification.Name = "lblNoNotification";
+            this.lblNoNotification.Size = new System.Drawing.Size(190, 13);
+            this.lblNoNotification.TabIndex = 0;
+            this.lblNoNotification.Text = "You don\'t have any notifications";
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnLogOut.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(250)))));
+            this.btnLogOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+            this.btnLogOut.Image = global::Hospital_Management_System.Properties.Resources.Logout_64;
+            this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogOut.ImageOffset = new System.Drawing.Point(2, 0);
+            this.btnLogOut.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 784);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnLogOut.Size = new System.Drawing.Size(238, 60);
+            this.btnLogOut.TabIndex = 24;
+            this.btnLogOut.Text = "Logout";
             // 
             // frmMainForSecretary
             // 
@@ -672,16 +671,16 @@
             this.pnlUsername.ResumeLayout(false);
             this.pnlUsername.PerformLayout();
             this.pnlUserImage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).EndInit();
             this.pnlSubMenuPharmacy.ResumeLayout(false);
             this.pnlSubMenuStaf.ResumeLayout(false);
             this.pnlSubMenuGeneral.ResumeLayout(false);
             this.pnlAppLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.pnlTopPanel.ResumeLayout(false);
             this.pnlNotificationIcon.ResumeLayout(false);
             this.pnlNotificationList.ResumeLayout(false);
             this.pnlNotificationList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -694,12 +693,12 @@
         private Guna.UI2.WinForms.Guna2Panel pnlPuttons;
         private Guna.UI2.WinForms.Guna2Button btnGeneral;
         private Guna.UI2.WinForms.Guna2Panel pnlSubMenuStaf;
-        private Guna.UI2.WinForms.Guna2Button btnStaffScheduling;
+        private Guna.UI2.WinForms.Guna2Button btnDoctors;
         private Guna.UI2.WinForms.Guna2Button btnNurses;
         private Guna.UI2.WinForms.Guna2Button btnStaff;
         private Guna.UI2.WinForms.Guna2Panel pnlSubMenuGeneral;
         private Guna.UI2.WinForms.Guna2Button btnPayments;
-        private Guna.UI2.WinForms.Guna2Button btnAdmissions;
+        private Guna.UI2.WinForms.Guna2Button btnPatients;
         private Guna.UI2.WinForms.Guna2Button btnAppointments;
         private Guna.UI2.WinForms.Guna2Button btnPharmacy;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
@@ -707,7 +706,6 @@
         private Guna.UI2.WinForms.Guna2Panel pnlSubMenuPharmacy;
         private Guna.UI2.WinForms.Guna2Button btnRequests;
         private Guna.UI2.WinForms.Guna2Button btnInventory;
-        private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private System.Windows.Forms.Panel pnlLoginUserDetails;
         private System.Windows.Forms.Panel pnlUsername;
         private System.Windows.Forms.Label lblUsername;
@@ -720,6 +718,7 @@
         private System.Windows.Forms.Label lblNoNotification;
         private Guna.UI2.WinForms.Guna2GradientPanel pnlNotificationList;
         private Guna.UI2.WinForms.Guna2Button btnUsers;
+        private Guna.UI2.WinForms.Guna2Button btnLogOut;
     }
 }
 

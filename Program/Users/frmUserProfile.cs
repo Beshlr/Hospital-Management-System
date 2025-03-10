@@ -60,7 +60,7 @@ namespace Hospital_Management_System
         private Image _Img = null;
         private clsUsers _User = null;
 
-        private void _ChangeAllTheControlsStatus(bool enable) => gbxActiveStatus.Enabled = gbxRoles.Enabled = txtUsername.Enabled = txtPassword.Enabled = txtEmail.Enabled = enable;
+        private void _ChangeAllTheControlsStatus(bool enable) =>  gbxActiveStatus.Enabled = pbxHideShowPass.Enabled = gbxRoles.Enabled = txtUsername.Enabled = txtPassword.Enabled = txtEmail.Enabled = enable;
         
         private void _HandelShowRolesLoginUserCouldSelect()
         {
@@ -129,6 +129,7 @@ namespace Hospital_Management_System
         {
             btnSaveEdit.Text = "Edit";
             btnClose.Text = "Close";
+            pbxHideShowPass.BackColor = Color.FromArgb(226, 226, 226);
             ctrlAddNewPicture1.ChangeEditImageStatus(false);
                 _ChangeAllTheControlsStatus(false);
         }
@@ -138,6 +139,7 @@ namespace Hospital_Management_System
         {
             btnSaveEdit.Text = "Save";
             btnClose.Text = "Cancel";
+            pbxHideShowPass.BackColor = Color.Transparent;
             ctrlAddNewPicture1.ChangeEditImageStatus(true);
             _ChangeAllTheControlsStatus(true);
         }

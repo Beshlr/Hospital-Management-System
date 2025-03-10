@@ -47,6 +47,7 @@ namespace Hospital_Management_System
                 subMenu.Visible = false;
         }
 
+        //Change main screen controls according to login user's role
         private void _SetScreenControls()
         {
             switch(_LoginUser.RoleName)
@@ -61,9 +62,21 @@ namespace Hospital_Management_System
                     _SetScreenControlsForDoctor();
                     break;
                 default:
-                    _SetScreenControlsForAdmin();
+                    _SetScreenControlsForSecretary();
                     break;
             }
+        }
+
+        
+        private void _SetScreenControlsForDoctor()
+        {
+            
+            this.Controls.Remove(btnPatients);
+        }
+
+        private void _SetScreenControlsForPatient()
+        {
+            throw new NotImplementedException();
         }
 
         private void _SetScreenControlsForSecretary()
