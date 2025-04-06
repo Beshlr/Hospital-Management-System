@@ -95,7 +95,7 @@ int AppointmentID, int PatientID, int DoctorID, DateTime Date, byte Status, int 
         {
             bool SaveUpdateApp =
             clsAppointmentsData.UpdateAppointmentsByID(
-    this.AppointmentID, this.PatientID, this.DoctorID, this.Date, this.Status, this.RoomID);
+            this.AppointmentID, this.PatientID, this.DoctorID, this.Date, this.Status, this.RoomID);
 
             bool SaveNewRoomNO = false;
 
@@ -129,7 +129,7 @@ int AppointmentID, int PatientID, int DoctorID, DateTime Date, byte Status, int 
                 || Status == enStatus.Confirmed)
                 ChangeRoomAvaliblity = clsRooms.ChangeRoomReservation(this.RoomID, false);
 
-            return (IsUpdated && !ChangeRoomAvaliblity);
+            return (IsUpdated && ChangeRoomAvaliblity);
         }
 
 
@@ -271,8 +271,10 @@ int AppointmentID, int PatientID, int DoctorID, DateTime Date, byte Status, int 
 
         public static bool DeleteAppointments(int AppointmentID)
         {
-
-            return clsAppointmentsData.DeleteAppointments(AppointmentID);
+            if (clsRooms.ChangeRoomReservation(clsAppointments.GetRoomIDByAppID(AppointmentID), false))
+                return (clsAppointmentsData.DeleteAppointments(AppointmentID));
+            else
+                return false;
 
         }
 
@@ -285,6 +287,14 @@ int AppointmentID, int PatientID, int DoctorID, DateTime Date, byte Status, int 
             Date,
             Status,
             RoomID
+        }
+
+        public static int GetRoomIDByAppID(int AppID)
+        {
+            if (AppID == -1) return -1;
+            int RoomID = -1;
+
+            return clsAppointmentsData.GetRoomIDByAppID(AppID);
         }
 
         public static int CheckIfPatientHasActiveApp(int PatientID)

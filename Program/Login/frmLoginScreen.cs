@@ -158,15 +158,6 @@ namespace Hospital_Management_System.Login
         }
 
        
-
-        private void rbtnRemeberMe_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSignIn_DoubleClick(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

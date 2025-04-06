@@ -126,7 +126,6 @@
             this.cbxRemeberMe.UncheckedState.BorderRadius = 0;
             this.cbxRemeberMe.UncheckedState.BorderThickness = 0;
             this.cbxRemeberMe.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cbxRemeberMe.CheckedChanged += new System.EventHandler(this.rbtnRemeberMe_CheckedChanged_1);
             // 
             // pxbHideShowPass
             // 
@@ -154,9 +153,10 @@
             this.btnSignIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             resources.ApplyResources(this.btnSignIn, "btnSignIn");
             this.btnSignIn.ForeColor = System.Drawing.Color.White;
+            this.btnSignIn.HoverState.FillColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSignIn.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
-            this.btnSignIn.DoubleClick += new System.EventHandler(this.btnSignIn_DoubleClick);
             // 
             // label3
             // 

@@ -60,6 +60,12 @@ namespace Hospital_Management_System
         private Image _Img = null;
         private clsUsers _User = null;
 
+
+        ///<summary>
+        ///Changes Status of Controls (Enable - Disable)
+        ///</summary>
+        ///<param name="enable"> Are you want to enable controls ?</param>
+
         private void _ChangeAllTheControlsStatus(bool enable) =>  gbxActiveStatus.Enabled = pbxHideShowPass.Enabled = gbxRoles.Enabled = txtUsername.Enabled = txtPassword.Enabled = txtEmail.Enabled = enable;
         
         private void _HandelShowRolesLoginUserCouldSelect()
@@ -187,6 +193,11 @@ namespace Hospital_Management_System
             }
         }
 
+        /// <summary>
+        /// Get the role id from the checked radio button in groub box : 'Role'
+        /// </summary>
+        /// <returns></returns>
+
         private int GetRoleID()
         {
             if (rbtnAdmin.Checked)
@@ -200,6 +211,8 @@ namespace Hospital_Management_System
 
             else return -1;
         }
+
+        
 
         private bool SaveUserInfo()
         {

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using clsBussinessLayer;
 
 namespace Hospital_Management_System.Global.Controls
 {
@@ -18,6 +19,8 @@ namespace Hospital_Management_System.Global.Controls
             InitializeComponent();
             HandleFormatScreen(listType);
         }
+
+        private DataTable _ListData = new DataTable();
 
         private void HandleFormatScreen(string listType)
         {
@@ -47,6 +50,8 @@ namespace Hospital_Management_System.Global.Controls
                     SetupDefaultSettings();
                     break;
             }
+
+            dgvList.DataSource = _ListData;
         }
 
         private void SetupAppointmentsSettings()
@@ -61,6 +66,9 @@ namespace Hospital_Management_System.Global.Controls
 
             cbxStatus.Items.Clear();
             cbxStatus.Items.AddRange(new string[] { "Scheduled", "Confirmed", "Pending", "Cancelled", "Rescheduled" });
+            
+            //Load Data
+            _ListData = clsAppointments.GetAllAppointments();
         }
 
         private void SetupPatientsSettings()
@@ -75,6 +83,9 @@ namespace Hospital_Management_System.Global.Controls
 
             cbxStatus.Items.Clear();
             cbxStatus.Items.AddRange(new string[] { "Active", "Inactive", "Discharged" });
+
+            //Load Data
+            _ListData = clsPatients.GetAllPatients();
         }
 
         private void SetupNursesSettings()
@@ -88,6 +99,9 @@ namespace Hospital_Management_System.Global.Controls
             btnAdd.Text = "Add Nurse";
             cbxStatus.Items.Clear();
             cbxStatus.Items.AddRange(new string[] { "On Duty", "Off Duty", "On Leave" });
+
+            ////Load Data
+            //_ListData = clsPatients.GetAllPatients();
         }
 
         private void SetupDoctorsSettings()
@@ -101,6 +115,9 @@ namespace Hospital_Management_System.Global.Controls
 
             cbxStatus.Items.Clear();
             cbxStatus.Items.AddRange(new string[] { "Available", "Busy", "On Leave" });
+
+            //Load Data
+            _ListData = clsDoctors.GetAllDoctors();
         }
 
         private void SetupRoomsSettings()
@@ -115,6 +132,9 @@ namespace Hospital_Management_System.Global.Controls
 
             cbxStatus.Items.Clear();
             cbxStatus.Items.AddRange(new string[] { "Available", "Occupied", "Under Maintenance" });
+
+            //Load Data
+            _ListData = clsRooms.GetAllRooms();
         }
 
         private void SetupDefaultSettings()

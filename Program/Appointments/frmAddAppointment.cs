@@ -438,12 +438,18 @@ namespace Hospital_Management_System.Appointments
 
         }
 
+        public bool _ChangeRoomStatus(int AppID,bool Reservation)
+        {
+            int RoomID = clsAppointments.GetRoomIDByAppID(AppID);
+            return clsRooms.ChangeRoomReservation(RoomID, Reservation);
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             clsAppointments appointment = new clsAppointments();
 
             int ActiveAppID = clsAppointments.CheckIfPatientHasActiveApp(_SelectedPatient.PatientID);
-            if (ActiveAppID != -1)
+            if (ActiveAppID != _Appointment.AppointmentID)
             {
                 if(MessageBox.Show($"Selected Patient Has An Active Appointment With ID : [ {ActiveAppID} ]Do You Want To Cancel This Appointment ?",
                                     "Patient Has Another Appointment",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -452,16 +458,19 @@ namespace Hospital_Management_System.Appointments
                 }
                 else
                 {
+                    _ChangeRoomStatus(ActiveAppID, false);
                     clsAppointments app = clsAppointments.FindByAppointmentID(ActiveAppID);
                     app.Status = 3;
                     app.Save();
                 }
             }
 
+
                 if (_Appointment.AppointmentID != -1)
-                appointment = _Appointment;
-            appointment.PatientID = _SelectedPatient.PatientID;
-            appointment.DoctorID = _SelectedDoctor.DoctorID;
+                    appointment = _Appointment;
+                appointment.PatientID = _SelectedPatient.PatientID;
+                appointment.DoctorID = _SelectedDoctor.DoctorID;
+
             if (_Appointment.AppointmentID != -1)
             {
                 if (dtpDate.Value != appointment.Date)
@@ -476,10 +485,13 @@ namespace Hospital_Management_System.Appointments
                 appointment.Date = dtpDate.Value;
             int SelectedRoomID = clsRooms.GetRoomIDByRoomNO(cbxRoomNO.Text);
 
+            //Check if user change pervious room
             if (SelectedRoomID != appointment.RoomID && appointment.RoomID != -1)
             {
                 appointment.TempRoomID = appointment.RoomID;
                 appointment.RoomID = SelectedRoomID;
+
+                clsRooms.ChangeRoomReservation(appointment.TempRoomID, false);
             }
             else
                 appointment.RoomID = SelectedRoomID;

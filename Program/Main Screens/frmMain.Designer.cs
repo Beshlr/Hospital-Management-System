@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainForSecretary));
             this.pnlControl = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlPuttons = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.pnlLoginUserDetails = new System.Windows.Forms.Panel();
             this.pnlUsername = new System.Windows.Forms.Panel();
@@ -60,7 +61,6 @@
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pnlNotificationList = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblNoNotification = new System.Windows.Forms.Label();
-            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.pnlControl.SuspendLayout();
             this.pnlPuttons.SuspendLayout();
             this.pnlLoginUserDetails.SuspendLayout();
@@ -108,6 +108,32 @@
             this.pnlPuttons.Size = new System.Drawing.Size(238, 825);
             this.pnlPuttons.TabIndex = 1;
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
+            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnLogOut.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(250)))));
+            this.btnLogOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+            this.btnLogOut.Image = global::Hospital_Management_System.Properties.Resources.Logout_64;
+            this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogOut.ImageOffset = new System.Drawing.Point(2, 0);
+            this.btnLogOut.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 784);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
+            this.btnLogOut.Size = new System.Drawing.Size(238, 60);
+            this.btnLogOut.TabIndex = 24;
+            this.btnLogOut.Text = "Logout";
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // btnUsers
             // 
             this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
@@ -133,6 +159,7 @@
             this.btnUsers.Size = new System.Drawing.Size(238, 60);
             this.btnUsers.TabIndex = 22;
             this.btnUsers.Text = "Users";
+            this.btnUsers.Visible = false;
             // 
             // pnlLoginUserDetails
             // 
@@ -622,31 +649,6 @@
             this.lblNoNotification.Size = new System.Drawing.Size(190, 13);
             this.lblNoNotification.TabIndex = 0;
             this.lblNoNotification.Text = "You don\'t have any notifications";
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
-            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.btnLogOut.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(150)))), ((int)(((byte)(250)))));
-            this.btnLogOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-            this.btnLogOut.Image = global::Hospital_Management_System.Properties.Resources.Logout_64;
-            this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogOut.ImageOffset = new System.Drawing.Point(2, 0);
-            this.btnLogOut.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLogOut.Location = new System.Drawing.Point(0, 784);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(184)))), ((int)(((byte)(255)))));
-            this.btnLogOut.Size = new System.Drawing.Size(238, 60);
-            this.btnLogOut.TabIndex = 24;
-            this.btnLogOut.Text = "Logout";
             // 
             // frmMainForSecretary
             // 

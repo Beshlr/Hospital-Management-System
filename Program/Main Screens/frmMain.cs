@@ -25,6 +25,7 @@ namespace Hospital_Management_System
             _frmLogin = LoginFrm;
             hideSubMenu();
             _LoginUser = clsGlobal.CurrentUser;
+            _SetScreenControls();
         }
         private void hideSubMenu()
         {
@@ -52,6 +53,9 @@ namespace Hospital_Management_System
         {
             switch(_LoginUser.RoleName)
             {
+                case "Admin":
+                    _SetScreenControlsForAdmin();
+                    break;
                 case "Secretary":
                     _SetScreenControlsForSecretary();
                     break;
@@ -67,7 +71,11 @@ namespace Hospital_Management_System
             }
         }
 
-        
+        private void _SetScreenControlsForAdmin()
+        {
+            btnUsers.Visible = true;
+        }
+
         private void _SetScreenControlsForDoctor()
         {
             

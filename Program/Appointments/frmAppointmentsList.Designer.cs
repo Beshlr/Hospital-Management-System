@@ -61,6 +61,7 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.lblNoAppointments = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gbxFilterBy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.cmsMenuList.SuspendLayout();
@@ -523,11 +524,25 @@
             this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Width = 77;
             // 
+            // lblNoAppointments
+            // 
+            this.lblNoAppointments.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblNoAppointments.BackColor = System.Drawing.Color.White;
+            this.lblNoAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblNoAppointments.ForeColor = System.Drawing.Color.Gray;
+            this.lblNoAppointments.Location = new System.Drawing.Point(458, 749);
+            this.lblNoAppointments.Name = "lblNoAppointments";
+            this.lblNoAppointments.Size = new System.Drawing.Size(292, 26);
+            this.lblNoAppointments.TabIndex = 19;
+            this.lblNoAppointments.Text = "There is no appointments to show.";
+            this.lblNoAppointments.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmAppointmentsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 796);
+            this.Controls.Add(this.lblNoAppointments);
             this.Controls.Add(this.dgvAppointments);
             this.Controls.Add(this.pnlControls);
             this.Controls.Add(this.pnlLogo);
@@ -548,6 +563,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -581,5 +597,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.Panel pnlLogo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblNoAppointments;
     }
 }

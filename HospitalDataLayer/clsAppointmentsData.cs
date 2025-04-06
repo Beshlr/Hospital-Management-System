@@ -262,6 +262,29 @@ namespace HospitalDataLayer
 
             return dt;
         }
+        public static int GetRoomIDByAppID(int AppID)
+        {
+            int RoomID = -1;
+            
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            string query = "Select RoomID From Appointments Where AppointmentID = @AppID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@AppID", AppID);
+
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if(result != null)
+                    RoomID = (int)result;
+            }
+            catch(Exception ex) { }
+            finally { connection.Close(); }
+
+            return RoomID;
+        }
     }
 }
 

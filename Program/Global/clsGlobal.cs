@@ -6,6 +6,7 @@ using System.Text;
 using static System.Drawing.Image;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 using clsBussinessLayer;
@@ -19,35 +20,18 @@ namespace Hospital_Management_System.Classes
 
         public static bool RememberUsernameAndPassword(string Username, string Password)
         {
+            string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\Hospital Management System";
 
             try
             {
-                //this will get the current project directory folder.
-                string currentDirectory = System.IO.Directory.GetCurrentDirectory();
-
-
-                // Define the path to the text file where you want to save the data
-                string filePath = currentDirectory + "\\data.txt";
-
-                //incase the username is empty, delete the file
-                if (Username=="" && File.Exists(filePath)) 
-                { 
-                     File.Delete(filePath);
-                    return true;
-
-                }
-
                 // concatonate username and passwrod withe seperator.
-                string dataToSave = Username + "#//#"+Password ;
 
-                // Create a StreamWriter to write to the file
-                using (StreamWriter writer = new StreamWriter(filePath))
-                {
-                    // Write the data to the file
-                    writer.WriteLine(dataToSave);
-                   
-                  return true;
-                }
+                //Save data to Registry
+                Registry.SetValue(keyPath, "Username", Username, RegistryValueKind.String);
+                Registry.SetValue(keyPath, "Password", Password, RegistryValueKind.String);
+
+                return true;
+                
             }
             catch (Exception ex)
             {
@@ -59,38 +43,26 @@ namespace Hospital_Management_System.Classes
 
         public static bool GetStoredCredential(ref string Username, ref string Password)
         {
+            string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\Hospital Management System";
             //this will get the stored username and password and will return true if found and false if not found.
             try
             {
-                //gets the current project's directory
-                string currentDirectory = System.IO.Directory.GetCurrentDirectory();
+               string valueData1 = Registry.GetValue(keyPath, "Username", null) as string;
+               string valueData2 = Registry.GetValue(keyPath, "Password", null) as string;
 
-                // Path for the file that contains the credential.
-                string filePath  = currentDirectory + "\\data.txt";
-
-                // Check if the file exists before attempting to read it
-                if (File.Exists(filePath))
+                if(valueData1 != null && valueData2 != null)
                 {
-                    // Create a StreamReader to read from the file
-                    using (StreamReader reader = new StreamReader(filePath))
-                    {
-                        // Read data line by line until the end of the file
-                        string line;
-                        while ((line = reader.ReadLine()) != null)
-                        {
-                            Console.WriteLine(line); // Output each line of data to the console
-                            string[] result = line.Split(new string[] { "#//#" }, StringSplitOptions.None);
 
-                            Username = result[0];
-                            Password = result[1];
-                        }
-                        return true;
-                    }
+                    Username = valueData1;
+                    Password = valueData2;
+
                 }
                 else
                 {
-                    return false;
+                    MessageBox.Show($"No value found with name Username And Password");
                 }
+
+                    return true;
             }
             catch (Exception ex)
             {
@@ -175,7 +147,7 @@ namespace Hospital_Management_System.Classes
             return FirstText == SecText && FirstText.Length > 0;
         }
 
-        public static bool HandelChooseImageFromFileExplorer(ref OpenFileDialog openFileDialog,
+        public static bool HandelChooseImageFromFileExplorer(ref System.Windows.Forms.OpenFileDialog openFileDialog,
                                                              ref Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox, ref string ImagePath)
         {
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";

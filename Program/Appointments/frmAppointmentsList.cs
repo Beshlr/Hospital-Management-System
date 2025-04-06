@@ -25,6 +25,7 @@ namespace Hospital_Management_System.Appointments
         private string _FilterText = "Patient Name";
         private DataTable _Appointments = new DataTable();
         private int _AppID = -1;
+        private int _NumOfAppointments = -1;
         private clsAppointments _AppInfo = null;
 
         private Dictionary<int, Image> patientImages = new Dictionary<int, Image>();
@@ -45,17 +46,21 @@ namespace Hospital_Management_System.Appointments
         private void _LoadDataToList()
         {
             _Appointments = clsAppointments.GetAllAppointments();
+            _NumOfAppointments = _Appointments.Rows.Count;
+
             dgvAppointments.DataSource = _Appointments;
             if (_Appointments.Rows.Count > 0)
             {
                 _AppID = Convert.ToInt32(dgvAppointments.CurrentCell.Value);
                 _AppInfo = clsAppointments.FindByAppointmentID(_AppID);
+                lblNoAppointments.Visible = false;
             }
             else
             {
-
+                lblNoAppointments.Visible = true;
             }
             cbxStatus.SelectedIndex = 0;
+
         }
 
         private void pbxSearchFilter_Click(object sender, EventArgs e)
@@ -259,14 +264,23 @@ namespace Hospital_Management_System.Appointments
             if (MessageBox.Show($"Are You Sure You Want To Cancel Appointment With ID : {_AppID} ?", "Confirm",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (_AppInfo.UpdateAppointmentStatus(_AppID, clsAppointments.enStatus.CancelledByPatient))
+                if((clsRooms.ChangeRoomReservation(_AppInfo.RoomID, false)))
                 {
-                    MessageBox.Show("Appointment Cancelled Successfully", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    _LoadDataToList();
+                    if (_AppInfo.UpdateAppointmentStatus(_AppID, clsAppointments.enStatus.CancelledByPatient))
+                    {
+                        MessageBox.Show("Appointment Cancelled Successfully", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        _LoadDataToList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Appointment Cancellation Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Appointment Cancellation Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Failed to change status of room", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
         }
@@ -284,20 +298,25 @@ namespace Hospital_Management_System.Appointments
         {
             if (_AppID == -1)
                 GetSelectedAppID();
-
-            if (clsAppointments.DeleteAppointments(_AppID))
-            {
-                if (MessageBox.Show($"Are You Sure You Want To Delete This Appointment With ID :[{_AppID}]", "Confirm",
+            
+            if (MessageBox.Show($"Are You Sure You Want To Delete This Appointment With ID :[{_AppID}]", "Confirm",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (clsAppointments.DeleteAppointments(_AppID))
                 {
                     MessageBox.Show("This Appointment Is Deleted Successfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _LoadDataToList();
                 }
+                else
+                {
+                    MessageBox.Show("Appointment Deletion Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Appointment Deletion Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Deletion Cancelled Successfully", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+           
         }
 
         private void dgvAppointments_Click(object sender, EventArgs e)
