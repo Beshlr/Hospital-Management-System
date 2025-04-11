@@ -505,6 +505,7 @@
             this.btnPatients.Size = new System.Drawing.Size(238, 49);
             this.btnPatients.TabIndex = 10;
             this.btnPatients.Text = "Patients";
+            this.btnPatients.Click += new System.EventHandler(this.btnPatients_Click);
             // 
             // btnAppointments
             // 

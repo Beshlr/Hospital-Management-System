@@ -18,10 +18,10 @@ namespace Hospital_Management_System.Patients
     {
         public delegate void BackAddedPatientID(int PatientID);
         public event BackAddedPatientID BackPatientID;
-        public frmAddNewPatient(string NationalNo)
+        public frmAddNewPatient(string NationalNo = "")
         {
             InitializeComponent();
-            if(NationalNo != null)
+            if(NationalNo != null && !String.IsNullOrWhiteSpace(NationalNo))
             {
                 _Patient = clsPatients.FindByNationalNO(NationalNo);
                 enMode = _Mode.enUpdate;

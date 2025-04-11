@@ -13,6 +13,7 @@ using clsBussinessLayer;
 using Hospital_Management_System.Properties;
 using Hospital_Management_System.Appointments;
 using static Hospital_Management_System.frmUserProfile;
+using Hospital_Management_System.Patients;
 
 namespace Hospital_Management_System
 {
@@ -320,6 +321,16 @@ namespace Hospital_Management_System
         private void frmMainForSecretary_Resize(object sender, EventArgs e)
         {
             _RefreashNotificationsListLocation();
+        }
+
+        private void btnPatients_Click(object sender, EventArgs e)
+        {
+            if (activeForm is frmPatientsList)
+                return;
+
+            openChildFormInPanel(new frmPatientsList());
+            hideSubMenu();
+            
         }
     }
 }

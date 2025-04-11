@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pnlControls = new System.Windows.Forms.Panel();
             this.pnlSearchBar = new System.Windows.Forms.Panel();
@@ -47,6 +47,7 @@
             this.rbtnStatus = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnDoctorName = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbtnPatientName = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.lblNoData = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.pnlControls.SuspendLayout();
             this.pnlSearchBar.SuspendLayout();
@@ -60,45 +61,45 @@
             // 
             this.dgvList.AllowUserToAddRows = false;
             this.dgvList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Lavender;
-            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.dgvList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvList.ColumnHeadersHeight = 25;
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvList.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvList.Location = new System.Drawing.Point(0, 158);
+            this.dgvList.Location = new System.Drawing.Point(0, 121);
             this.dgvList.Name = "dgvList";
             this.dgvList.ReadOnly = true;
             this.dgvList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvList.RowHeadersVisible = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvList.RowTemplate.Height = 40;
-            this.dgvList.Size = new System.Drawing.Size(1102, 368);
+            this.dgvList.Size = new System.Drawing.Size(1102, 409);
             this.dgvList.TabIndex = 18;
             this.dgvList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvList.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -121,6 +122,7 @@
             this.dgvList.ThemeStyle.RowsStyle.Height = 40;
             this.dgvList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(50)))), ((int)(((byte)(180)))));
             this.dgvList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvList.Click += new System.EventHandler(this.pnlControls_Click);
             // 
             // pnlControls
             // 
@@ -131,8 +133,9 @@
             this.pnlControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControls.Location = new System.Drawing.Point(0, 0);
             this.pnlControls.Name = "pnlControls";
-            this.pnlControls.Size = new System.Drawing.Size(1102, 158);
+            this.pnlControls.Size = new System.Drawing.Size(1102, 121);
             this.pnlControls.TabIndex = 19;
+            this.pnlControls.Click += new System.EventHandler(this.pnlControls_Click);
             // 
             // pnlSearchBar
             // 
@@ -142,8 +145,9 @@
             this.pnlSearchBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSearchBar.Location = new System.Drawing.Point(0, 0);
             this.pnlSearchBar.Name = "pnlSearchBar";
-            this.pnlSearchBar.Size = new System.Drawing.Size(321, 158);
+            this.pnlSearchBar.Size = new System.Drawing.Size(321, 121);
             this.pnlSearchBar.TabIndex = 11;
+            this.pnlSearchBar.Click += new System.EventHandler(this.pnlControls_Click);
             // 
             // cbxStatus
             // 
@@ -159,10 +163,11 @@
             "Cancelled by Doctor",
             "Rescheduled",
             "Missed"});
-            this.cbxStatus.Location = new System.Drawing.Point(37, 121);
+            this.cbxStatus.Location = new System.Drawing.Point(37, 84);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(205, 28);
             this.cbxStatus.TabIndex = 9;
+            this.cbxStatus.Visible = false;
             // 
             // txtSearchBar
             // 
@@ -184,25 +189,27 @@
             this.txtSearchBar.IconRight = global::Hospital_Management_System.Properties.Resources._211817_search_strong_icon;
             this.txtSearchBar.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txtSearchBar.IconRightOffset = new System.Drawing.Point(5, 0);
-            this.txtSearchBar.Location = new System.Drawing.Point(12, 120);
+            this.txtSearchBar.Location = new System.Drawing.Point(12, 83);
             this.txtSearchBar.Name = "txtSearchBar";
             this.txtSearchBar.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtSearchBar.PlaceholderText = "Enter Patient\'s Text";
             this.txtSearchBar.SelectedText = "";
             this.txtSearchBar.Size = new System.Drawing.Size(263, 32);
             this.txtSearchBar.TabIndex = 6;
+            this.txtSearchBar.Enter += new System.EventHandler(this.txtSearchBar_Enter);
             // 
             // pbxSearchFilter
             // 
             this.pbxSearchFilter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pbxSearchFilter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSearchFilter.Image = global::Hospital_Management_System.Properties.Resources._4781833_filter_filters_funnel_list_navigation_icon;
-            this.pbxSearchFilter.Location = new System.Drawing.Point(289, 122);
+            this.pbxSearchFilter.Location = new System.Drawing.Point(289, 85);
             this.pbxSearchFilter.Name = "pbxSearchFilter";
             this.pbxSearchFilter.Size = new System.Drawing.Size(29, 30);
             this.pbxSearchFilter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxSearchFilter.TabIndex = 8;
             this.pbxSearchFilter.TabStop = false;
+            this.pbxSearchFilter.Click += new System.EventHandler(this.pbxSearchFilter_Click);
             // 
             // pnlAdd
             // 
@@ -210,8 +217,9 @@
             this.pnlAdd.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlAdd.Location = new System.Drawing.Point(948, 0);
             this.pnlAdd.Name = "pnlAdd";
-            this.pnlAdd.Size = new System.Drawing.Size(154, 158);
+            this.pnlAdd.Size = new System.Drawing.Size(154, 121);
             this.pnlAdd.TabIndex = 16;
+            this.pnlAdd.Click += new System.EventHandler(this.pnlControls_Click);
             // 
             // btnAdd
             // 
@@ -225,16 +233,17 @@
             this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAdd.Font = new System.Drawing.Font("Cairo Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(10, 120);
+            this.btnAdd.Location = new System.Drawing.Point(10, 83);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(135, 32);
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pnlFilterBy
             // 
             this.pnlFilterBy.Controls.Add(this.gbxFilterBy);
-            this.pnlFilterBy.Location = new System.Drawing.Point(327, 38);
+            this.pnlFilterBy.Location = new System.Drawing.Point(327, 3);
             this.pnlFilterBy.Name = "pnlFilterBy";
             this.pnlFilterBy.Size = new System.Drawing.Size(265, 115);
             this.pnlFilterBy.TabIndex = 12;
@@ -254,6 +263,7 @@
             this.gbxFilterBy.TabIndex = 9;
             this.gbxFilterBy.Tag = "Department";
             this.gbxFilterBy.Text = "Filter By";
+            this.gbxFilterBy.Visible = false;
             // 
             // rbtnDepartment
             // 
@@ -274,6 +284,7 @@
             this.rbtnDepartment.UncheckedState.BorderThickness = 2;
             this.rbtnDepartment.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rbtnDepartment.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbtnDepartment.CheckedChanged += new System.EventHandler(this._CheckIfUserSelectStatusOption);
             // 
             // rbtnStatus
             // 
@@ -294,6 +305,7 @@
             this.rbtnStatus.UncheckedState.BorderThickness = 2;
             this.rbtnStatus.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rbtnStatus.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbtnStatus.CheckedChanged += new System.EventHandler(this._CheckIfUserSelectStatusOption);
             // 
             // rbtnDoctorName
             // 
@@ -313,6 +325,7 @@
             this.rbtnDoctorName.UncheckedState.BorderThickness = 2;
             this.rbtnDoctorName.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rbtnDoctorName.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbtnDoctorName.CheckedChanged += new System.EventHandler(this._CheckIfUserSelectStatusOption);
             // 
             // rbtnPatientName
             // 
@@ -334,15 +347,30 @@
             this.rbtnPatientName.UncheckedState.BorderThickness = 2;
             this.rbtnPatientName.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rbtnPatientName.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbtnPatientName.CheckedChanged += new System.EventHandler(this._CheckIfUserSelectStatusOption);
+            // 
+            // lblNoData
+            // 
+            this.lblNoData.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblNoData.BackColor = System.Drawing.Color.White;
+            this.lblNoData.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.lblNoData.ForeColor = System.Drawing.Color.Gray;
+            this.lblNoData.Location = new System.Drawing.Point(446, 486);
+            this.lblNoData.Name = "lblNoData";
+            this.lblNoData.Size = new System.Drawing.Size(214, 26);
+            this.lblNoData.TabIndex = 20;
+            this.lblNoData.Text = "There is no data to show.";
+            this.lblNoData.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ctrlListWithFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblNoData);
             this.Controls.Add(this.dgvList);
             this.Controls.Add(this.pnlControls);
             this.Name = "ctrlListWithFilter";
-            this.Size = new System.Drawing.Size(1102, 526);
+            this.Size = new System.Drawing.Size(1102, 530);
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.pnlControls.ResumeLayout(false);
             this.pnlSearchBar.ResumeLayout(false);
@@ -352,6 +380,7 @@
             this.gbxFilterBy.ResumeLayout(false);
             this.gbxFilterBy.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -371,5 +400,6 @@
         private Guna.UI2.WinForms.Guna2RadioButton rbtnStatus;
         private Guna.UI2.WinForms.Guna2RadioButton rbtnDoctorName;
         private Guna.UI2.WinForms.Guna2RadioButton rbtnPatientName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblNoData;
     }
 }

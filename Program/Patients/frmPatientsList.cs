@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital_Management_System.Global.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,10 @@ namespace Hospital_Management_System.Patients
         public frmPatientsList()
         {
             InitializeComponent();
+        }
+
+        private void frmPatientsList_Load(object sender, EventArgs e)
+        {
         }
     }
 }

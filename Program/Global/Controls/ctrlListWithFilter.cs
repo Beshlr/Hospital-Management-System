@@ -1,49 +1,75 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using clsBussinessLayer;
+using Hospital_Management_System.Patients;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
-using clsBussinessLayer;
 
 namespace Hospital_Management_System.Global.Controls
 {
     public partial class ctrlListWithFilter : UserControl
     {
+        public ctrlListWithFilter()
+        {
+            InitializeComponent();
+        }
+        /// <summary>
+        /// This Constracter for user control class that's handle diffrent types of list
+        /// </summary>
+        /// <param name="listType">list of what?</param>
         public ctrlListWithFilter(string listType)
         {
             InitializeComponent();
-            HandleFormatScreen(listType);
+            _HandleFormatScreen(listType);
         }
 
-        private DataTable _ListData = new DataTable();
+        // Start Global Variables
+        public enum enListTypes { enAppointments = 1, enPatients = 2, enDoctors = 3,
+                                                            enNurses = 4,enRooms = 5};
 
-        private void HandleFormatScreen(string listType)
+        public static enListTypes enListOf = enListTypes.enDoctors;
+
+        private DataTable _ListData = new DataTable();
+        private int _NumOfRows = -1;
+
+        // End Global Variables
+        private int _GetNumberOfRows()
+        {
+            _NumOfRows = _ListData.Rows.Count;
+
+            if (_NumOfRows > 0)
+                lblNoData.Visible = false;
+            else
+                lblNoData.Visible = true;
+
+            return _NumOfRows;
+        }
+
+        private void _HandleFormatScreen(string listType)
         {
             switch (listType)
             {
                 case "Appointments":
                     SetupAppointmentsSettings();
+                    enListOf = enListTypes.enAppointments;
                     break;
 
                 case "Patients":
                     SetupPatientsSettings();
+                    enListOf = enListTypes.enPatients;
                     break;
 
                 case "Nurses":
                     SetupNursesSettings();
+                    enListOf = enListTypes.enNurses;
                     break;
 
                 case "Doctors":
                     SetupDoctorsSettings();
+                    enListOf = enListTypes.enDoctors;
                     break;
 
                 case "Rooms":
                     SetupRoomsSettings();
+                    enListOf = enListTypes.enRooms;
                     break;
 
                 default:
@@ -52,11 +78,14 @@ namespace Hospital_Management_System.Global.Controls
             }
 
             dgvList.DataSource = _ListData;
+
+            
+            _GetNumberOfRows();
         }
 
         private void SetupAppointmentsSettings()
         {
-            
+
             txtSearchBar.PlaceholderText = "Enter Patient's Text";
             rbtnPatientName.Text = "Patient Name";
             rbtnDoctorName.Text = "Doctor Name";
@@ -66,14 +95,14 @@ namespace Hospital_Management_System.Global.Controls
 
             cbxStatus.Items.Clear();
             cbxStatus.Items.AddRange(new string[] { "Scheduled", "Confirmed", "Pending", "Cancelled", "Rescheduled" });
-            
+
             //Load Data
             _ListData = clsAppointments.GetAllAppointments();
         }
 
         private void SetupPatientsSettings()
         {
-            
+
             txtSearchBar.PlaceholderText = "Enter Patient's Name";
             rbtnPatientName.Text = "Patient Name";
             rbtnDoctorName.Text = "Doctor Name";
@@ -90,7 +119,7 @@ namespace Hospital_Management_System.Global.Controls
 
         private void SetupNursesSettings()
         {
-            
+
             txtSearchBar.PlaceholderText = "Enter Nurse's Name";
             rbtnPatientName.Text = "Nurse Name";
             rbtnDoctorName.Text = "Department";
@@ -106,7 +135,7 @@ namespace Hospital_Management_System.Global.Controls
 
         private void SetupDoctorsSettings()
         {
-                        txtSearchBar.PlaceholderText = "Enter Doctor's Name";
+            txtSearchBar.PlaceholderText = "Enter Doctor's Name";
             rbtnPatientName.Text = "Doctor Name";
             rbtnDoctorName.Text = "Specialization";
             rbtnStatus.Text = "Status";
@@ -122,7 +151,7 @@ namespace Hospital_Management_System.Global.Controls
 
         private void SetupRoomsSettings()
         {
-            
+
             txtSearchBar.PlaceholderText = "Enter Room Number";
             rbtnPatientName.Text = "Room Number";
             rbtnDoctorName.Text = "Room Type";
@@ -139,7 +168,7 @@ namespace Hospital_Management_System.Global.Controls
 
         private void SetupDefaultSettings()
         {
-            
+
             txtSearchBar.PlaceholderText = "Search...";
             rbtnPatientName.Text = "Name";
             rbtnDoctorName.Text = "Type";
@@ -151,6 +180,55 @@ namespace Hospital_Management_System.Global.Controls
             cbxStatus.Items.AddRange(new string[] { "Active", "Inactive" });
         }
 
-        //private void _
+        private void pbxSearchFilter_Click(object sender, System.EventArgs e)
+        {
+            _ChangeGbxFilterVisablity(!gbxFilterBy.Visible);
+        }
+
+        
+
+        private void _CheckIfUserSelectStatusOption(object sender, System.EventArgs e)
+        {
+            Guna.UI2.WinForms.Guna2RadioButton radiobutton = (Guna.UI2.WinForms.Guna2RadioButton)sender;
+            string text = radiobutton.Text;
+            if (text == "Status")
+            {
+                cbxStatus.Visible = true;
+                txtSearchBar.Visible = false;
+            }
+            else
+            {
+                cbxStatus.Visible = false;
+                txtSearchBar.Visible = true;
+            }
+
+        }
+
+        private void _ChangeGbxFilterVisablity(bool visable)
+        {
+            gbxFilterBy.Visible = visable;
+        }
+
+        private void txtSearchBar_Enter(object sender, System.EventArgs e)
+        {
+            _ChangeGbxFilterVisablity(!gbxFilterBy.Visible);
+        }
+
+        private void pnlControls_Click(object sender, System.EventArgs e)
+        {
+            if(gbxFilterBy.Visible)
+                _ChangeGbxFilterVisablity(false);
+        }
+
+        public void RefreashList()
+        {
+            dgvList.DataSource = _ListData;
+        }
+
+        private void btnAdd_Click(object sender, System.EventArgs e)
+        {
+            frmAddNewPatient frm = new frmAddNewPatient();
+            frm.Show();
+        }
     }
 }
