@@ -16,6 +16,8 @@ namespace Hospital_Management_System.Appointments
 {
     public partial class frmAddAppointment : Form
     {
+        public delegate void BackAppointmentIDHandler(int AppointmentID);
+        public BackAppointmentIDHandler BackAppointmentID;
         public frmAddAppointment(int AppointmentID = -1)
         {
             InitializeComponent();
@@ -444,15 +446,41 @@ namespace Hospital_Management_System.Appointments
             return clsRooms.ChangeRoomReservation(RoomID, Reservation);
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private bool _SaveInCaseUpdating(ref clsAppointments appointment)
         {
-            clsAppointments appointment = new clsAppointments();
-
             int ActiveAppID = clsAppointments.CheckIfPatientHasActiveApp(_SelectedPatient.PatientID);
+            int SelectedRoomID = clsRooms.GetRoomIDByRoomNO(cbxRoomNO.Text);
+            _HandlePatientHasActiveApp(ActiveAppID);
+            if (dtpDate.Value != appointment.Date)
+            {
+                appointment.Date = dtpDate.Value;
+                appointment.Status = 5;
+                appointment.UpdateAppointmentStatus(appointment.AppointmentID, clsAppointments.enStatus.Rescheduled);
+            }
+            if (SelectedRoomID != appointment.RoomID && appointment.RoomID != -1)
+            {
+                appointment.TempRoomID = appointment.RoomID;
+                appointment.RoomID = SelectedRoomID;
+
+                clsRooms.ChangeRoomReservation(appointment.TempRoomID, false);
+            }
+            if (appointment.Save())
+            {
+                MessageBox.Show("Appointment Saved Successfully", "Data Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            else
+                MessageBox.Show("Appointment Saved Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            return false;
+        }
+
+        private void _HandlePatientHasActiveApp(int ActiveAppID)
+        {
             if (ActiveAppID != _Appointment.AppointmentID)
             {
-                if(MessageBox.Show($"Selected Patient Has An Active Appointment With ID : [ {ActiveAppID} ]Do You Want To Cancel This Appointment ?",
-                                    "Patient Has Another Appointment",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show($"Selected Patient Has An Active Appointment With ID : [ {ActiveAppID} ]Do You Want To Cancel This Appointment ?",
+                                    "Patient Has Another Appointment", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     return;
                 }
@@ -464,47 +492,34 @@ namespace Hospital_Management_System.Appointments
                     app.Save();
                 }
             }
+        }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            clsAppointments appointment = new clsAppointments();
 
-                if (_Appointment.AppointmentID != -1)
-                    appointment = _Appointment;
-                appointment.PatientID = _SelectedPatient.PatientID;
-                appointment.DoctorID = _SelectedDoctor.DoctorID;
-
-            if (_Appointment.AppointmentID != -1)
+            if(_Mode == _enMode.enUpdate)
             {
-                if (dtpDate.Value != appointment.Date)
-                {
-                    appointment.Date = dtpDate.Value;
-                    appointment.Status = 5;
-                    appointment.UpdateAppointmentStatus(appointment.AppointmentID, clsAppointments.enStatus.Rescheduled);
-                }
+                appointment = _Appointment;
+                _SaveInCaseUpdating(ref appointment);
 
+                return;
             }
-            else
-                appointment.Date = dtpDate.Value;
+            
+            appointment.PatientID = _SelectedPatient.PatientID;
+            appointment.DoctorID = _SelectedDoctor.DoctorID;
+
+            appointment.Date = dtpDate.Value;
             int SelectedRoomID = clsRooms.GetRoomIDByRoomNO(cbxRoomNO.Text);
 
-            //Check if user change pervious room
-            if (SelectedRoomID != appointment.RoomID && appointment.RoomID != -1)
-            {
-                appointment.TempRoomID = appointment.RoomID;
-                appointment.RoomID = SelectedRoomID;
+            appointment.RoomID = SelectedRoomID;
 
-                clsRooms.ChangeRoomReservation(appointment.TempRoomID, false);
-            }
-            else
-                appointment.RoomID = SelectedRoomID;
-
-            if(
-            appointment.Save())
-            {
-                MessageBox.Show("Appointment Saved Successfully", "Data Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            if(appointment.Save())
+                MessageBox.Show("Appointment Saved Successfully", "Data Saved", MessageBoxButtons.OK, MessageBoxIcon.Information); 
             else
                 MessageBox.Show("Appointment Saved Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
+                
+            return;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -518,11 +533,6 @@ namespace Hospital_Management_System.Appointments
                 gbxFilterBy.Visible = false;
             else
                 gbxFilterBy.Visible = true;
-        }
-
-        private void btnSave_DoubleClick(object sender, EventArgs e)
-        {
-
         }
 
         private void rbtnNationalNO_CheckedChanged(object sender, EventArgs e)

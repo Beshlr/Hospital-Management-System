@@ -21,5 +21,10 @@ namespace Hospital_Management_System.Patients
         private void frmPatientsList_Load(object sender, EventArgs e)
         {
         }
+
+        private void ctrlListWithFilter1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

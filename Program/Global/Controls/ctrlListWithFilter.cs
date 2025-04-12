@@ -1,5 +1,8 @@
 ﻿using clsBussinessLayer;
 using Hospital_Management_System.Patients;
+using Hospital_Management_System.Appointments;
+using Hospital_Management_System.Doctors;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -15,7 +18,7 @@ namespace Hospital_Management_System.Global.Controls
         /// This Constracter for user control class that's handle diffrent types of list
         /// </summary>
         /// <param name="listType">list of what?</param>
-        public ctrlListWithFilter(string listType)
+        public ctrlListWithFilter(enListTypes listType)
         {
             InitializeComponent();
             _HandleFormatScreen(listType);
@@ -26,48 +29,53 @@ namespace Hospital_Management_System.Global.Controls
                                                             enNurses = 4,enRooms = 5};
 
         public static enListTypes enListOf = enListTypes.enDoctors;
-
         private DataTable _ListData = new DataTable();
         private int _NumOfRows = -1;
 
         // End Global Variables
+
+        //Start Properties
+
+        public static int _InsertedRowID { get; set; }
+
+        //End Properties
         private int _GetNumberOfRows()
         {
             _NumOfRows = _ListData.Rows.Count;
 
-            if (_NumOfRows > 0)
-                lblNoData.Visible = false;
-            else
-                lblNoData.Visible = true;
+            lblNoData.Visible = !(_NumOfRows > 0);
+            
+            pnlNumOfRows.Visible = !lblNoData.Visible;
 
+            lblNumOfRows.Text = _NumOfRows.ToString();
             return _NumOfRows;
         }
 
-        private void _HandleFormatScreen(string listType)
+        private void _HandleFormatScreen(enListTypes listType)
         {
             switch (listType)
             {
-                case "Appointments":
+                case enListTypes.enAppointments:
                     SetupAppointmentsSettings();
                     enListOf = enListTypes.enAppointments;
                     break;
 
-                case "Patients":
+                case enListTypes.enPatients:
                     SetupPatientsSettings();
                     enListOf = enListTypes.enPatients;
                     break;
 
-                case "Nurses":
+                case enListTypes.enNurses:
                     SetupNursesSettings();
                     enListOf = enListTypes.enNurses;
                     break;
 
-                case "Doctors":
+                case enListTypes.enDoctors:
                     SetupDoctorsSettings();
                     enListOf = enListTypes.enDoctors;
                     break;
 
-                case "Rooms":
+                case enListTypes.enRooms:
                     SetupRoomsSettings();
                     enListOf = enListTypes.enRooms;
                     break;
@@ -211,7 +219,7 @@ namespace Hospital_Management_System.Global.Controls
 
         private void txtSearchBar_Enter(object sender, System.EventArgs e)
         {
-            _ChangeGbxFilterVisablity(!gbxFilterBy.Visible);
+            _ChangeGbxFilterVisablity(false);
         }
 
         private void pnlControls_Click(object sender, System.EventArgs e)
@@ -222,13 +230,70 @@ namespace Hospital_Management_System.Global.Controls
 
         public void RefreashList()
         {
+            switch (enListOf)
+            {
+                case enListTypes.enAppointments:
+                    _ListData = clsAppointments.GetAllAppointments();
+                    break;
+                case enListTypes.enPatients:
+                    _ListData = clsPatients.GetAllPatients();
+                    break;
+                case enListTypes.enDoctors:
+                    _ListData = clsDoctors.GetAllDoctors();
+                    break;
+                case enListTypes.enNurses:
+                    _ListData = null;
+                    break;
+                case enListTypes.enRooms:
+                    _ListData = null;
+                    break;
+                default:
+                    _ListData = clsAppointments.GetAllAppointments();
+                    break;
+            }
             dgvList.DataSource = _ListData;
+            _NumOfRows = _ListData.Rows.Count;
+            lblNumOfRows.Text = _NumOfRows.ToString();
         }
 
         private void btnAdd_Click(object sender, System.EventArgs e)
         {
-            frmAddNewPatient frm = new frmAddNewPatient();
-            frm.Show();
+            Form frm = new Form();
+            _HandleShowAddingRowForm(ref frm);
+            frm.ShowDialog();
+            RefreashList();
+        }
+
+        private void _GetAddingRowID(int insertedID)
+        {
+            _InsertedRowID = insertedID;
+        }
+
+        private void _HandleShowAddingRowForm(ref Form frm)
+        {
+            switch (enListOf)
+            {
+                case enListTypes.enAppointments:
+                    frm = new frmAddAppointment();
+                    break;
+                case enListTypes.enPatients:
+                    frm = new frmAddNewPatient();
+                    ((frmAddNewPatient)frm).BackPatientID += _GetAddingRowID;
+                    break;
+                case enListTypes.enDoctors:
+                    frm = new frmAddNewDoctor();
+                    ((frmAddNewDoctor)frm).BackDoctorID += _GetAddingRowID;
+                    break;
+                case enListTypes.enNurses:
+                    frm = null;
+                    break;
+                case enListTypes.enRooms:
+                    frm = null;
+                    break;
+                default:
+                    frm = new frmAddAppointment();
+                    break;
+            }
         }
     }
 }

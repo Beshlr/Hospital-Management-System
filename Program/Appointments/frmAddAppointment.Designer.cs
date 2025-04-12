@@ -855,7 +855,6 @@
             this.btnSave.TabIndex = 22;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            this.btnSave.DoubleClick += new System.EventHandler(this.btnSave_DoubleClick);
             // 
             // pnlEmergencyContactInfo
             // 

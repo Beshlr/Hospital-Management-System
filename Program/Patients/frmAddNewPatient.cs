@@ -80,7 +80,7 @@ namespace Hospital_Management_System.Patients
 
             Person.PhoneNumber = txtPhoneNumber.Text;
             if(pbxPatientImage.Image != Resources.Patient_512)
-                Person.ImagePath = pbxPatientImage.ImageLocation;
+                Person.ImagePath = _ImagePath;
             else
                 Person.ImagePath = null;
 
@@ -109,7 +109,6 @@ namespace Hospital_Management_System.Patients
 
             CheckField(txtName, "Patient Name", errorFields);
             CheckField(txtNationalNo, "National Number", errorFields);
-            CheckField(txtAllergies, "Allergies", errorFields);
             CheckField(txtPhoneNumber, "Phone Number", errorFields);
 
 

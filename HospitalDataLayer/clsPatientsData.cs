@@ -36,7 +36,7 @@ namespace HospitalDataLayer
             command.Parameters.AddWithValue("@PatientStatus", PatientStatus);
 
             //Checking For Nullable Values
-            if (Allergies != null || Allergies.Length > 0)
+            if (Allergies != null && Allergies.Length > 0)
                 command.Parameters.AddWithValue("@Allergies", Allergies);
             else
                 command.Parameters.AddWithValue("@Allergies", DBNull.Value);
@@ -45,7 +45,7 @@ namespace HospitalDataLayer
             else
                 command.Parameters.AddWithValue("@EmergencyContactID", DBNull.Value);
 
-            if (Notes != null || Notes.Length > 0)
+            if (Notes != null && Notes.Length > 0)
                 command.Parameters.AddWithValue("@Notes", Notes);
             else
                 command.Parameters.AddWithValue("@Notes", DBNull.Value);
@@ -134,7 +134,7 @@ namespace HospitalDataLayer
             command.Parameters.AddWithValue("@PatientStatus", PatientStatus);
 
             //Checking For Nullable Values
-            if (Allergies != null || Allergies != "")
+            if (Allergies != null && Allergies != "")
                 command.Parameters.AddWithValue("@Allergies", Allergies);
             else
                 command.Parameters.AddWithValue("@Allergies", DBNull.Value);
@@ -142,7 +142,7 @@ namespace HospitalDataLayer
                 command.Parameters.AddWithValue("@EmergencyContactID", EmergencyContactID);
             else
                 command.Parameters.AddWithValue("@EmergencyContactID", DBNull.Value);
-            if (Notes.Length > 0 || Notes != null)
+            if (Notes.Length > 0 && Notes != null)
                 command.Parameters.AddWithValue("@Notes", Notes);
             else
                 command.Parameters.AddWithValue("@Notes", DBNull.Value);
@@ -182,7 +182,7 @@ namespace HospitalDataLayer
             command.Parameters.AddWithValue("@PatientStatus", PatientStatus);
 
             //Checking For Nullable Values
-            if (Allergies != null || Allergies != "")
+            if (Allergies != null && Allergies != "")
                 command.Parameters.AddWithValue("@Allergies", Allergies);
             else
                 command.Parameters.AddWithValue("@Allergies", DBNull.Value);
@@ -190,7 +190,7 @@ namespace HospitalDataLayer
                 command.Parameters.AddWithValue("@EmergencyContactID", EmergencyContactID);
             else
                 command.Parameters.AddWithValue("@EmergencyContactID", DBNull.Value);
-            if (Notes.Length> 0 || Notes != null)
+            if (Notes.Length> 0 && Notes != null)
                 command.Parameters.AddWithValue("@Notes", Notes);
             else
                 command.Parameters.AddWithValue("@Notes", DBNull.Value);
@@ -362,7 +362,7 @@ namespace HospitalDataLayer
             DataTable dt = new DataTable();
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "Select * From Patients";
+            string query = "Select * From PatientsList";
             SqlCommand command = new SqlCommand(query, connection);
 
             try
@@ -408,11 +408,11 @@ namespace HospitalDataLayer
             command.Parameters.AddWithValue("@ContactFirstPhoneNO", ContactFirstPhoneNO);
 
             //Checking For Nullable Values
-            if (ContactSecondPhoneNO != null || ContactSecondPhoneNO.Length > 0)
+            if (ContactSecondPhoneNO != null && ContactSecondPhoneNO.Length > 0)
                 command.Parameters.AddWithValue("@ContactSecondPhoneNO", ContactSecondPhoneNO);
             else
                 command.Parameters.AddWithValue("@ContactSecondPhoneNO", DBNull.Value);
-            if (RelationshipWithEmergencyContact != null || RelationshipWithEmergencyContact.Length > 0)
+            if (RelationshipWithEmergencyContact != null && RelationshipWithEmergencyContact.Length > 0)
                 command.Parameters.AddWithValue("@RelationshipWithEmergencyContact", RelationshipWithEmergencyContact);
             else
                 command.Parameters.AddWithValue("@RelationshipWithEmergencyContact", DBNull.Value);
@@ -507,7 +507,7 @@ namespace HospitalDataLayer
                 command.Parameters.AddWithValue("@EndDate", EndDate);
             else
                 command.Parameters.AddWithValue("EndDate", DBNull.Value);
-            if (Notes != null || Notes.Length > 0)
+            if (Notes != null && Notes.Length > 0)
                 command.Parameters.AddWithValue("@Notes", Notes);
             else
                 command.Parameters.AddWithValue("@Notes", DBNull.Value);
@@ -615,7 +615,7 @@ namespace HospitalDataLayer
                 command.Parameters.AddWithValue("@EndDate", EndDate);
             else
                 command.Parameters.AddWithValue("EndDate", DBNull.Value);
-            if (Notes != null || Notes.Length > 0)
+            if (Notes != null && Notes.Length > 0)
                 command.Parameters.AddWithValue("@Notes", Notes);
             else
                 command.Parameters.AddWithValue("@Notes", DBNull.Value);

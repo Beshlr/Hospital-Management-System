@@ -1,4 +1,6 @@
-﻿namespace Hospital_Management_System.Patients
+﻿using Hospital_Management_System.Global.Controls;
+
+namespace Hospital_Management_System.Patients
 {
     partial class frmPatientsList
     {
@@ -29,22 +31,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientsList));
-            this.ctrlListWithFilter1 = new Hospital_Management_System.Global.Controls.ctrlListWithFilter("Patients");
             this.siticonePictureBox1 = new SiticoneNetFrameworkUI.SiticonePictureBox();
             this.siticoneLabel1 = new SiticoneNetFrameworkUI.SiticoneLabel();
             this.pnlFormImage = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ctrlListWithFilter1 = new Hospital_Management_System.Global.Controls.ctrlListWithFilter(ctrlListWithFilter.enListTypes.enPatients);
             this.pnlFormImage.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ctrlListWithFilter1
-            // 
-            this.ctrlListWithFilter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ctrlListWithFilter1.Location = new System.Drawing.Point(0, 196);
-            this.ctrlListWithFilter1.Name = "ctrlListWithFilter1";
-            this.ctrlListWithFilter1.Size = new System.Drawing.Size(1181, 600);
-            this.ctrlListWithFilter1.TabIndex = 0;
             // 
             // siticonePictureBox1
             // 
@@ -120,12 +114,21 @@
             this.panel1.Size = new System.Drawing.Size(1181, 56);
             this.panel1.TabIndex = 4;
             // 
+            // ctrlListWithFilter1
+            // 
+            this.ctrlListWithFilter1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ctrlListWithFilter1.Location = new System.Drawing.Point(0, 246);
+            this.ctrlListWithFilter1.Name = "ctrlListWithFilter1";
+            this.ctrlListWithFilter1.Size = new System.Drawing.Size(1181, 500);
+            this.ctrlListWithFilter1.TabIndex = 0;
+            this.ctrlListWithFilter1.Load += new System.EventHandler(this.ctrlListWithFilter1_Load);
+            // 
             // frmPatientsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1181, 796);
+            this.ClientSize = new System.Drawing.Size(1181, 746);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ctrlListWithFilter1);
             this.Controls.Add(this.pnlFormImage);

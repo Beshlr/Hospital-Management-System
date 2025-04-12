@@ -19,10 +19,10 @@ namespace Hospital_Management_System.Doctors
 
         public event BackDoctorIDHandler BackDoctorID;
         
-        public frmAddNewDoctor(string NationalNo)
+        public frmAddNewDoctor(string NationalNo = "")
         {
             InitializeComponent();
-            if (NationalNo != null)
+            if (NationalNo != "" && !String.IsNullOrEmpty(NationalNo))
             {
                 _Doctor = clsDoctors.FindByNationalNO(NationalNo);
                 _Person = _Doctor.PersonInfo;
