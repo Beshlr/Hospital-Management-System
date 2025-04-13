@@ -45,6 +45,7 @@ namespace Hospital_Management_System.Patients
         private void llblRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             pbxPatientImage.Image = Resources.Patient_512;
+            _ImagePath = "";
         }
 
         private bool SavePersonInfo(ref clsPeople Person)

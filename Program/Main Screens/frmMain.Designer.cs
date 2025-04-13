@@ -110,6 +110,7 @@
             // 
             // btnLogOut
             // 
+            this.btnLogOut.Animated = true;
             this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
             this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -136,6 +137,7 @@
             // 
             // btnUsers
             // 
+            this.btnUsers.Animated = true;
             this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
             this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -218,6 +220,7 @@
             // 
             // btnSettings
             // 
+            this.btnSettings.Animated = true;
             this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
             this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -244,6 +247,7 @@
             // 
             // btnRooms
             // 
+            this.btnRooms.Animated = true;
             this.btnRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
             this.btnRooms.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRooms.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -281,6 +285,7 @@
             // 
             // btnRequests
             // 
+            this.btnRequests.Animated = true;
             this.btnRequests.BackColor = System.Drawing.Color.Transparent;
             this.btnRequests.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRequests.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -306,6 +311,7 @@
             // 
             // btnInventory
             // 
+            this.btnInventory.Animated = true;
             this.btnInventory.BackColor = System.Drawing.Color.Transparent;
             this.btnInventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInventory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -331,6 +337,7 @@
             // 
             // btnPharmacy
             // 
+            this.btnPharmacy.Animated = true;
             this.btnPharmacy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
             this.btnPharmacy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPharmacy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -369,6 +376,7 @@
             // 
             // btnDoctors
             // 
+            this.btnDoctors.Animated = true;
             this.btnDoctors.BackColor = System.Drawing.Color.Transparent;
             this.btnDoctors.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoctors.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -394,6 +402,7 @@
             // 
             // btnNurses
             // 
+            this.btnNurses.Animated = true;
             this.btnNurses.BackColor = System.Drawing.Color.Transparent;
             this.btnNurses.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNurses.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -419,6 +428,7 @@
             // 
             // btnStaff
             // 
+            this.btnStaff.Animated = true;
             this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
             this.btnStaff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStaff.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -458,6 +468,7 @@
             // 
             // btnPayments
             // 
+            this.btnPayments.Animated = true;
             this.btnPayments.BackColor = System.Drawing.Color.Transparent;
             this.btnPayments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPayments.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -483,6 +494,7 @@
             // 
             // btnPatients
             // 
+            this.btnPatients.Animated = true;
             this.btnPatients.BackColor = System.Drawing.Color.Transparent;
             this.btnPatients.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPatients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -509,6 +521,7 @@
             // 
             // btnAppointments
             // 
+            this.btnAppointments.Animated = true;
             this.btnAppointments.BackColor = System.Drawing.Color.Transparent;
             this.btnAppointments.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAppointments.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -535,6 +548,7 @@
             // 
             // btnGeneral
             // 
+            this.btnGeneral.Animated = true;
             this.btnGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(219)))));
             this.btnGeneral.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGeneral.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

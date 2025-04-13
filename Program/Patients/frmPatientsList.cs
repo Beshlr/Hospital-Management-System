@@ -20,6 +20,8 @@ namespace Hospital_Management_System.Patients
 
         private void frmPatientsList_Load(object sender, EventArgs e)
         {
+            ctrlListWithFilter1.enListOf = ctrlListWithFilter.enListTypes.enPatients;
+            ctrlListWithFilter1.RefreashList();
         }
 
         private void ctrlListWithFilter1_Load(object sender, EventArgs e)

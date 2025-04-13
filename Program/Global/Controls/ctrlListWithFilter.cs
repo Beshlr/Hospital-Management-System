@@ -28,7 +28,7 @@ namespace Hospital_Management_System.Global.Controls
         public enum enListTypes { enAppointments = 1, enPatients = 2, enDoctors = 3,
                                                             enNurses = 4,enRooms = 5};
 
-        public static enListTypes enListOf = enListTypes.enDoctors;
+        public enListTypes enListOf = enListTypes.enDoctors;
         private DataTable _ListData = new DataTable();
         private int _NumOfRows = -1;
 
@@ -228,6 +228,8 @@ namespace Hospital_Management_System.Global.Controls
                 _ChangeGbxFilterVisablity(false);
         }
 
+        
+
         public void RefreashList()
         {
             switch (enListOf)
@@ -263,6 +265,8 @@ namespace Hospital_Management_System.Global.Controls
             frm.ShowDialog();
             RefreashList();
         }
+
+
 
         private void _GetAddingRowID(int insertedID)
         {

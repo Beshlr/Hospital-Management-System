@@ -238,7 +238,7 @@ namespace Hospital_Management_System
                 return;
 
             openChildFormInPanel(new frmAppointmentsList());
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private void _RefreashNotificationList()
@@ -329,7 +329,7 @@ namespace Hospital_Management_System
                 return;
 
             openChildFormInPanel(new frmPatientsList());
-            hideSubMenu();
+            //hideSubMenu();
             
         }
     }

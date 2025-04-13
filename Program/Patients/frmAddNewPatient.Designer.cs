@@ -158,7 +158,6 @@
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.Location = new System.Drawing.Point(148, 277);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderText = "";
             this.txtPhoneNumber.SelectedText = "";
             this.txtPhoneNumber.Size = new System.Drawing.Size(194, 26);
@@ -196,7 +195,6 @@
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Location = new System.Drawing.Point(148, 329);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '\0';
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(194, 58);
@@ -285,7 +283,6 @@
             this.txtNationalNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNationalNo.Location = new System.Drawing.Point(148, 115);
             this.txtNationalNo.Name = "txtNationalNo";
-            this.txtNationalNo.PasswordChar = '\0';
             this.txtNationalNo.PlaceholderText = "";
             this.txtNationalNo.SelectedText = "";
             this.txtNationalNo.Size = new System.Drawing.Size(194, 26);
@@ -323,7 +320,6 @@
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Location = new System.Drawing.Point(148, 62);
             this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(194, 26);
@@ -517,7 +513,6 @@
             this.txtSecPhoneNo.Location = new System.Drawing.Point(153, 126);
             this.txtSecPhoneNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSecPhoneNo.Name = "txtSecPhoneNo";
-            this.txtSecPhoneNo.PasswordChar = '\0';
             this.txtSecPhoneNo.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtSecPhoneNo.PlaceholderText = "Enter PhoneNO.";
             this.txtSecPhoneNo.SelectedText = "";
@@ -565,7 +560,6 @@
             this.txtFirstPhoneNo.Location = new System.Drawing.Point(151, 70);
             this.txtFirstPhoneNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFirstPhoneNo.Name = "txtFirstPhoneNo";
-            this.txtFirstPhoneNo.PasswordChar = '\0';
             this.txtFirstPhoneNo.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtFirstPhoneNo.PlaceholderText = "Enter PhoneNO.";
             this.txtFirstPhoneNo.SelectedText = "";
@@ -602,7 +596,6 @@
             this.txtContactName.Location = new System.Drawing.Point(151, 13);
             this.txtContactName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContactName.Name = "txtContactName";
-            this.txtContactName.PasswordChar = '\0';
             this.txtContactName.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtContactName.PlaceholderText = "Enter Name";
             this.txtContactName.SelectedText = "";
@@ -702,7 +695,6 @@
             this.txtNotes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNotes.Location = new System.Drawing.Point(390, 76);
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.PasswordChar = '\0';
             this.txtNotes.PlaceholderText = "";
             this.txtNotes.SelectedText = "";
             this.txtNotes.Size = new System.Drawing.Size(198, 117);
@@ -738,13 +730,11 @@
             this.txtAllergies.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAllergies.Location = new System.Drawing.Point(147, 110);
             this.txtAllergies.Name = "txtAllergies";
-            this.txtAllergies.PasswordChar = '\0';
             this.txtAllergies.PlaceholderText = "";
             this.txtAllergies.SelectedText = "";
             this.txtAllergies.Size = new System.Drawing.Size(198, 83);
             this.txtAllergies.TabIndex = 34;
             this.txtAllergies.Tag = "Allergies";
-            this.txtAllergies.Validating += new System.ComponentModel.CancelEventHandler(this.CheckIfTextBoxISEmpty);
             // 
             // btnSave
             // 

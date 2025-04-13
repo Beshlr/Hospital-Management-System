@@ -35,7 +35,7 @@ namespace Hospital_Management_System.Patients
             this.siticoneLabel1 = new SiticoneNetFrameworkUI.SiticoneLabel();
             this.pnlFormImage = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ctrlListWithFilter1 = new Hospital_Management_System.Global.Controls.ctrlListWithFilter(ctrlListWithFilter.enListTypes.enPatients);
+            this.ctrlListWithFilter1 = new Hospital_Management_System.Global.Controls.ctrlListWithFilter();
             this.pnlFormImage.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -116,10 +116,10 @@ namespace Hospital_Management_System.Patients
             // 
             // ctrlListWithFilter1
             // 
-            this.ctrlListWithFilter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ctrlListWithFilter1.Location = new System.Drawing.Point(0, 246);
+            this.ctrlListWithFilter1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctrlListWithFilter1.Location = new System.Drawing.Point(0, 140);
             this.ctrlListWithFilter1.Name = "ctrlListWithFilter1";
-            this.ctrlListWithFilter1.Size = new System.Drawing.Size(1181, 500);
+            this.ctrlListWithFilter1.Size = new System.Drawing.Size(1181, 606);
             this.ctrlListWithFilter1.TabIndex = 0;
             this.ctrlListWithFilter1.Load += new System.EventHandler(this.ctrlListWithFilter1_Load);
             // 
