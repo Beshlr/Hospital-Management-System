@@ -24,7 +24,12 @@ namespace Hospital_Management_System
             public Image UserImage { get; }
 
             public FormCloseEventArgs(Image userImage)
-            { this.UserImage = userImage; }
+            {
+                if (userImage != null)
+                    this.UserImage = userImage;
+                else
+                    this.UserImage = Image.FromFile("C:\\Users\\Hassan\\Pictures\\Icnos\\accountProfileIcon1.png");
+            }
         }
 
         public EventHandler<FormCloseEventArgs> ImageChanged;
@@ -270,8 +275,7 @@ namespace Hospital_Management_System
             if (_ScreenMode == enScreenMode.enShow)
             {
                 _Img = ctrlAddNewPicture1.GetImage();
-                if (_Img != null)
-                    OnFormClosed(_Img);
+                OnFormClosed(_Img);
                 this.DialogResult = DialogResult.Cancel;
             }
             else

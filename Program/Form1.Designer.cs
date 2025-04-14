@@ -32,6 +32,7 @@
             this.mySiticoneLicenseSettings1 = new SiticoneNetFrameworkUI.MySiticoneLicenseSettings();
             this.siticoneActivityButton1 = new SiticoneNetFrameworkUI.SiticoneActivityButton();
             this.siticoneAdvancedPanel1 = new SiticoneNetFrameworkUI.SiticoneAdvancedPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mySiticoneLicenseSettings1
@@ -137,11 +138,21 @@
             this.siticoneAdvancedPanel1.TopLeftRadius = 5;
             this.siticoneAdvancedPanel1.TopRightRadius = 5;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(306, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 44);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 476);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.siticoneAdvancedPanel1);
             this.Controls.Add(this.siticoneActivityButton1);
             this.Name = "Form1";
@@ -156,5 +167,6 @@
         private SiticoneNetFrameworkUI.MySiticoneLicenseSettings mySiticoneLicenseSettings1;
         private SiticoneNetFrameworkUI.SiticoneActivityButton siticoneActivityButton1;
         private SiticoneNetFrameworkUI.SiticoneAdvancedPanel siticoneAdvancedPanel1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -87,7 +87,6 @@
             this.Controls.Add(this.pbxImage);
             this.Name = "ctrlAddNewPicture";
             this.Size = new System.Drawing.Size(185, 201);
-            this.Load += new System.EventHandler(this.ctrlAddNewPicture_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnChangeImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);

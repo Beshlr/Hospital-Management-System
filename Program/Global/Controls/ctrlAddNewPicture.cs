@@ -12,6 +12,8 @@ using Hospital_Management_System.Global;
 using Hospital_Management_System.Properties;
 using Hospital_Management_System.Classes;
 using System.IO;
+using System.Windows.Input;
+
 
 namespace Hospital_Management_System.Global.Controls
 {
@@ -90,8 +92,6 @@ namespace Hospital_Management_System.Global.Controls
             }
         }
 
-
-
         public string GetImagePath()
         {
             return _ImagePath;
@@ -101,23 +101,23 @@ namespace Hospital_Management_System.Global.Controls
         public void ChangeEditImageStatus(bool Edit)
         {
             btnChangeImage.Enabled = llblRemoveImage.Enabled = Edit;
+
         }
+
 
         private void llblRemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if (pbxImage.Image != Resources.Male_512)
+                OnImageChanged += CtrlAddNewPicture_OnImageChanged;
             pbxImage.Image = Resources.Male_512;
             _ImagePath = null;
             _img = null;
+
         }
 
         public void ChangeEditingStatus(bool EnableEdit)
         {
             btnChangeImage.Enabled = llblRemoveImage.Enabled = EnableEdit;
-        }
-
-        private void ctrlAddNewPicture_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
