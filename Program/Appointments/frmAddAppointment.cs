@@ -88,18 +88,23 @@ namespace Hospital_Management_System.Appointments
             {
                 if (patients[1].PersonInfo.ImagePath != null)
                     pbxPatient2Image.ImageLocation = patients[1].PersonInfo.ImagePath;
+                else
+                    pbxPatient1Image.Image = Resources.Patient_512;
                 lblPatient2Name.Text = patients[1].PersonInfo.FullName;
             }
             if (pnlPatient3.Visible)
             {
                 if (patients[2].PersonInfo.ImagePath != null)
                     pbxPatient3Image.ImageLocation = patients[2].PersonInfo.ImagePath;
+                else
+                    pbxPatient1Image.Image = Resources.Patient_512;
                 lblPatient3Name.Text = patients[2].PersonInfo.FullName;
 
 
             }
         }
 
+      
         private void _HandelShowAndHideFoundDoctorsPanal(List<clsDoctors> doctors)
         {
             
@@ -515,7 +520,10 @@ namespace Hospital_Management_System.Appointments
             appointment.RoomID = SelectedRoomID;
 
             if(appointment.Save())
-                MessageBox.Show("Appointment Saved Successfully", "Data Saved", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            {
+                MessageBox.Show("Appointment Saved Successfully", "Data Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnSave.Enabled = false;
+            }
             else
                 MessageBox.Show("Appointment Saved Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
