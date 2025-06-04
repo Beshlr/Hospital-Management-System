@@ -14,6 +14,7 @@ using Hospital_Management_System.Properties;
 using Hospital_Management_System.Appointments;
 using static Hospital_Management_System.frmUserProfile;
 using Hospital_Management_System.Patients;
+using Hospital_Management_System.Doctors;
 
 namespace Hospital_Management_System
 {
@@ -331,6 +332,14 @@ namespace Hospital_Management_System
             openChildFormInPanel(new frmPatientsList());
             //hideSubMenu();
             
+        }
+
+        private void btnDoctors_Click(object sender, EventArgs e)
+        {
+            if (activeForm is frmDoctorsList)
+                return;
+
+            openChildFormInPanel(new frmDoctorsList());
         }
     }
 }

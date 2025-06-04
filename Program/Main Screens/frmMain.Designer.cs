@@ -31,50 +31,50 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainForSecretary));
             this.pnlControl = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlPuttons = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.pnlLoginUserDetails = new System.Windows.Forms.Panel();
             this.pnlUsername = new System.Windows.Forms.Panel();
             this.lblUsername = new System.Windows.Forms.Label();
             this.pnlUserImage = new System.Windows.Forms.Panel();
+            this.pnlSubMenuPharmacy = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlSubMenuStaf = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlSubMenuGeneral = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlAppLogo = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlTopPanel = new System.Windows.Forms.Panel();
+            this.pnlNotificationIcon = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pnlNotificationList = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblNoNotification = new System.Windows.Forms.Label();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.pbxUserImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnRooms = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlSubMenuPharmacy = new Guna.UI2.WinForms.Guna2Panel();
             this.btnRequests = new Guna.UI2.WinForms.Guna2Button();
             this.btnInventory = new Guna.UI2.WinForms.Guna2Button();
             this.btnPharmacy = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlSubMenuStaf = new Guna.UI2.WinForms.Guna2Panel();
             this.btnDoctors = new Guna.UI2.WinForms.Guna2Button();
             this.btnNurses = new Guna.UI2.WinForms.Guna2Button();
             this.btnStaff = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlSubMenuGeneral = new Guna.UI2.WinForms.Guna2Panel();
             this.btnPayments = new Guna.UI2.WinForms.Guna2Button();
             this.btnPatients = new Guna.UI2.WinForms.Guna2Button();
             this.btnAppointments = new Guna.UI2.WinForms.Guna2Button();
             this.btnGeneral = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlAppLogo = new Guna.UI2.WinForms.Guna2Panel();
             this.pbxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pnlTopPanel = new System.Windows.Forms.Panel();
-            this.pnlNotificationIcon = new System.Windows.Forms.Panel();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.panelChildForm = new System.Windows.Forms.Panel();
-            this.pnlNotificationList = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.lblNoNotification = new System.Windows.Forms.Label();
             this.pnlControl.SuspendLayout();
             this.pnlPuttons.SuspendLayout();
             this.pnlLoginUserDetails.SuspendLayout();
             this.pnlUsername.SuspendLayout();
             this.pnlUserImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).BeginInit();
             this.pnlSubMenuPharmacy.SuspendLayout();
             this.pnlSubMenuStaf.SuspendLayout();
             this.pnlSubMenuGeneral.SuspendLayout();
             this.pnlAppLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.pnlTopPanel.SuspendLayout();
             this.pnlNotificationIcon.SuspendLayout();
             this.pnlNotificationList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlControl
@@ -107,6 +107,159 @@
             this.pnlPuttons.Name = "pnlPuttons";
             this.pnlPuttons.Size = new System.Drawing.Size(238, 825);
             this.pnlPuttons.TabIndex = 1;
+            // 
+            // pnlLoginUserDetails
+            // 
+            this.pnlLoginUserDetails.Controls.Add(this.pnlUsername);
+            this.pnlLoginUserDetails.Controls.Add(this.pnlUserImage);
+            this.pnlLoginUserDetails.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlLoginUserDetails.Location = new System.Drawing.Point(0, 773);
+            this.pnlLoginUserDetails.Name = "pnlLoginUserDetails";
+            this.pnlLoginUserDetails.Size = new System.Drawing.Size(238, 52);
+            this.pnlLoginUserDetails.TabIndex = 3;
+            // 
+            // pnlUsername
+            // 
+            this.pnlUsername.Controls.Add(this.lblUsername);
+            this.pnlUsername.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlUsername.Location = new System.Drawing.Point(3, 0);
+            this.pnlUsername.Name = "pnlUsername";
+            this.pnlUsername.Size = new System.Drawing.Size(185, 52);
+            this.pnlUsername.TabIndex = 3;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.Gray;
+            this.lblUsername.Location = new System.Drawing.Point(65, 17);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(54, 18);
+            this.lblUsername.TabIndex = 1;
+            this.lblUsername.Text = "Admin";
+            // 
+            // pnlUserImage
+            // 
+            this.pnlUserImage.Controls.Add(this.pbxUserImage);
+            this.pnlUserImage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlUserImage.Location = new System.Drawing.Point(188, 0);
+            this.pnlUserImage.Name = "pnlUserImage";
+            this.pnlUserImage.Size = new System.Drawing.Size(50, 52);
+            this.pnlUserImage.TabIndex = 2;
+            // 
+            // pnlSubMenuPharmacy
+            // 
+            this.pnlSubMenuPharmacy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.pnlSubMenuPharmacy.Controls.Add(this.btnRequests);
+            this.pnlSubMenuPharmacy.Controls.Add(this.btnInventory);
+            this.pnlSubMenuPharmacy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuPharmacy.Location = new System.Drawing.Point(0, 482);
+            this.pnlSubMenuPharmacy.Name = "pnlSubMenuPharmacy";
+            this.pnlSubMenuPharmacy.Size = new System.Drawing.Size(238, 122);
+            this.pnlSubMenuPharmacy.TabIndex = 14;
+            // 
+            // pnlSubMenuStaf
+            // 
+            this.pnlSubMenuStaf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.pnlSubMenuStaf.Controls.Add(this.btnDoctors);
+            this.pnlSubMenuStaf.Controls.Add(this.btnNurses);
+            this.pnlSubMenuStaf.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuStaf.Location = new System.Drawing.Point(0, 298);
+            this.pnlSubMenuStaf.Name = "pnlSubMenuStaf";
+            this.pnlSubMenuStaf.Size = new System.Drawing.Size(238, 124);
+            this.pnlSubMenuStaf.TabIndex = 12;
+            // 
+            // pnlSubMenuGeneral
+            // 
+            this.pnlSubMenuGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.pnlSubMenuGeneral.Controls.Add(this.btnPayments);
+            this.pnlSubMenuGeneral.Controls.Add(this.btnPatients);
+            this.pnlSubMenuGeneral.Controls.Add(this.btnAppointments);
+            this.pnlSubMenuGeneral.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMenuGeneral.Location = new System.Drawing.Point(0, 60);
+            this.pnlSubMenuGeneral.Name = "pnlSubMenuGeneral";
+            this.pnlSubMenuGeneral.Size = new System.Drawing.Size(238, 178);
+            this.pnlSubMenuGeneral.TabIndex = 8;
+            // 
+            // pnlAppLogo
+            // 
+            this.pnlAppLogo.Controls.Add(this.pbxLogo);
+            this.pnlAppLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAppLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlAppLogo.Name = "pnlAppLogo";
+            this.pnlAppLogo.Size = new System.Drawing.Size(238, 103);
+            this.pnlAppLogo.TabIndex = 0;
+            // 
+            // pnlTopPanel
+            // 
+            this.pnlTopPanel.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.pnlTopPanel.Controls.Add(this.pnlNotificationIcon);
+            this.pnlTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopPanel.Location = new System.Drawing.Point(238, 0);
+            this.pnlTopPanel.Name = "pnlTopPanel";
+            this.pnlTopPanel.Size = new System.Drawing.Size(854, 52);
+            this.pnlTopPanel.TabIndex = 0;
+            // 
+            // pnlNotificationIcon
+            // 
+            this.pnlNotificationIcon.Controls.Add(this.guna2ImageButton1);
+            this.pnlNotificationIcon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlNotificationIcon.Location = new System.Drawing.Point(793, 0);
+            this.pnlNotificationIcon.Name = "pnlNotificationIcon";
+            this.pnlNotificationIcon.Size = new System.Drawing.Size(61, 52);
+            this.pnlNotificationIcon.TabIndex = 1;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelChildForm.Location = new System.Drawing.Point(238, 52);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(854, 824);
+            this.panelChildForm.TabIndex = 2;
+            // 
+            // pnlNotificationList
+            // 
+            this.pnlNotificationList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlNotificationList.AutoScroll = true;
+            this.pnlNotificationList.AutoSize = true;
+            this.pnlNotificationList.BorderColor = System.Drawing.Color.DimGray;
+            this.pnlNotificationList.BorderRadius = 5;
+            this.pnlNotificationList.BorderThickness = 1;
+            this.pnlNotificationList.Controls.Add(this.lblNoNotification);
+            this.pnlNotificationList.Location = new System.Drawing.Point(640, 6);
+            this.pnlNotificationList.Name = "pnlNotificationList";
+            this.pnlNotificationList.Size = new System.Drawing.Size(211, 174);
+            this.pnlNotificationList.TabIndex = 0;
+            this.pnlNotificationList.Visible = false;
+            // 
+            // lblNoNotification
+            // 
+            this.lblNoNotification.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblNoNotification.AutoSize = true;
+            this.lblNoNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoNotification.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblNoNotification.Location = new System.Drawing.Point(793, 0);
+            this.lblNoNotification.Name = "lblNoNotification";
+            this.lblNoNotification.Size = new System.Drawing.Size(190, 13);
+            this.lblNoNotification.TabIndex = 0;
+            this.lblNoNotification.Text = "You don\'t have any notifications";
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton1.Image = global::Hospital_Management_System.Properties.Resources._4781824_alarm_alert_attention_bell_clock_icon;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(32, 32);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(3, 3);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(55, 42);
+            this.guna2ImageButton1.TabIndex = 0;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // btnLogOut
             // 
@@ -162,46 +315,6 @@
             this.btnUsers.TabIndex = 22;
             this.btnUsers.Text = "Users";
             this.btnUsers.Visible = false;
-            // 
-            // pnlLoginUserDetails
-            // 
-            this.pnlLoginUserDetails.Controls.Add(this.pnlUsername);
-            this.pnlLoginUserDetails.Controls.Add(this.pnlUserImage);
-            this.pnlLoginUserDetails.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlLoginUserDetails.Location = new System.Drawing.Point(0, 773);
-            this.pnlLoginUserDetails.Name = "pnlLoginUserDetails";
-            this.pnlLoginUserDetails.Size = new System.Drawing.Size(238, 52);
-            this.pnlLoginUserDetails.TabIndex = 3;
-            // 
-            // pnlUsername
-            // 
-            this.pnlUsername.Controls.Add(this.lblUsername);
-            this.pnlUsername.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlUsername.Location = new System.Drawing.Point(3, 0);
-            this.pnlUsername.Name = "pnlUsername";
-            this.pnlUsername.Size = new System.Drawing.Size(185, 52);
-            this.pnlUsername.TabIndex = 3;
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.Gray;
-            this.lblUsername.Location = new System.Drawing.Point(65, 17);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(54, 18);
-            this.lblUsername.TabIndex = 1;
-            this.lblUsername.Text = "Admin";
-            // 
-            // pnlUserImage
-            // 
-            this.pnlUserImage.Controls.Add(this.pbxUserImage);
-            this.pnlUserImage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlUserImage.Location = new System.Drawing.Point(188, 0);
-            this.pnlUserImage.Name = "pnlUserImage";
-            this.pnlUserImage.Size = new System.Drawing.Size(50, 52);
-            this.pnlUserImage.TabIndex = 2;
             // 
             // pbxUserImage
             // 
@@ -271,17 +384,6 @@
             this.btnRooms.Size = new System.Drawing.Size(238, 60);
             this.btnRooms.TabIndex = 17;
             this.btnRooms.Text = "Rooms";
-            // 
-            // pnlSubMenuPharmacy
-            // 
-            this.pnlSubMenuPharmacy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.pnlSubMenuPharmacy.Controls.Add(this.btnRequests);
-            this.pnlSubMenuPharmacy.Controls.Add(this.btnInventory);
-            this.pnlSubMenuPharmacy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuPharmacy.Location = new System.Drawing.Point(0, 482);
-            this.pnlSubMenuPharmacy.Name = "pnlSubMenuPharmacy";
-            this.pnlSubMenuPharmacy.Size = new System.Drawing.Size(238, 122);
-            this.pnlSubMenuPharmacy.TabIndex = 14;
             // 
             // btnRequests
             // 
@@ -363,17 +465,6 @@
             this.btnPharmacy.Text = "Pharmacy";
             this.btnPharmacy.Click += new System.EventHandler(this.btnPharmacy_Click);
             // 
-            // pnlSubMenuStaf
-            // 
-            this.pnlSubMenuStaf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.pnlSubMenuStaf.Controls.Add(this.btnDoctors);
-            this.pnlSubMenuStaf.Controls.Add(this.btnNurses);
-            this.pnlSubMenuStaf.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuStaf.Location = new System.Drawing.Point(0, 298);
-            this.pnlSubMenuStaf.Name = "pnlSubMenuStaf";
-            this.pnlSubMenuStaf.Size = new System.Drawing.Size(238, 124);
-            this.pnlSubMenuStaf.TabIndex = 12;
-            // 
             // btnDoctors
             // 
             this.btnDoctors.Animated = true;
@@ -399,6 +490,7 @@
             this.btnDoctors.Size = new System.Drawing.Size(235, 49);
             this.btnDoctors.TabIndex = 10;
             this.btnDoctors.Text = "Doctors";
+            this.btnDoctors.Click += new System.EventHandler(this.btnDoctors_Click);
             // 
             // btnNurses
             // 
@@ -453,18 +545,6 @@
             this.btnStaff.TabIndex = 9;
             this.btnStaff.Text = "Staff";
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
-            // 
-            // pnlSubMenuGeneral
-            // 
-            this.pnlSubMenuGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.pnlSubMenuGeneral.Controls.Add(this.btnPayments);
-            this.pnlSubMenuGeneral.Controls.Add(this.btnPatients);
-            this.pnlSubMenuGeneral.Controls.Add(this.btnAppointments);
-            this.pnlSubMenuGeneral.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubMenuGeneral.Location = new System.Drawing.Point(0, 60);
-            this.pnlSubMenuGeneral.Name = "pnlSubMenuGeneral";
-            this.pnlSubMenuGeneral.Size = new System.Drawing.Size(238, 178);
-            this.pnlSubMenuGeneral.TabIndex = 8;
             // 
             // btnPayments
             // 
@@ -574,15 +654,6 @@
             this.btnGeneral.Text = "General";
             this.btnGeneral.Click += new System.EventHandler(this.btnGeneral_Click);
             // 
-            // pnlAppLogo
-            // 
-            this.pnlAppLogo.Controls.Add(this.pbxLogo);
-            this.pnlAppLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAppLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlAppLogo.Name = "pnlAppLogo";
-            this.pnlAppLogo.Size = new System.Drawing.Size(238, 103);
-            this.pnlAppLogo.TabIndex = 0;
-            // 
             // pbxLogo
             // 
             this.pbxLogo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -594,76 +665,6 @@
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 0;
             this.pbxLogo.TabStop = false;
-            // 
-            // pnlTopPanel
-            // 
-            this.pnlTopPanel.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.pnlTopPanel.Controls.Add(this.pnlNotificationIcon);
-            this.pnlTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTopPanel.Location = new System.Drawing.Point(238, 0);
-            this.pnlTopPanel.Name = "pnlTopPanel";
-            this.pnlTopPanel.Size = new System.Drawing.Size(854, 52);
-            this.pnlTopPanel.TabIndex = 0;
-            // 
-            // pnlNotificationIcon
-            // 
-            this.pnlNotificationIcon.Controls.Add(this.guna2ImageButton1);
-            this.pnlNotificationIcon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlNotificationIcon.Location = new System.Drawing.Point(793, 0);
-            this.pnlNotificationIcon.Name = "pnlNotificationIcon";
-            this.pnlNotificationIcon.Size = new System.Drawing.Size(61, 52);
-            this.pnlNotificationIcon.TabIndex = 1;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton1.Image = global::Hospital_Management_System.Properties.Resources._4781824_alarm_alert_attention_bell_clock_icon;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(3, 3);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(55, 42);
-            this.guna2ImageButton1.TabIndex = 0;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelChildForm.Location = new System.Drawing.Point(238, 52);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(854, 824);
-            this.panelChildForm.TabIndex = 2;
-            // 
-            // pnlNotificationList
-            // 
-            this.pnlNotificationList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlNotificationList.AutoScroll = true;
-            this.pnlNotificationList.AutoSize = true;
-            this.pnlNotificationList.BorderColor = System.Drawing.Color.DimGray;
-            this.pnlNotificationList.BorderRadius = 5;
-            this.pnlNotificationList.BorderThickness = 1;
-            this.pnlNotificationList.Controls.Add(this.lblNoNotification);
-            this.pnlNotificationList.Location = new System.Drawing.Point(640, 6);
-            this.pnlNotificationList.Name = "pnlNotificationList";
-            this.pnlNotificationList.Size = new System.Drawing.Size(211, 174);
-            this.pnlNotificationList.TabIndex = 0;
-            this.pnlNotificationList.Visible = false;
-            // 
-            // lblNoNotification
-            // 
-            this.lblNoNotification.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblNoNotification.AutoSize = true;
-            this.lblNoNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoNotification.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblNoNotification.Location = new System.Drawing.Point(793, 0);
-            this.lblNoNotification.Name = "lblNoNotification";
-            this.lblNoNotification.Size = new System.Drawing.Size(190, 13);
-            this.lblNoNotification.TabIndex = 0;
-            this.lblNoNotification.Text = "You don\'t have any notifications";
             // 
             // frmMainForSecretary
             // 
@@ -688,16 +689,16 @@
             this.pnlUsername.ResumeLayout(false);
             this.pnlUsername.PerformLayout();
             this.pnlUserImage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).EndInit();
             this.pnlSubMenuPharmacy.ResumeLayout(false);
             this.pnlSubMenuStaf.ResumeLayout(false);
             this.pnlSubMenuGeneral.ResumeLayout(false);
             this.pnlAppLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.pnlTopPanel.ResumeLayout(false);
             this.pnlNotificationIcon.ResumeLayout(false);
             this.pnlNotificationList.ResumeLayout(false);
             this.pnlNotificationList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxUserImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
