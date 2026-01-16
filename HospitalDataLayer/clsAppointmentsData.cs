@@ -177,7 +177,6 @@ namespace HospitalDataLayer
             return (rowsAffected > 0);
         }
 
-
         public static bool DeleteAppointments(int AppointmentID)
         {
             int rowsAffected = 0;
@@ -231,6 +230,7 @@ namespace HospitalDataLayer
 
             return (rowsAffected > 0);
         }
+        
         public static DataTable SearchData(string ColumnName, string Data)
         {
             DataTable dt = new DataTable();
@@ -262,6 +262,7 @@ namespace HospitalDataLayer
 
             return dt;
         }
+        
         public static int GetRoomIDByAppID(int AppID)
         {
             int RoomID = -1;

@@ -81,6 +81,7 @@ namespace HospitalDataLayer
             }
             return isFound;
         }
+        
         public static DataTable GetAllRooms()
         {
             DataTable dt = new DataTable();
@@ -110,7 +111,6 @@ namespace HospitalDataLayer
             return dt;
         }
 
-
         public static DataTable GetAllRoomsNumbers()
         {
             DataTable dt = new DataTable();
@@ -128,7 +128,9 @@ namespace HospitalDataLayer
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             dt.Load(reader);
+                            
                         }
+
                     }
                 }
             }
@@ -140,9 +142,6 @@ namespace HospitalDataLayer
             return dt;
         }
         
-
-
-
         public static int AddNewRooms(string RoomNumber, string Floor, string RoomType, string BedCount, bool IsOccupied,  byte AvailabilityStatus, decimal DailyRate)
         {
             int RoomID = -1;
@@ -246,7 +245,6 @@ namespace HospitalDataLayer
 
             return (rowsAffected > 0);
         }
-
 
         public static bool DeleteRooms(int RoomID)
         {

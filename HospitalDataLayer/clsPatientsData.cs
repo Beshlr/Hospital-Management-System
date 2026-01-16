@@ -356,7 +356,6 @@ namespace HospitalDataLayer
         }
         
 
-
         public static DataTable GetAllPatients()
         {
             DataTable dt = new DataTable();

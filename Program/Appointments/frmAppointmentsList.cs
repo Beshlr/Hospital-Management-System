@@ -404,4 +404,15 @@ namespace Hospital_Management_System.Appointments
            
         }
     }
+
+    /*
+
+     Todo List:
+
+        - Fix the image loading to ensure images are displayed correctly without distortion.
+        - Before save the appointment check  if patient has same appointment with same doctor in same day
+        - Fix the date of the appointment to make  choose it easly and show it softly
+        - try to make the selection of the row by hover on it not condition to left click on it
+         
+     */
 }

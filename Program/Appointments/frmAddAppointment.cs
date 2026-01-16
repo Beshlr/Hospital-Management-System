@@ -365,9 +365,13 @@ namespace Hospital_Management_System.Appointments
 
             try
             {
-                List<string> roomNumbers = clsRooms.GetAllRoomNumbers();
-
-                cbxRoomNO.DataSource = roomNumbers; 
+                List<string> roomNumbers = clsRooms.GetAllRoomsNumbers();
+                if(_Mode == _enMode.enUpdate)
+                {
+                    roomNumbers.Add(_Appointment.RoomsInfo.RoomNumber);
+                }
+                roomNumbers.Sort();
+                cbxRoomNO.DataSource = roomNumbers;
             }
             catch (Exception ex)
             {
@@ -389,7 +393,6 @@ namespace Hospital_Management_System.Appointments
             {
                 _LoadSelectedPatientData();
                 _LoadSelectedDoctorData();
-
                 cbxRoomNO.Text = _Appointment.RoomsInfo.RoomNumber;
                 dtpDate.Text = _Appointment.Date.ToShortDateString();
                 dtpDate.Enabled = (_Appointment.AppStatus != clsAppointments.enStatus.Rescheduled);
@@ -419,7 +422,12 @@ namespace Hospital_Management_System.Appointments
             _LoadSelectedPatientData(_SelectedPatient.PatientID);
         }
 
-        
+        //Todo List:
+
+        /*
+            - Adding choosing the doctor by his department
+         
+        */
 
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -510,7 +518,15 @@ namespace Hospital_Management_System.Appointments
 
                 return;
             }
-            
+
+            int ActiveAppForSelectedPatient = clsAppointments.CheckIfPatientHasActiveApp(_SelectedPatient.PatientID);
+
+
+            if (ActiveAppForSelectedPatient != -1)
+            {
+                //MessageBox.Show($"Patient {_SelectedPatient.PersonInfo.FirstName} Has Active ","")
+            }
+
             appointment.PatientID = _SelectedPatient.PatientID;
             appointment.DoctorID = _SelectedDoctor.DoctorID;
 

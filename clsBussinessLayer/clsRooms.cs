@@ -195,7 +195,7 @@ int  RoomID, string RoomNumber, string Floor, string RoomType, string BedCount, 
 
         
 
-        public static List<string> GetAllRoomNumbers()
+        public static List<string> GetAllRoomsNumbers()
         {
             DataTable dt = clsRoomsData.GetAllRoomsNumbers();
             List<string> roomNumbers = new List<string>();
