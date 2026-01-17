@@ -107,7 +107,9 @@
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.txtDoctorsSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPatientSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pbxSearchFilter = new System.Windows.Forms.PictureBox();
+            this.pbxPatientSearchFilter = new System.Windows.Forms.PictureBox();
+            this.pbxDoctorSearchFilter = new System.Windows.Forms.PictureBox();
+            this.cbxSpecilizations = new Guna.UI2.WinForms.Guna2ComboBox();
             this.gbxFilterBy.SuspendLayout();
             this.gbxPatientInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSelectedPatientImage)).BeginInit();
@@ -133,7 +135,8 @@
             this.pnlPatient1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPatient1Image)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSearchFilter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPatientSearchFilter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDoctorSearchFilter)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -1124,9 +1127,8 @@
             this.txtDoctorsSearchBar.IconRight = global::Hospital_Management_System.Properties.Resources._211817_search_strong_icon;
             this.txtDoctorsSearchBar.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txtDoctorsSearchBar.IconRightOffset = new System.Drawing.Point(5, 0);
-            this.txtDoctorsSearchBar.Location = new System.Drawing.Point(581, 61);
+            this.txtDoctorsSearchBar.Location = new System.Drawing.Point(581, 62);
             this.txtDoctorsSearchBar.Name = "txtDoctorsSearchBar";
-            this.txtDoctorsSearchBar.PasswordChar = '\0';
             this.txtDoctorsSearchBar.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtDoctorsSearchBar.PlaceholderText = "Enter Doctor\'s Name";
             this.txtDoctorsSearchBar.SelectedText = "";
@@ -1153,9 +1155,8 @@
             this.txtPatientSearchBar.IconRight = global::Hospital_Management_System.Properties.Resources._211817_search_strong_icon;
             this.txtPatientSearchBar.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.txtPatientSearchBar.IconRightOffset = new System.Drawing.Point(5, 0);
-            this.txtPatientSearchBar.Location = new System.Drawing.Point(12, 59);
+            this.txtPatientSearchBar.Location = new System.Drawing.Point(12, 62);
             this.txtPatientSearchBar.Name = "txtPatientSearchBar";
-            this.txtPatientSearchBar.PasswordChar = '\0';
             this.txtPatientSearchBar.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtPatientSearchBar.PlaceholderText = "Enter Patient\'s Name";
             this.txtPatientSearchBar.SelectedText = "";
@@ -1164,17 +1165,47 @@
             this.txtPatientSearchBar.TextChanged += new System.EventHandler(this.txtPatientSearchBar_TextChanged);
             this.txtPatientSearchBar.Click += new System.EventHandler(this.txtPatientSearchBar_Click);
             // 
-            // pbxSearchFilter
+            // pbxPatientSearchFilter
             // 
-            this.pbxSearchFilter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxSearchFilter.Image = global::Hospital_Management_System.Properties.Resources._4781833_filter_filters_funnel_list_navigation_icon;
-            this.pbxSearchFilter.Location = new System.Drawing.Point(281, 61);
-            this.pbxSearchFilter.Name = "pbxSearchFilter";
-            this.pbxSearchFilter.Size = new System.Drawing.Size(29, 30);
-            this.pbxSearchFilter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxSearchFilter.TabIndex = 11;
-            this.pbxSearchFilter.TabStop = false;
-            this.pbxSearchFilter.Click += new System.EventHandler(this.pbxSearchFilter_Click);
+            this.pbxPatientSearchFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxPatientSearchFilter.Image = global::Hospital_Management_System.Properties.Resources._4781833_filter_filters_funnel_list_navigation_icon;
+            this.pbxPatientSearchFilter.Location = new System.Drawing.Point(281, 63);
+            this.pbxPatientSearchFilter.Name = "pbxPatientSearchFilter";
+            this.pbxPatientSearchFilter.Size = new System.Drawing.Size(29, 30);
+            this.pbxPatientSearchFilter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxPatientSearchFilter.TabIndex = 11;
+            this.pbxPatientSearchFilter.TabStop = false;
+            this.pbxPatientSearchFilter.Click += new System.EventHandler(this.pbxSearchFilter_Click);
+            // 
+            // pbxDoctorSearchFilter
+            // 
+            this.pbxDoctorSearchFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxDoctorSearchFilter.Image = global::Hospital_Management_System.Properties.Resources._4781833_filter_filters_funnel_list_navigation_icon;
+            this.pbxDoctorSearchFilter.Location = new System.Drawing.Point(850, 63);
+            this.pbxDoctorSearchFilter.Name = "pbxDoctorSearchFilter";
+            this.pbxDoctorSearchFilter.Size = new System.Drawing.Size(29, 30);
+            this.pbxDoctorSearchFilter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxDoctorSearchFilter.TabIndex = 25;
+            this.pbxDoctorSearchFilter.TabStop = false;
+            this.pbxDoctorSearchFilter.Click += new System.EventHandler(this.pbxSearchFilter_Click);
+            // 
+            // cbxSpecilizations
+            // 
+            this.cbxSpecilizations.BackColor = System.Drawing.Color.Transparent;
+            this.cbxSpecilizations.BorderRadius = 10;
+            this.cbxSpecilizations.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxSpecilizations.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSpecilizations.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxSpecilizations.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxSpecilizations.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbxSpecilizations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbxSpecilizations.ItemHeight = 30;
+            this.cbxSpecilizations.Location = new System.Drawing.Point(582, 58);
+            this.cbxSpecilizations.Name = "cbxSpecilizations";
+            this.cbxSpecilizations.Size = new System.Drawing.Size(262, 36);
+            this.cbxSpecilizations.TabIndex = 26;
+            this.cbxSpecilizations.Visible = false;
+            this.cbxSpecilizations.SelectedIndexChanged += new System.EventHandler(this.cbxSpecilizations_SelectedIndexChanged);
             // 
             // frmAddAppointment
             // 
@@ -1182,6 +1213,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(932, 727);
+            this.Controls.Add(this.cbxSpecilizations);
+            this.Controls.Add(this.pbxDoctorSearchFilter);
             this.Controls.Add(this.pnlFoundDoctors);
             this.Controls.Add(this.gbxDoctorInfo);
             this.Controls.Add(this.btnClose);
@@ -1194,13 +1227,14 @@
             this.Controls.Add(this.label26);
             this.Controls.Add(this.gbxFilterBy);
             this.Controls.Add(this.txtPatientSearchBar);
-            this.Controls.Add(this.pbxSearchFilter);
+            this.Controls.Add(this.pbxPatientSearchFilter);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddAppointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Appointment";
             this.Load += new System.EventHandler(this.frmAddAppointment_Load);
+            this.Click += new System.EventHandler(this.pbxSearchFilter_Click);
             this.gbxFilterBy.ResumeLayout(false);
             this.gbxFilterBy.PerformLayout();
             this.gbxPatientInfo.ResumeLayout(false);
@@ -1239,7 +1273,8 @@
             this.pnlPatient1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPatient1Image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSearchFilter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPatientSearchFilter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDoctorSearchFilter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1254,7 +1289,7 @@
         private Guna.UI2.WinForms.Guna2RadioButton rbtnNationalNO;
         private Guna.UI2.WinForms.Guna2RadioButton rbtnPatientName;
         private Guna.UI2.WinForms.Guna2TextBox txtPatientSearchBar;
-        private System.Windows.Forms.PictureBox pbxSearchFilter;
+        private System.Windows.Forms.PictureBox pbxPatientSearchFilter;
         private System.Windows.Forms.Label lblPatientID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel llblEditPatientInfo;
@@ -1326,5 +1361,7 @@
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label lblSpecialization;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pbxDoctorSearchFilter;
+        private Guna.UI2.WinForms.Guna2ComboBox cbxSpecilizations;
     }
 }

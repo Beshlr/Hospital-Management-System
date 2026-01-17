@@ -11,6 +11,7 @@ using clsBussinessLayer;
 using Hospital_Management_System.Doctors;
 using Hospital_Management_System.Patients;
 using Hospital_Management_System.Properties;
+using static clsBussinessLayer.clsDoctors;
 
 namespace Hospital_Management_System.Appointments
 {
@@ -556,16 +557,57 @@ namespace Hospital_Management_System.Appointments
             if(gbxFilterBy.Visible)
                 gbxFilterBy.Visible = false;
             else
+            {
                 gbxFilterBy.Visible = true;
+
+                // Change Texts According to which search filter picture box is clicked
+                if (((PictureBox)sender).Name == "pbxPatientSearchFilter")
+                {
+                    gbxFilterBy.Text = "Filter Patients By";
+                    rbtnNationalNO.Text = "National NO.";
+                    rbtnPatientName.Text = "Patient's Name";
+
+                }
+                else if (((PictureBox)sender).Name == "pbxDoctorSearchFilter")
+                {
+                    gbxFilterBy.Text = "Filter Doctors By";
+                    rbtnNationalNO.Text = "Department";
+                    rbtnPatientName.Text = "Doctor's Name";
+                }
+            }
         }
 
         private void rbtnNationalNO_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnNationalNO.Checked)
-                txtPatientSearchBar.PlaceholderText = "Enter NationalNO.";
-            else
-                txtPatientSearchBar.PlaceholderText = "Enter Patient's Name";
+            {
+                if (rbtnNationalNO.Text == "National NO.")
+                    txtPatientSearchBar.PlaceholderText = "Enter NationalNO.";
+                else
+                {
+                    txtDoctorsSearchBar.Visible = false;
+                    cbxSpecilizations.Visible = true;
+                    _LoadDepartmentsIntoComboBox();
+                }
 
+            }
+            else
+            {
+                if (rbtnPatientName.Text == "Patient's Name")
+                    txtPatientSearchBar.PlaceholderText = "Enter Patient's Name";
+                else
+                {
+                    cbxSpecilizations.Visible = false;
+                    txtDoctorsSearchBar.Visible = true;
+                }
+            }
+
+        }
+        private void _LoadDepartmentsIntoComboBox()
+        {
+            List<string> deptNames = clsSpecializations.GetAllSpecializationName();
+            cbxSpecilizations.DataSource = deptNames;
+            cbxSpecilizations.Visible = true;
         }
 
         private void txtPatientSearchBar_Click(object sender, EventArgs e)
@@ -582,6 +624,28 @@ namespace Hospital_Management_System.Appointments
                 {
                     _TempRoomID = _Appointment.RoomID;
                 }
+            }
+        }
+
+        private void cbxSpecilizations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int specializationId = cbxSpecilizations.SelectedIndex + 1;
+            LoadDoctorsBySpecialization(specializationId);
+        }
+
+        private void LoadDoctorsBySpecialization(int specializationId)
+        {
+            _doctors = clsDoctors.GetDoctorsBySpecializationID(specializationId);
+
+            if (_doctors.Count > 0)
+
+            {
+                _HandelShowAndHideFoundDoctorsPanal(_doctors);
+                _HandelLoadFoundDoctorsData(_doctors);
+            }
+            else
+            {
+                pnlFoundDoctors.Visible = false;
             }
         }
     }

@@ -48,7 +48,7 @@ namespace HospitalDataLayer
 
             return DoctorID;
         }
-    
+
         public static bool DeleteDoctorByDoctorID(int DoctorID)
         {
             bool IsDeleted = false;
@@ -71,7 +71,7 @@ namespace HospitalDataLayer
 
             return IsDeleted;
         }
-    
+
         public static bool DeleteDoctorByPersonID(int PersonID)
         {
             bool IsDeleted = false;
@@ -95,7 +95,7 @@ namespace HospitalDataLayer
             return IsDeleted;
         }
 
-        public static bool UpdateDoctorByDoctorID(int DoctorID,int SpecializationID, int WorkingHours)
+        public static bool UpdateDoctorByDoctorID(int DoctorID, int SpecializationID, int WorkingHours)
         {
             bool IsUpdated = false;
 
@@ -124,8 +124,8 @@ namespace HospitalDataLayer
             return IsUpdated;
 
         }
-    
-        public static bool UpdateDoctorByPersonID(int PersonID,int SpecializationID, int WorkingHours)
+
+        public static bool UpdateDoctorByPersonID(int PersonID, int SpecializationID, int WorkingHours)
         {
             bool IsUpdated = false;
 
@@ -154,20 +154,20 @@ namespace HospitalDataLayer
             return IsUpdated;
 
         }
-    
-        public static bool GetDoctorInfoByDoctorID(int DoctorID, ref int PersonID,ref  int SpecializationID,ref int WorkingHours)
+
+        public static bool GetDoctorInfoByDoctorID(int DoctorID, ref int PersonID, ref int SpecializationID, ref int WorkingHours)
         {
             bool IsFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
             string query = "Select * From Doctors Where DoctorID = @DoctorID";
 
-            SqlCommand command = new SqlCommand(query,connection);
+            SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@DoctorID", DoctorID);
             try
             {
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
-                if(reader.Read())
+                if (reader.Read())
                 {
                     IsFound = true;
                     PersonID = (int)reader["PersonID"];
@@ -182,20 +182,20 @@ namespace HospitalDataLayer
 
             return IsFound;
         }
-    
-        public static bool GetDoctorInfoByPersonID(ref int DoctorID, int PersonID,ref  int SpecializationID,ref int WorkingHours)
+
+        public static bool GetDoctorInfoByPersonID(ref int DoctorID, int PersonID, ref int SpecializationID, ref int WorkingHours)
         {
             bool IsFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
             string query = "Select * From Doctors Where PersonID = @PersonID";
 
-            SqlCommand command = new SqlCommand(query,connection);
+            SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonID", PersonID);
             try
             {
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
-                if(reader.Read())
+                if (reader.Read())
                 {
                     IsFound = true;
                     DoctorID = (int)reader["DoctorID"];
@@ -210,7 +210,7 @@ namespace HospitalDataLayer
 
             return IsFound;
         }
-    
+
         public static bool IsDoctorInThisSpecialization(int DoctorID, int SpecializationID)
         {
             bool IsFound = false;
@@ -232,7 +232,7 @@ namespace HospitalDataLayer
 
             return IsFound;
         }
-    
+
         public static DataTable GetAllDoctors()
         {
             DataTable dt = new DataTable();
@@ -258,7 +258,7 @@ namespace HospitalDataLayer
             return dt;
         }
 
-        public static bool GetDoctorInfoByNationalNO(string NationalNO,ref int DoctorID,ref int PersonID, ref int SpecializationID, ref int WorkingHours)
+        public static bool GetDoctorInfoByNationalNO(string NationalNO, ref int DoctorID, ref int PersonID, ref int SpecializationID, ref int WorkingHours)
         {
             bool IsFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
@@ -283,7 +283,7 @@ FROM            Doctors INNER JOIN
                     WorkingHours = Convert.ToInt32((byte)reader["WorkingHours"]);
 
                     //Checking For Nullable Values
-                    
+
                 }
 
                 reader.Close();
@@ -296,10 +296,10 @@ FROM            Doctors INNER JOIN
 
         public static DataTable GetTop3DoctorsThereNameStartWith(string DoctorName)
         {
-            DataTable dt = new DataTable() ;
+            DataTable dt = new DataTable();
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            
+
             string query = @"SELECT    Top 3    Doctors.DoctorID, Doctors.PersonID, Doctors.SpecializationID, Doctors.WorkingHours,
                              People.FirstName + ' ' + People.SecondName + ' ' + People.LastName AS FullName
                              FROM            Doctors INNER JOIN
@@ -330,16 +330,40 @@ FROM            Doctors INNER JOIN
 
             return dt;
         }
-    }
 
-    public class clsSpecializationsData
-    {
-        public static int AddNewSpecialization(string SpecializationName, string SpecializationDescription, int NumOfDoctors)
+        public static DataTable GetDoctorsBySpecializationID(int SpecializationID)
         {
-            int SpecializationID = -1;
+            DataTable dt = new DataTable();
+            using (SqlCommand cmd = new SqlCommand("dbo.SP_GetDoctorsInSpecialization", new SqlConnection(clsDataAccessSettings.ConnectionString)))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@SpecializationID", SpecializationID);
+                try
+                {
+                    cmd.Connection.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        dt.Load(reader);
+                    }
+                    reader.Close();
+                }
+                catch { }
+                finally { cmd.Connection.Close(); }
+                {
+                    return dt;
+                }
+            }
+        }
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"Insert Into Specializations(
+        public class clsSpecializationsData
+        {
+            public static int AddNewSpecialization(string SpecializationName, string SpecializationDescription, int NumOfDoctors)
+            {
+                int SpecializationID = -1;
+
+                SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+                string query = @"Insert Into Specializations(
                            SpecializationName,SpecializationDescr,NumOfDoctors)
                             
                             Values:
@@ -350,138 +374,139 @@ FROM            Doctors INNER JOIN
                             )
                             SELECT SCOPE_IDENTITY();";
 
-            SqlCommand command = new SqlCommand(query, connection);
+                SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@SpecializationName", SpecializationName);
-            command.Parameters.AddWithValue("@SpecializationDescription", SpecializationDescription);
-            command.Parameters.AddWithValue("@NumOfDoctors", NumOfDoctors);
+                command.Parameters.AddWithValue("@SpecializationName", SpecializationName);
+                command.Parameters.AddWithValue("@SpecializationDescription", SpecializationDescription);
+                command.Parameters.AddWithValue("@NumOfDoctors", NumOfDoctors);
 
 
-            try
-            {
-                connection.Open();
-                object result = command.ExecuteScalar();
-                if (result != null && int.TryParse(result.ToString(), out int InsertedID))
+                try
                 {
-                    SpecializationID = InsertedID;
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != null && int.TryParse(result.ToString(), out int InsertedID))
+                    {
+                        SpecializationID = InsertedID;
+                    }
+
                 }
+                catch { }
+                finally { connection.Close(); }
 
+                return SpecializationID;
             }
-            catch { }
-            finally { connection.Close(); }
 
-            return SpecializationID;
-        }
-    
-        public static bool UpdateSpecialization(int SpecializationID, string SpecializationName,string SpecializationDescription, int NumOfDoctors)
-        {
-            bool IsUpdated = false;
+            public static bool UpdateSpecialization(int SpecializationID, string SpecializationName, string SpecializationDescription, int NumOfDoctors)
+            {
+                bool IsUpdated = false;
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = @"Update Specializations
+                SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+                string query = @"Update Specializations
                             Set
                             SpecializationName = @SpecializationName
                             SpecializationDescription = @SpecializationDescription
                             NumOfDoctors = @NumOfDoctors
                             Where SpecializationID = @SpecializationID";
-            SqlCommand command = new SqlCommand(query, connection);
+                SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@SpecializationName", SpecializationName);
-            command.Parameters.AddWithValue("@SpecializationDescription", SpecializationDescription);
-            command.Parameters.AddWithValue("@NumOfDoctors", NumOfDoctors);
-            command.Parameters.AddWithValue("@SpecializationID", SpecializationID);
+                command.Parameters.AddWithValue("@SpecializationName", SpecializationName);
+                command.Parameters.AddWithValue("@SpecializationDescription", SpecializationDescription);
+                command.Parameters.AddWithValue("@NumOfDoctors", NumOfDoctors);
+                command.Parameters.AddWithValue("@SpecializationID", SpecializationID);
 
-            try
-            {
-                connection.Open();
-                int result = command.ExecuteNonQuery();
-                IsUpdated = (result > 0);
-
-            }
-            catch { }
-            finally { connection.Close(); }
-
-            return IsUpdated;
-        }
-    
-        public static int GetNumOfDoctorsInASpecialization(int SpecializationID)
-        {
-            int NumOfDoctors = -1;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "Select NumOfDoctors From Specializations Where SpecializationID = @SpecializationID";
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@SpecializationID", SpecializationID);
-
-            try
-            {
-                connection.Open();
-                object result = command.ExecuteScalar();
-                NumOfDoctors = (int)result ;
-
-            }
-            catch { }
-            finally { connection.Close(); }
-
-            return NumOfDoctors;
-
-        }
-    
-        public static DataTable GetAllSpecializationsRecords()
-        {
-            
-            DataTable dt = new DataTable();
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "Select * From Specialization";
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
+                try
                 {
-                    dt.Load(reader);
+                    connection.Open();
+                    int result = command.ExecuteNonQuery();
+                    IsUpdated = (result > 0);
+
                 }
+                catch { }
+                finally { connection.Close(); }
 
-                reader.Close();
+                return IsUpdated;
             }
-            catch { }
-            finally { connection.Close(); }
 
-            return dt;
-        }
-
-        public static bool GetSpecializationInfo(int SpecializationID, ref string SpecializationName, ref string SpecializationDescr, ref int NumOfDoctors)
-        {
-            bool IsFound = false;
-
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-            string query = "Select * From Specialization Where SpecializationID = @SpecializationID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@SpecializationID", SpecializationID);
-            try
+            public static int GetNumOfDoctorsInASpecialization(int SpecializationID)
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
+                int NumOfDoctors = -1;
+                SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+                string query = "Select NumOfDoctors From Specializations Where SpecializationID = @SpecializationID";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@SpecializationID", SpecializationID);
+
+                try
                 {
-                    IsFound = true;
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    NumOfDoctors = (int)result;
 
-                    SpecializationName = (string)reader["SpecializationName"];
-                    SpecializationDescr = (string)reader["SpecializationDescr"];
-                    NumOfDoctors = (int)reader["NumOfDoctors"];
                 }
+                catch { }
+                finally { connection.Close(); }
 
-                reader.Close();
+                return NumOfDoctors;
+
             }
-            catch { Exception ex; }
-            finally { connection.Close(); }
 
-            return IsFound;
+            public static DataTable GetAllSpecializationsRecords()
+            {
+
+                DataTable dt = new DataTable();
+
+                SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+                string query = "Select * From Specialization";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        dt.Load(reader);
+                    }
+
+                    reader.Close();
+                }
+                catch { }
+                finally { connection.Close(); }
+
+                return dt;
+            }
+
+            public static bool GetSpecializationInfo(int SpecializationID, ref string SpecializationName, ref string SpecializationDescr, ref int NumOfDoctors)
+            {
+                bool IsFound = false;
+
+                SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+                string query = "Select * From Specialization Where SpecializationID = @SpecializationID";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@SpecializationID", SpecializationID);
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        IsFound = true;
+
+                        SpecializationName = (string)reader["SpecializationName"];
+                        SpecializationDescr = (string)reader["SpecializationDescr"];
+                        NumOfDoctors = (int)reader["NumOfDoctors"];
+                    }
+
+                    reader.Close();
+                }
+                catch { Exception ex; }
+                finally { connection.Close(); }
+
+                return IsFound;
+            }
+
         }
-    
     }
 }

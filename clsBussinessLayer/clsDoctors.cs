@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using HospitalDataLayer;
 using System.Data;
+using static HospitalDataLayer.clsDoctorsData;
 
 namespace clsBussinessLayer
 {
     public class clsDoctors
     {
         public int DoctorID { get; set; }
-        public int PersonID {  get; set; }
+        public int PersonID { get; set; }
         public clsPeople PersonInfo { get; set; }
         public int SpecializationID { get; set; }
         public clsSpecializations SpecializationInfo { get; set; }
@@ -28,7 +29,7 @@ namespace clsBussinessLayer
             this.Mode = enMode.AddNew;
         }
 
-        private clsDoctors(int personID,int DoctorID, int SpecializationID, int WorkingHours)
+        private clsDoctors(int personID, int DoctorID, int SpecializationID, int WorkingHours)
         {
             this.PersonID = personID;
             this.PersonInfo = clsPeople.GetPersonInfo(personID);
@@ -75,7 +76,7 @@ namespace clsBussinessLayer
 
         public bool Save()
         {
-            
+
 
             switch (Mode)
             {
@@ -104,7 +105,7 @@ namespace clsBussinessLayer
             {
                 //Get person information by ID.
 
-                return new clsDoctors(PersonID,DoctorID,
+                return new clsDoctors(PersonID, DoctorID,
                     SpecializationID, WorkingHours);
             }
 
@@ -129,9 +130,9 @@ namespace clsBussinessLayer
 
         public static clsDoctors FindByNationalNO(string NationalNO)
         {
-            int PersonID = -1, SpecializationID = -1, WorkingHours = -1,DoctorID = -1;
+            int PersonID = -1, SpecializationID = -1, WorkingHours = -1, DoctorID = -1;
 
-            if (clsDoctorsData.GetDoctorInfoByNationalNO(NationalNO,ref DoctorID, ref PersonID, ref SpecializationID, ref WorkingHours))
+            if (clsDoctorsData.GetDoctorInfoByNationalNO(NationalNO, ref DoctorID, ref PersonID, ref SpecializationID, ref WorkingHours))
             {
                 //Get person information by ID.
                 clsPeople PersonInfo = clsPeople.GetPersonInfo(PersonID);
@@ -154,9 +155,9 @@ namespace clsBussinessLayer
 
             dt1 = clsDoctorsData.GetTop3DoctorsThereNameStartWith(DoctorName);
 
-            List<clsDoctors> doctors = new List<clsDoctors>(); 
+            List<clsDoctors> doctors = new List<clsDoctors>();
 
-            HashSet<string> uniqueIds = new HashSet<string>(); 
+            HashSet<string> uniqueIds = new HashSet<string>();
 
             foreach (DataRow dr in dt1.Rows)
             {
@@ -165,107 +166,124 @@ namespace clsBussinessLayer
                 {
                     clsDoctors newDoctor = clsDoctors.FindByDoctorID(Convert.ToInt32(doctorID));
                     doctors.Add(newDoctor);
-                    uniqueIds.Add(doctorID); 
+                    uniqueIds.Add(doctorID);
                 }
             }
 
             return doctors;
         }
 
-    }
-
-    public class clsSpecializations
-    {
-        public int SpecializationID { get; set; }
-        public string SpecializationName { get; set; }
-        public string SpecializationDescription { get; set; }
-        public int NumOfDoctorsInSpecialization { get; set; }
-
-        public enum enMode { AddNew = 1, Update = 2 }
-        public enMode Mode { get; set; }
-
-        public clsSpecializations()
+        public static List<clsDoctors> GetDoctorsBySpecializationID(int SpecializationID)
         {
-            this.SpecializationID = -1;
-            this.SpecializationDescription = "";
-            this.SpecializationName = "";
-            this.NumOfDoctorsInSpecialization = -1;
-
-            this.Mode = enMode.AddNew;
-        }
-
-        private clsSpecializations(int specializationID, string specializationName, string specializationDes, int numOfDoctors)
-        {
-            this.SpecializationID = specializationID;
-            this.SpecializationDescription = specializationDes;
-            this.SpecializationName = specializationName;
-            this.NumOfDoctorsInSpecialization = numOfDoctors;
-
-            this.Mode = enMode.Update;
-        }
-
-        private bool _AddNewSpecialization()
-        {
-            this.SpecializationID = clsSpecializationsData.AddNewSpecialization(this.SpecializationName, this.SpecializationDescription, this.NumOfDoctorsInSpecialization);
-
-            return (this.SpecializationID != -1);
-        }
-
-        private bool _UpdateSpecialization()
-        {
-            return clsSpecializationsData.UpdateSpecialization(this.SpecializationID, this.SpecializationName, this.SpecializationDescription, this.NumOfDoctorsInSpecialization);
-        }
-
-        public bool Save()
-        {
-            switch (this.Mode)
             {
-                case enMode.AddNew:
-                    if (_AddNewSpecialization())
-                    {
-                        this.Mode = enMode.Update;
-                        return true;
-                    }
-                    else
-                        return false;
+                DataTable dt1 = new DataTable();
+                dt1 = clsDoctorsData.GetDoctorsBySpecializationID(SpecializationID);
+                List<clsDoctors> doctors = new List<clsDoctors>();
+                foreach (DataRow dr in dt1.Rows)
+                {
+                    int doctorID = Convert.ToInt32(dr["DoctorID"]);
+                    clsDoctors newDoctor = clsDoctors.FindByDoctorID(doctorID);
+                    doctors.Add(newDoctor);
+                }
+                return doctors;
+            }
+        }
 
-                case enMode.Update:
-                    return _UpdateSpecialization();
+        public class clsSpecializations
+        {
+            public int SpecializationID { get; set; }
+            public string SpecializationName { get; set; }
+            public string SpecializationDescription { get; set; }
+            public int NumOfDoctorsInSpecialization { get; set; }
 
+            public enum enMode { AddNew = 1, Update = 2 }
+            public enMode Mode { get; set; }
+
+            public clsSpecializations()
+            {
+                this.SpecializationID = -1;
+                this.SpecializationDescription = "";
+                this.SpecializationName = "";
+                this.NumOfDoctorsInSpecialization = -1;
+
+                this.Mode = enMode.AddNew;
             }
 
-            return false;
-        }
-
-        public static clsSpecializations Find(int SpecializationID)
-        {
-            string SpecializationName = "", SpecializationDescr = "";
-            int NumOfDoctors = -1;
-
-            if(clsSpecializationsData.GetSpecializationInfo(SpecializationID,ref SpecializationName,ref SpecializationDescr,ref NumOfDoctors))
+            private clsSpecializations(int specializationID, string specializationName, string specializationDes, int numOfDoctors)
             {
-                return new clsSpecializations(SpecializationID, SpecializationName, SpecializationDescr, NumOfDoctors);
-            }
-            return null;
-        }
+                this.SpecializationID = specializationID;
+                this.SpecializationDescription = specializationDes;
+                this.SpecializationName = specializationName;
+                this.NumOfDoctorsInSpecialization = numOfDoctors;
 
-        public static int GetNumOfDoctorInASpecialization(int SpecializationID)
-        {
-            return clsSpecializationsData.GetNumOfDoctorsInASpecialization(SpecializationID);
-        }
-    
-        public static List<string> GetAllSpecializationName()
-        {
-            DataTable dt1 = clsSpecializationsData.GetAllSpecializationsRecords();
-
-            List<string> roomNumbers = new List<string>();
-
-            foreach (DataRow row in dt1.Rows)
-            {
-                roomNumbers.Add(row["SpecializationName"].ToString());
+                this.Mode = enMode.Update;
             }
 
-            return roomNumbers;
+            private bool _AddNewSpecialization()
+            {
+                this.SpecializationID = clsSpecializationsData.AddNewSpecialization(this.SpecializationName, this.SpecializationDescription, this.NumOfDoctorsInSpecialization);
+
+                return (this.SpecializationID != -1);
+            }
+
+            private bool _UpdateSpecialization()
+            {
+                return clsSpecializationsData.UpdateSpecialization(this.SpecializationID, this.SpecializationName, this.SpecializationDescription, this.NumOfDoctorsInSpecialization);
+            }
+
+            public bool Save()
+            {
+                switch (this.Mode)
+                {
+                    case enMode.AddNew:
+                        if (_AddNewSpecialization())
+                        {
+                            this.Mode = enMode.Update;
+                            return true;
+                        }
+                        else
+                            return false;
+
+                    case enMode.Update:
+                        return _UpdateSpecialization();
+
+                }
+
+                return false;
+            }
+
+            public static clsSpecializations Find(int SpecializationID)
+            {
+                string SpecializationName = "", SpecializationDescr = "";
+                int NumOfDoctors = -1;
+
+                if (clsSpecializationsData.GetSpecializationInfo(SpecializationID, ref SpecializationName, ref SpecializationDescr, ref NumOfDoctors))
+                {
+                    return new clsSpecializations(SpecializationID, SpecializationName, SpecializationDescr, NumOfDoctors);
+                }
+                return null;
+            }
+
+            public static int GetNumOfDoctorInASpecialization(int SpecializationID)
+            {
+                return clsSpecializationsData.GetNumOfDoctorsInASpecialization(SpecializationID);
+            }
+
+            public static List<string> GetAllSpecializationName()
+            {
+                DataTable dt1 = clsSpecializationsData.GetAllSpecializationsRecords();
+
+                List<string> roomNumbers = new List<string>();
+
+                foreach (DataRow row in dt1.Rows)
+                {
+                    roomNumbers.Add(row["SpecializationName"].ToString());
+                }
+
+                return roomNumbers;
+            }
+
+
         }
     }
 }
