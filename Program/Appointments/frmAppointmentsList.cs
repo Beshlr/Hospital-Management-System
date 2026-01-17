@@ -12,6 +12,7 @@ using clsBussinessLayer;
 using System.Drawing.Drawing2D;
 using System.Security.Cryptography;
 using Guna.UI2.WinForms;
+using static clsBussinessLayer.clsDoctors;
 
 namespace Hospital_Management_System.Appointments
 {
