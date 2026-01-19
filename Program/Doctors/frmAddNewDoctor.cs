@@ -19,8 +19,8 @@ namespace Hospital_Management_System.Doctors
         public delegate void BackDoctorIDHandler( int DoctorID);
 
         public event BackDoctorIDHandler BackDoctorID;
-        
-        public frmAddNewDoctor(string NationalNo = "")
+
+        public frmAddNewDoctor(string NationalNo = "", int SptializationIndex = -1)
         {
             InitializeComponent();
             if (NationalNo != "" && !String.IsNullOrEmpty(NationalNo))
@@ -30,6 +30,9 @@ namespace Hospital_Management_System.Doctors
 
                 enMode = _Mode.enUpdate;
             }
+            if(SptializationIndex != -1)
+                this._SptializationIndex = SptializationIndex;
+        
 
         }
 
@@ -39,6 +42,8 @@ namespace Hospital_Management_System.Doctors
         private enum _Mode { enAdd = 1, enUpdate = 2 }
         private _Mode enMode = _Mode.enAdd;
         private string _ImagePath = "";
+        private int _SptializationIndex;
+
         private void pbxEditImage_Click(object sender, EventArgs e)
         {
             clsGlobal.HandelChooseImageFromFileExplorer(ref openFileDialog1, ref pbxDoctorImage,ref _ImagePath);
@@ -48,6 +53,13 @@ namespace Hospital_Management_System.Doctors
         {
             pbxDoctorImage.Image = Resources.Doctor_512;
         }
+
+        // Todo List:
+
+        /*
+            - Fix Save Image Path Problem 
+         
+        */
 
         private bool SavePersonInfo(ref clsPeople Person)
         {
@@ -238,6 +250,9 @@ namespace Hospital_Management_System.Doctors
                 List<string> SpecializationNames = clsSpecializations.GetAllSpecializationName();
 
                 cbxSpecialization.DataSource = SpecializationNames;
+
+                if (_SptializationIndex != -1)
+                    cbxSpecialization.SelectedIndex = _SptializationIndex;
             }
             catch (Exception ex)
             {

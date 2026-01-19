@@ -300,11 +300,21 @@ FROM            Doctors INNER JOIN
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = @"SELECT    Top 3    Doctors.DoctorID, Doctors.PersonID, Doctors.SpecializationID, Doctors.WorkingHours,
-                             People.FirstName + ' ' + People.SecondName + ' ' + People.LastName AS FullName
-                             FROM            Doctors INNER JOIN
-                             People ON Doctors.PersonID = People.PersonID
-						     Where People.FirstName Like @DoctorName ";
+            string query = @"SELECT TOP 3
+                                d.DoctorID,
+                                d.PersonID,
+                                d.SpecializationID,
+                                d.WorkingHours,
+                                LTRIM(RTRIM(
+                                    CONCAT(
+                                        p.FirstName, ' ',
+                                        ISNULL(p.SecondName + ' ', ''),
+                                        p.LastName
+                                    )
+                                )) AS FullName
+                            FROM Doctors d
+                            JOIN People p ON d.PersonID = p.PersonID
+                            Where p.FullName Like @DoctorName ";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@DoctorName", DoctorName + '%');

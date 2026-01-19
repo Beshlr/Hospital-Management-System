@@ -217,7 +217,6 @@
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.Location = new System.Drawing.Point(148, 62);
             this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(194, 26);
@@ -243,7 +242,6 @@
             this.txtNationalNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNationalNo.Location = new System.Drawing.Point(148, 115);
             this.txtNationalNo.Name = "txtNationalNo";
-            this.txtNationalNo.PasswordChar = '\0';
             this.txtNationalNo.PlaceholderText = "";
             this.txtNationalNo.SelectedText = "";
             this.txtNationalNo.Size = new System.Drawing.Size(194, 26);
@@ -355,7 +353,6 @@
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Location = new System.Drawing.Point(148, 329);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.PasswordChar = '\0';
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(194, 58);
@@ -380,7 +377,6 @@
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.Location = new System.Drawing.Point(148, 277);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderText = "";
             this.txtPhoneNumber.SelectedText = "";
             this.txtPhoneNumber.Size = new System.Drawing.Size(194, 26);
@@ -492,6 +488,7 @@
             this.Controls.Add(this.gbxPersonalInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddNewDoctor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddNewDoctor";
             this.Load += new System.EventHandler(this.frmAddNewDoctor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
