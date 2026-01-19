@@ -108,8 +108,6 @@ namespace Hospital_Management_System.Appointments
       
         private void _HandelShowAndHideFoundDoctorsPanal(List<clsDoctors> doctors)
         {
-            
-
             pnlFoundDoctors.Visible = doctors.Count >= 0;
 
             if(doctors.Count == 0)
@@ -426,8 +424,8 @@ namespace Hospital_Management_System.Appointments
         //Todo List:
 
         /*
-            - Adding choosing the doctor by his department
-         
+            - Adding choosing the doctor by his department ✔ Done
+            
         */
 
 
@@ -448,7 +446,7 @@ namespace Hospital_Management_System.Appointments
 
         private void llblAddNewDoctor_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmAddNewDoctor frm = new frmAddNewDoctor(null);
+            frmAddNewDoctor frm = new frmAddNewDoctor(null, cbxSpecilizations.SelectedIndex);
             frm.BackDoctorID += _LoadSelectedDoctorData;
             frm.ShowDialog();
 
@@ -637,7 +635,7 @@ namespace Hospital_Management_System.Appointments
         {
             _doctors = clsDoctors.GetDoctorsBySpecializationID(specializationId);
 
-            if (_doctors.Count > 0)
+            if (_doctors.Count >= 0)
 
             {
                 _HandelShowAndHideFoundDoctorsPanal(_doctors);
