@@ -231,14 +231,20 @@ int AppointmentID, int PatientID, int DoctorID, DateTime Date, byte Status, int 
 
         public static bool CheckIfAppoimentIsMissed(int AppointmentID)
         {
-            return (clsAppointments.FindByAppointmentID(AppointmentID).Date < DateTime.Now &&
-                    clsAppointments.FindByAppointmentID(AppointmentID).Status != 7);
+            clsAppointments app = clsAppointments.FindByAppointmentID(AppointmentID);
+            return (app.Date < DateTime.Now &&
+                    app.Status != 7);
             
             
         }
 
         private bool _UpdateAppStatusToMissed()
         {
+            if(this.Status == 7) return false;
+            if(this.Status == 3) return false;
+            if(this.Status == 4) return false;
+            if(this.Status == 6) return false;
+
             if (!CheckIfAppoimentIsMissed(this.AppointmentID))
                 return false;
             this.Status = 7;

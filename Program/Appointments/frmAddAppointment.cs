@@ -421,13 +421,6 @@ namespace Hospital_Management_System.Appointments
             _LoadSelectedPatientData(_SelectedPatient.PatientID);
         }
 
-        //Todo List:
-
-        /*
-            - Adding choosing the doctor by his department ✔ Done
-            
-        */
-
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -523,7 +516,7 @@ namespace Hospital_Management_System.Appointments
 
             if (ActiveAppForSelectedPatient != -1)
             {
-                //MessageBox.Show($"Patient {_SelectedPatient.PersonInfo.FirstName} Has Active ","")
+                MessageBox.Show($"Patient {_SelectedPatient.PersonInfo.FirstName} Has Active Appointment", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             appointment.PatientID = _SelectedPatient.PatientID;
@@ -552,6 +545,9 @@ namespace Hospital_Management_System.Appointments
 
         private void pbxSearchFilter_Click(object sender, EventArgs e)
         {
+            if (sender.GetType() != typeof(PictureBox))
+                return;
+
             if(gbxFilterBy.Visible)
                 gbxFilterBy.Visible = false;
             else
@@ -559,19 +555,24 @@ namespace Hospital_Management_System.Appointments
                 gbxFilterBy.Visible = true;
 
                 // Change Texts According to which search filter picture box is clicked
-                if (((PictureBox)sender).Name == "pbxPatientSearchFilter")
-                {
-                    gbxFilterBy.Text = "Filter Patients By";
-                    rbtnNationalNO.Text = "National NO.";
-                    rbtnPatientName.Text = "Patient's Name";
+                _HandleSearchFilterClick(sender);
+            }
+        }
 
-                }
-                else if (((PictureBox)sender).Name == "pbxDoctorSearchFilter")
-                {
-                    gbxFilterBy.Text = "Filter Doctors By";
-                    rbtnNationalNO.Text = "Department";
-                    rbtnPatientName.Text = "Doctor's Name";
-                }
+        private void _HandleSearchFilterClick(object sender)
+        {
+            if (((PictureBox)sender).Name == "pbxPatientSearchFilter")
+            {
+                gbxFilterBy.Text = "Filter Patients By";
+                rbtnNationalNO.Text = "National NO.";
+                rbtnPatientName.Text = "Patient's Name";
+
+            }
+            else if (((PictureBox)sender).Name == "pbxDoctorSearchFilter")
+            {
+                gbxFilterBy.Text = "Filter Doctors By";
+                rbtnNationalNO.Text = "Department";
+                rbtnPatientName.Text = "Doctor's Name";
             }
         }
 
@@ -579,6 +580,8 @@ namespace Hospital_Management_System.Appointments
         {
             if (rbtnNationalNO.Checked)
             {
+                if(pnlFoundDoctors.Visible)
+                    pnlFoundDoctors.Visible = false;
                 if (rbtnNationalNO.Text == "National NO.")
                     txtPatientSearchBar.PlaceholderText = "Enter NationalNO.";
                 else
@@ -591,6 +594,8 @@ namespace Hospital_Management_System.Appointments
             }
             else
             {
+                if (pnlFoundDoctors.Visible)
+                    pnlFoundDoctors.Visible = false;
                 if (rbtnPatientName.Text == "Patient's Name")
                     txtPatientSearchBar.PlaceholderText = "Enter Patient's Name";
                 else
