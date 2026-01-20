@@ -54,12 +54,6 @@ namespace Hospital_Management_System.Doctors
             pbxDoctorImage.Image = Resources.Doctor_512;
         }
 
-        // Todo List:
-
-        /*
-            - Fix Save Image Path Problem 
-         
-        */
 
         private bool SavePersonInfo(ref clsPeople Person)
         {
@@ -93,7 +87,7 @@ namespace Hospital_Management_System.Doctors
                 Person.Gendor = clsPeople.enGendor.Female;
 
             Person.PhoneNumber = txtPhoneNumber.Text;
-            Person.ImagePath = pbxDoctorImage.ImageLocation;
+            Person.ImagePath = _ImagePath;
 
             return Person.Save();
 

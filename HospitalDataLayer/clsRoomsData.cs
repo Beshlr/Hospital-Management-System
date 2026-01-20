@@ -178,6 +178,11 @@ namespace HospitalDataLayer
 
         }
 
+        //ToDo:
+        /*
+            -Fix UpdateRoomReservation method to set AvailabilityStatus based on IsOccupied value 
+        */
+
         public static bool UpdateRoomReservation(int RoomID,bool Reservate)
         {
             int rowsAffected = 0;
